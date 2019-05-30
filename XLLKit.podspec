@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name                    = 'XLLKit'
-  s.version                 = '0.1.3'
+  s.version                 = '0.1.4'
   s.summary                 = 'Base XLLKit.'
   s.homepage                = 'https://github.com/yuanxinliang/XLLKit'
   s.license                 = 'MIT'
