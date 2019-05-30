@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import XLLKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(XLView())
+        print(TButton())
+        
+//        let a: TButton = TButton
+        
     }
 
     override func didReceiveMemoryWarning() {

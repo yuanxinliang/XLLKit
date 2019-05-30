@@ -8,15 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		05AC1AC1FFD56A3A68C929FA640CBC31 /* Pods-XLLKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAE4818E37CCB52D32609D7627DF658 /* Pods-XLLKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D371D0DB33175905441591871FEBC67 /* XLLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD3D016FF9CF7D41B70D677BBF35D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3033FEE4A057A8111F5278C926F05699 /* UIButton+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */; };
+		304A3974BF59293DF9177656663B5A6D /* XLLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */; };
 		3F320F8CC0726F341E6DDC2DCCAA34FE /* Pods-XLLKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F08F5BF49F6A7CFE04645D022472CB /* Pods-XLLKit_Example-dummy.m */; };
-		578F6040D1207C1FBCDA832BDA16EC81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		53724FCA229FA8AC002B4795 /* UIImageView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */; };
+		53724FCC229FA91E002B4795 /* UILabel+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */; };
+		53724FCE229FA94A002B4795 /* UITextField+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */; };
+		53724FD0229FAA25002B4795 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCF229FAA25002B4795 /* String+Extension.swift */; };
+		6D180F15471F352CE3EF29AF604D1A7B /* XLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D950A97FCFF4825AE68867D81A539 /* XLView.swift */; };
 		7A79F5283CD2DB5F105863036D1D3A2F /* Pods-XLLKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEB78DB88A750D6B8E51613559256E9 /* Pods-XLLKit_Tests-dummy.m */; };
 		872E6F74A3B1D2EBC98CBA9707EC89C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B33F450F04D2E23766CD56FE307F11E1 /* XLLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F189627AE0BE14072AD2725325FBABEC /* XLLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4A3C480160B048D13CEC79605E4D514 /* XLLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1231505614E2738611AE9D0681880A /* XLLKit-dummy.m */; };
+		87B0D1FA95C6194D89791A806FEAF8CD /* UIView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */; };
+		B1705434FE493B1023944A6C74EEE3EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		EB76A07AA05DF387A4ADA10172C91214 /* Pods-XLLKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 580B802E859B615899EC4407147FBF53 /* Pods-XLLKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F565E0A1688C5928FB07ED36F324BCA2 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DFA30FA88E4B82E49AD43C756C1DA /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,54 +43,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D1741F9C8BA500C1D24FFD84CA88549 /* XLLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = XLLKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		171B335A28A5B3F0DE4CC16E529D67CD /* XLLKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLKit-Info.plist"; sourceTree = "<group>"; };
 		17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		18D7935DFB2C3C3C0CEA5BE2AC300E24 /* Pods-XLLKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1930FBFE8A0DEE0F6FCBC59EBA8AA898 /* XLLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLKit.xcconfig; sourceTree = "<group>"; };
+		1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-umbrella.h"; sourceTree = "<group>"; };
+		2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIButton+XLExtension.swift"; sourceTree = "<group>"; };
 		30F08F5BF49F6A7CFE04645D022472CB /* Pods-XLLKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLKit_Example-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4A1231505614E2738611AE9D0681880A /* XLLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLKit-dummy.m"; sourceTree = "<group>"; };
+		40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIView+XLExtension.swift"; sourceTree = "<group>"; };
+		442D9FE4C3E3135364DDF9B327F25670 /* XLLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-prefix.pch"; sourceTree = "<group>"; };
+		493D950A97FCFF4825AE68867D81A539 /* XLView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLView.swift; path = XLLKit/Classes/Component/XLView.swift; sourceTree = "<group>"; };
+		51D3F892541F819ABA4AA95136437FF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52E39217F9A22186220893874D3248C0 /* Pods-XLLKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLKit_Example.modulemap"; sourceTree = "<group>"; };
+		53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImageView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIImageView+XLExtension.swift"; sourceTree = "<group>"; };
+		53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+XLExtension.swift"; path = "XLLKit/Classes/Extension/UILabel+XLExtension.swift"; sourceTree = "<group>"; };
+		53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITextField+XLExtension.swift"; path = "XLLKit/Classes/Extension/UITextField+XLExtension.swift"; sourceTree = "<group>"; };
+		53724FCF229FAA25002B4795 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "XLLKit/Classes/Extension/String+Extension.swift"; sourceTree = "<group>"; };
 		560DF19DE4684D702AE46C3169ED0D52 /* Pods-XLLKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		57572AEE2DEF0073913378059676C637 /* XLLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580B802E859B615899EC4407147FBF53 /* Pods-XLLKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLKit.xcconfig; sourceTree = "<group>"; };
+		60A8A8754073E25A0899C28EE8A51BED /* XLLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLKit.modulemap; sourceTree = "<group>"; };
 		7EE5D0E95D8E2223C2EBF3963EFA6430 /* Pods-XLLKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		80125EC5B4D664CBEF06757AB730806B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8AEB78DB88A750D6B8E51613559256E9 /* Pods-XLLKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		8E83EDD1D43497638FA0D526ADEEED0B /* Pods-XLLKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		919C90901F52D5DCA8744A0F8E63643F /* Pods-XLLKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Example-Info.plist"; sourceTree = "<group>"; };
 		95187BB0B884198A1F78320FCEC0C42D /* Pods-XLLKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		99A50CD240A88C2A126EF3368CBD927D /* XLLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLKit.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A610EC5832594CCC67CB288BB2A26BDA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9E6C3F0D0560F2F63F9C6A37011C5F37 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLKit-dummy.m"; sourceTree = "<group>"; };
 		B13B819CDC8FCA9F1EBBBD7648B2A173 /* Pods_XLLKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9CED2028B0CA89F73A9CC18FBF46A /* Pods-XLLKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		BA1DFA30FA88E4B82E49AD43C756C1DA /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = XLLKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		D37FD4B2F16F1A89259066E0E982F5E9 /* Pods_XLLKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9F29DC79B49ECE99FBFB0116D0E15E /* XLLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = XLLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DEAE4818E37CCB52D32609D7627DF658 /* Pods-XLLKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		E33869B450DD8F81CB3BA65A82BC5811 /* Pods-XLLKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLKit_Tests.modulemap"; sourceTree = "<group>"; };
-		EADBCAB5580A951580947087D4B750F6 /* XLLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-prefix.pch"; sourceTree = "<group>"; };
 		F10AD7ED312CFC4F706F5894105D56EC /* Pods-XLLKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F189627AE0BE14072AD2725325FBABEC /* XLLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-umbrella.h"; sourceTree = "<group>"; };
-		F511FF4998595068DC3C481334FCD5FC /* XLLKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLKit-Info.plist"; sourceTree = "<group>"; };
 		FAD09B2D8CEEECA8F3736C1EC5BD6C4D /* Pods-XLLKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDB4AAE2E12ADF028A7846548867ABF7 /* Pods-XLLKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0F2F8CAF9D1E45E66DC6C4958C6B0CA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				578F6040D1207C1FBCDA832BDA16EC81 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7D0B90C6D3D774FE1408D6A075B9F445 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2CD3D016FF9CF7D41B70D677BBF35D1F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3280C2EC8CD6A0FAE5A5B0068E34D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1705434FE493B1023944A6C74EEE3EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,20 +120,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		224952293A884D997AAD0AACB6325E96 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				99A50CD240A88C2A126EF3368CBD927D /* XLLKit.modulemap */,
-				1930FBFE8A0DEE0F6FCBC59EBA8AA898 /* XLLKit.xcconfig */,
-				4A1231505614E2738611AE9D0681880A /* XLLKit-dummy.m */,
-				F511FF4998595068DC3C481334FCD5FC /* XLLKit-Info.plist */,
-				EADBCAB5580A951580947087D4B750F6 /* XLLKit-prefix.pch */,
-				F189627AE0BE14072AD2725325FBABEC /* XLLKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/XLLKit";
-			sourceTree = "<group>";
-		};
 		340549EE1B24A7C9CFB6B6E19572ACF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,23 +130,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		359A1695B54EDC7BEC58B88B77EE74FA /* Development Pods */ = {
+		50215AC6DE008B2D754784A69D5679B9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66A5E2CA7FF5FA51DAB9544873CB6231 /* XLLKit */,
+				D3443DA32DBDF1A8A400834DD0DBC7D2 /* XLLKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		66A5E2CA7FF5FA51DAB9544873CB6231 /* XLLKit */ = {
+		60A292B348655E8425CB251E1C88CFD8 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				BA1DFA30FA88E4B82E49AD43C756C1DA /* ReplaceMe.swift */,
-				96B4269FF3D7F9AB46D334517FD48F00 /* Pod */,
-				224952293A884D997AAD0AACB6325E96 /* Support Files */,
+				493D950A97FCFF4825AE68867D81A539 /* XLView.swift */,
 			);
-			name = XLLKit;
-			path = ../..;
+			name = Component;
+			sourceTree = "<group>";
+		};
+		64D01A3B79186D84E0C13F5F028E2779 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9E6C3F0D0560F2F63F9C6A37011C5F37 /* LICENSE */,
+				51D3F892541F819ABA4AA95136437FF9 /* README.md */,
+				DC9F29DC79B49ECE99FBFB0116D0E15E /* XLLKit.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		6985706710D0A4627CFC3E86E92E4F7D /* Pods-XLLKit_Example */ = {
@@ -184,14 +189,17 @@
 			path = "Target Support Files/Pods-XLLKit_Tests";
 			sourceTree = "<group>";
 		};
-		96B4269FF3D7F9AB46D334517FD48F00 /* Pod */ = {
+		A8A6E7DAAB1916B9F4DD8B65A171CAE0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				80125EC5B4D664CBEF06757AB730806B /* LICENSE */,
-				A610EC5832594CCC67CB288BB2A26BDA /* README.md */,
-				0D1741F9C8BA500C1D24FFD84CA88549 /* XLLKit.podspec */,
+				53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */,
+				2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */,
+				40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */,
+				53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */,
+				53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */,
+				53724FCF229FAA25002B4795 /* String+Extension.swift */,
 			);
-			name = Pod;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -206,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				359A1695B54EDC7BEC58B88B77EE74FA /* Development Pods */,
+				50215AC6DE008B2D754784A69D5679B9 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				340549EE1B24A7C9CFB6B6E19572ACF2 /* Products */,
 				02226BF8D5028115EEABE0D4BAA94072 /* Targets Support Files */,
@@ -221,6 +229,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D3443DA32DBDF1A8A400834DD0DBC7D2 /* XLLKit */ = {
+			isa = PBXGroup;
+			children = (
+				60A292B348655E8425CB251E1C88CFD8 /* Component */,
+				A8A6E7DAAB1916B9F4DD8B65A171CAE0 /* Extension */,
+				64D01A3B79186D84E0C13F5F028E2779 /* Pod */,
+				DE47D6D75DADF15AFA03CCBE5E565796 /* Support Files */,
+			);
+			name = XLLKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DE47D6D75DADF15AFA03CCBE5E565796 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60A8A8754073E25A0899C28EE8A51BED /* XLLKit.modulemap */,
+				5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */,
+				AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */,
+				171B335A28A5B3F0DE4CC16E529D67CD /* XLLKit-Info.plist */,
+				442D9FE4C3E3135364DDF9B327F25670 /* XLLKit-prefix.pch */,
+				1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/XLLKit";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -232,11 +266,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3AF45BCA5184072F42FB8A8E69EAC5C /* Headers */ = {
+		AAEED7849DE1BA9F76C90DEED4C95761 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33F450F04D2E23766CD56FE307F11E1 /* XLLKit-umbrella.h in Headers */,
+				1D371D0DB33175905441591871FEBC67 /* XLLKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +306,12 @@
 		};
 		8B88C9CB8FC2308E0933E14DE48FFBD3 /* XLLKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F623D74B766CBCB18E1A0FBA213989D0 /* Build configuration list for PBXNativeTarget "XLLKit" */;
+			buildConfigurationList = BF34B25FB247B51D92A3A54AAD2BC40F /* Build configuration list for PBXNativeTarget "XLLKit" */;
 			buildPhases = (
-				A3AF45BCA5184072F42FB8A8E69EAC5C /* Headers */,
-				B0E5F20E3CA7F31B1C563DFABA1359D6 /* Sources */,
-				0F2F8CAF9D1E45E66DC6C4958C6B0CA8 /* Frameworks */,
-				E04C0FA0030F1C34F2A23536D4B11064 /* Resources */,
+				AAEED7849DE1BA9F76C90DEED4C95761 /* Headers */,
+				F0FB34AA89AEC63952085BC0DAF6F2E0 /* Sources */,
+				C3280C2EC8CD6A0FAE5A5B0068E34D60 /* Frameworks */,
+				3D61A0239B29FCA18E481BCD4AA35731 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +349,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					A76C86D573C1DE73159846D0BF6E4B39 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -343,14 +382,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6387772828F7838B8370BD0127710C42 /* Resources */ = {
+		3D61A0239B29FCA18E481BCD4AA35731 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E04C0FA0030F1C34F2A23536D4B11064 /* Resources */ = {
+		6387772828F7838B8370BD0127710C42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,16 +411,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53724FCA229FA8AC002B4795 /* UIImageView+XLExtension.swift in Sources */,
 				3F320F8CC0726F341E6DDC2DCCAA34FE /* Pods-XLLKit_Example-dummy.m in Sources */,
+				53724FCC229FA91E002B4795 /* UILabel+XLExtension.swift in Sources */,
+				53724FD0229FAA25002B4795 /* String+Extension.swift in Sources */,
+				53724FCE229FA94A002B4795 /* UITextField+XLExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0E5F20E3CA7F31B1C563DFABA1359D6 /* Sources */ = {
+		F0FB34AA89AEC63952085BC0DAF6F2E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F565E0A1688C5928FB07ED36F324BCA2 /* ReplaceMe.swift in Sources */,
-				D4A3C480160B048D13CEC79605E4D514 /* XLLKit-dummy.m in Sources */,
+				3033FEE4A057A8111F5278C926F05699 /* UIButton+XLExtension.swift in Sources */,
+				87B0D1FA95C6194D89791A806FEAF8CD /* UIView+XLExtension.swift in Sources */,
+				304A3974BF59293DF9177656663B5A6D /* XLLKit-dummy.m in Sources */,
+				6D180F15471F352CE3EF29AF604D1A7B /* XLView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,9 +448,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02D307D2EBC42C0FE07C178607007B08 /* Release */ = {
+		45A0499A76C1E29FAADD3F7924DA52C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1930FBFE8A0DEE0F6FCBC59EBA8AA898 /* XLLKit.xcconfig */;
+			baseConfigurationReference = 5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -419,7 +464,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/XLLKit/XLLKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/XLLKit/XLLKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/XLLKit/XLLKit.modulemap";
 				PRODUCT_MODULE_NAME = XLLKit;
@@ -427,7 +472,42 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4902A8A93923C554C86FC6216DF214FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -435,7 +515,7 @@
 			};
 			name = Release;
 		};
-		1AC01FC0738F7CE4F9DCD718FC531D87 /* Debug */ = {
+		5BC06FFA0F05DD7CA2945A90FD952939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD09B2D8CEEECA8F3736C1EC5BD6C4D /* Pods-XLLKit_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -451,7 +531,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests.modulemap";
@@ -468,11 +548,12 @@
 			};
 			name = Debug;
 		};
-		42429C2B1CAF9A96EBBAA8521FB5E6FF /* Debug */ = {
+		637414F5A65020B9F8B217AFCC255576 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EE5D0E95D8E2223C2EBF3963EFA6430 /* Pods-XLLKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -484,7 +565,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.modulemap";
@@ -495,15 +576,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9F647EEABF924FE667F49C5FD7BE2C0B /* Debug */ = {
+		6AB8706CAE4CA3E449ED0CCBC9CC9BCB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1930FBFE8A0DEE0F6FCBC59EBA8AA898 /* XLLKit.xcconfig */;
+			baseConfigurationReference = 5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -517,7 +600,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/XLLKit/XLLKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/XLLKit/XLLKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/XLLKit/XLLKit.modulemap";
 				PRODUCT_MODULE_NAME = XLLKit;
@@ -525,40 +608,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A49C75E643658883D3A472E21A264D08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18D7935DFB2C3C3C0CEA5BE2AC300E24 /* Pods-XLLKit_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -566,7 +616,7 @@
 			};
 			name = Release;
 		};
-		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -614,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,7 +675,7 @@
 			};
 			name = Release;
 		};
-		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -676,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -689,9 +739,9 @@
 			};
 			name = Debug;
 		};
-		C9DABAD9DAEB3567E7E7C11E5D50EDFA /* Release */ = {
+		97BB4695D6E74CC809B848D20CF81074 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */;
+			baseConfigurationReference = 18D7935DFB2C3C3C0CEA5BE2AC300E24 /* Pods-XLLKit_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -703,12 +753,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -729,8 +779,8 @@
 		3F9ED951A3F9246D282C1E731157794A /* Build configuration list for PBXNativeTarget "Pods-XLLKit_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AC01FC0738F7CE4F9DCD718FC531D87 /* Debug */,
-				A49C75E643658883D3A472E21A264D08 /* Release */,
+				5BC06FFA0F05DD7CA2945A90FD952939 /* Debug */,
+				97BB4695D6E74CC809B848D20CF81074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -738,8 +788,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
-				B0087CB4594321EF41619F3181FE120E /* Release */,
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -747,17 +797,17 @@
 		94419E63B7B5C563389DA41D92E6065C /* Build configuration list for PBXNativeTarget "Pods-XLLKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				42429C2B1CAF9A96EBBAA8521FB5E6FF /* Debug */,
-				C9DABAD9DAEB3567E7E7C11E5D50EDFA /* Release */,
+				637414F5A65020B9F8B217AFCC255576 /* Debug */,
+				4902A8A93923C554C86FC6216DF214FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F623D74B766CBCB18E1A0FBA213989D0 /* Build configuration list for PBXNativeTarget "XLLKit" */ = {
+		BF34B25FB247B51D92A3A54AAD2BC40F /* Build configuration list for PBXNativeTarget "XLLKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F647EEABF924FE667F49C5FD7BE2C0B /* Debug */,
-				02D307D2EBC42C0FE07C178607007B08 /* Release */,
+				45A0499A76C1E29FAADD3F7924DA52C8 /* Debug */,
+				6AB8706CAE4CA3E449ED0CCBC9CC9BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
