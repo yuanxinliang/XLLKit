@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XLLKit_Example' do
+  pod 'XLLKit', :path => '../'
+
+  target 'XLLKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
