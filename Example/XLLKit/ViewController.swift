@@ -11,18 +11,19 @@ import XLLKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         print(xlAppName)
         print(xlAppBuild)
         print(xlAppVersion)
         print(xlAppBundleID)
-        
+        self.view.backgroundColor = UIColor.xlHexString(hex: "0x112340")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.backgroundColor = UIColor.xlRandomColor()
     }
 
 }
