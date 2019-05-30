@@ -1,0 +1,16 @@
+PODS:
+  - XLLKit (0.1.0)
+
+DEPENDENCIES:
+  - XLLKit (from `../`)
+
+EXTERNAL SOURCES:
+  XLLKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XLLKit: ed21c98ca1f93f722a63478e78670ba80c23443f
+
+PODFILE CHECKSUM: 3fc49942c72985e8ef4f7ec173b2ff2ea1270eb6
+
+COCOAPODS: 1.7.0.rc.1

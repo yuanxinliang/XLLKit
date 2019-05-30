@@ -1,0 +1,22 @@
+{
+  "name": "XLLKit",
+  "version": "0.1.0",
+  "summary": "A short description of XLLKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yuanxinliang/XLLKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yuanxinliang": "306619887@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yuanxinliang/XLLKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XLLKit/Classes/**/*"
+}
