@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		05AC1AC1FFD56A3A68C929FA640CBC31 /* Pods-XLLKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAE4818E37CCB52D32609D7627DF658 /* Pods-XLLKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D371D0DB33175905441591871FEBC67 /* XLLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD3D016FF9CF7D41B70D677BBF35D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		3033FEE4A057A8111F5278C926F05699 /* UIButton+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */; };
-		304A3974BF59293DF9177656663B5A6D /* XLLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */; };
+		3DB98E3E0C25408BD3437AD5EFAF938F /* UIImageView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647052E598534166DE0A99609F6BD0E /* UIImageView+XLExtension.swift */; };
 		3F320F8CC0726F341E6DDC2DCCAA34FE /* Pods-XLLKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F08F5BF49F6A7CFE04645D022472CB /* Pods-XLLKit_Example-dummy.m */; };
-		53724FCA229FA8AC002B4795 /* UIImageView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */; };
-		53724FCC229FA91E002B4795 /* UILabel+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */; };
-		53724FCE229FA94A002B4795 /* UITextField+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */; };
-		53724FD0229FAA25002B4795 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FCF229FAA25002B4795 /* String+Extension.swift */; };
-		6D180F15471F352CE3EF29AF604D1A7B /* XLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D950A97FCFF4825AE68867D81A539 /* XLView.swift */; };
+		486660931A84EB110A7346B75FDB74E9 /* GlobeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D243D6C156F78EB690E872A06AC27248 /* GlobeConstant.swift */; };
+		75494D872D494B0CFFE6B6A1DBFF920B /* XLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1E608DE69C07D6A45900FFCDEEAA4 /* XLView.swift */; };
 		7A79F5283CD2DB5F105863036D1D3A2F /* Pods-XLLKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEB78DB88A750D6B8E51613559256E9 /* Pods-XLLKit_Tests-dummy.m */; };
+		8551A289FE6A563EFCC4160832179757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		872E6F74A3B1D2EBC98CBA9707EC89C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		87B0D1FA95C6194D89791A806FEAF8CD /* UIView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */; };
-		B1705434FE493B1023944A6C74EEE3EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A9E4393CC2FBC9A3010E24ED53A0C02E /* XLLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBAE7DE80843D319886EF62F16F059D1 /* XLLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC65384C9CA85E465EB9A3937A47AAA /* UIButton+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D938CC158BB5E035AAB702C0FFBC359 /* UIButton+XLExtension.swift */; };
+		AADC8B108E2DE2392BE4D10BC343E38D /* UILabel+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE6FA7D3327CB5CDD1D77208DA7D0 /* UILabel+XLExtension.swift */; };
+		B51C0912B3B727DF297D9A90EDFE392F /* UITextField+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED968057CC5EBBD4E35BEDE9D04CBA /* UITextField+XLExtension.swift */; };
+		C4E192FEC2C3F63E8E9A221D0D8CFF6E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6035D2546665ACE6429A1F135A1D3F55 /* String+Extension.swift */; };
+		CC3466EDFAB7D58538F72F0489B5EFD8 /* XLLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E074EC2DB2B24A19479928CAE702104 /* XLLKit-dummy.m */; };
+		DF06AF492E630ECF55ADAE66227E78E5 /* UIColor+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AE308BA674B0E02EB3632E91192C7 /* UIColor+XLExtension.swift */; };
+		E062C20158F38CB47562E6BB27666A34 /* UIView+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC0B1DF6974E41744ADA81F8BFD887 /* UIView+XLExtension.swift */; };
 		EB76A07AA05DF387A4ADA10172C91214 /* Pods-XLLKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 580B802E859B615899EC4407147FBF53 /* Pods-XLLKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -43,60 +45,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		171B335A28A5B3F0DE4CC16E529D67CD /* XLLKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLKit-Info.plist"; sourceTree = "<group>"; };
+		034AE308BA674B0E02EB3632E91192C7 /* UIColor+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIColor+XLExtension.swift"; sourceTree = "<group>"; };
+		178D94BF402D6AA935EDA269D3D447DF /* XLLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLKit.modulemap; sourceTree = "<group>"; };
 		17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		18D7935DFB2C3C3C0CEA5BE2AC300E24 /* Pods-XLLKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-umbrella.h"; sourceTree = "<group>"; };
-		2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIButton+XLExtension.swift"; sourceTree = "<group>"; };
+		20F1E608DE69C07D6A45900FFCDEEAA4 /* XLView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLView.swift; path = XLLKit/Classes/Component/XLView.swift; sourceTree = "<group>"; };
 		30F08F5BF49F6A7CFE04645D022472CB /* Pods-XLLKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLKit_Example-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIView+XLExtension.swift"; sourceTree = "<group>"; };
-		442D9FE4C3E3135364DDF9B327F25670 /* XLLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-prefix.pch"; sourceTree = "<group>"; };
-		493D950A97FCFF4825AE68867D81A539 /* XLView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLView.swift; path = XLLKit/Classes/Component/XLView.swift; sourceTree = "<group>"; };
-		51D3F892541F819ABA4AA95136437FF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3E074EC2DB2B24A19479928CAE702104 /* XLLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLKit-dummy.m"; sourceTree = "<group>"; };
 		52E39217F9A22186220893874D3248C0 /* Pods-XLLKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLKit_Example.modulemap"; sourceTree = "<group>"; };
-		53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImageView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIImageView+XLExtension.swift"; sourceTree = "<group>"; };
-		53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+XLExtension.swift"; path = "XLLKit/Classes/Extension/UILabel+XLExtension.swift"; sourceTree = "<group>"; };
-		53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITextField+XLExtension.swift"; path = "XLLKit/Classes/Extension/UITextField+XLExtension.swift"; sourceTree = "<group>"; };
-		53724FCF229FAA25002B4795 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "XLLKit/Classes/Extension/String+Extension.swift"; sourceTree = "<group>"; };
 		560DF19DE4684D702AE46C3169ED0D52 /* Pods-XLLKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		57572AEE2DEF0073913378059676C637 /* XLLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57572AEE2DEF0073913378059676C637 /* XLLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLLKit.framework; path = XLLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580B802E859B615899EC4407147FBF53 /* Pods-XLLKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLKit.xcconfig; sourceTree = "<group>"; };
-		60A8A8754073E25A0899C28EE8A51BED /* XLLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLKit.modulemap; sourceTree = "<group>"; };
+		6035D2546665ACE6429A1F135A1D3F55 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "XLLKit/Classes/Extension/String+Extension.swift"; sourceTree = "<group>"; };
+		69EDC2649C089768CC29DB517355926A /* XLLKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLKit-Info.plist"; sourceTree = "<group>"; };
+		6AED968057CC5EBBD4E35BEDE9D04CBA /* UITextField+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+XLExtension.swift"; path = "XLLKit/Classes/Extension/UITextField+XLExtension.swift"; sourceTree = "<group>"; };
+		7647052E598534166DE0A99609F6BD0E /* UIImageView+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIImageView+XLExtension.swift"; sourceTree = "<group>"; };
 		7EE5D0E95D8E2223C2EBF3963EFA6430 /* Pods-XLLKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8AEB78DB88A750D6B8E51613559256E9 /* Pods-XLLKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		8B0BC67DC038C04878A292340BB26904 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8D938CC158BB5E035AAB702C0FFBC359 /* UIButton+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIButton+XLExtension.swift"; sourceTree = "<group>"; };
 		8E83EDD1D43497638FA0D526ADEEED0B /* Pods-XLLKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		919C90901F52D5DCA8744A0F8E63643F /* Pods-XLLKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Example-Info.plist"; sourceTree = "<group>"; };
 		95187BB0B884198A1F78320FCEC0C42D /* Pods-XLLKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E6C3F0D0560F2F63F9C6A37011C5F37 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLKit-dummy.m"; sourceTree = "<group>"; };
-		B13B819CDC8FCA9F1EBBBD7648B2A173 /* Pods_XLLKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DFCC0874A743B6CB7BC6CB91554D72E /* XLLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XLLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B13B819CDC8FCA9F1EBBBD7648B2A173 /* Pods_XLLKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLKit_Tests.framework; path = "Pods-XLLKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9CED2028B0CA89F73A9CC18FBF46A /* Pods-XLLKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D37FD4B2F16F1A89259066E0E982F5E9 /* Pods_XLLKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC9F29DC79B49ECE99FBFB0116D0E15E /* XLLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = XLLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAD0B482620187FDA0CAA704685DDF5E /* XLLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLKit.xcconfig; sourceTree = "<group>"; };
+		CEBFE6FA7D3327CB5CDD1D77208DA7D0 /* UILabel+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+XLExtension.swift"; path = "XLLKit/Classes/Extension/UILabel+XLExtension.swift"; sourceTree = "<group>"; };
+		D243D6C156F78EB690E872A06AC27248 /* GlobeConstant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobeConstant.swift; path = XLLKit/Classes/Constant/GlobeConstant.swift; sourceTree = "<group>"; };
+		D37FD4B2F16F1A89259066E0E982F5E9 /* Pods_XLLKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLKit_Example.framework; path = "Pods-XLLKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E128A0357C68221AEC91D4ED07B17D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		DEAE4818E37CCB52D32609D7627DF658 /* Pods-XLLKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		E33869B450DD8F81CB3BA65A82BC5811 /* Pods-XLLKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLKit_Tests.modulemap"; sourceTree = "<group>"; };
+		EBAE7DE80843D319886EF62F16F059D1 /* XLLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-umbrella.h"; sourceTree = "<group>"; };
 		F10AD7ED312CFC4F706F5894105D56EC /* Pods-XLLKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F4BC0B1DF6974E41744ADA81F8BFD887 /* UIView+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIView+XLExtension.swift"; sourceTree = "<group>"; };
+		F6C44E74B5C51166E10F6D9CC4061BA0 /* XLLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLKit-prefix.pch"; sourceTree = "<group>"; };
 		FAD09B2D8CEEECA8F3736C1EC5BD6C4D /* Pods-XLLKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDB4AAE2E12ADF028A7846548867ABF7 /* Pods-XLLKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02455DEE188944793EFDFDD0C1B2C4F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8551A289FE6A563EFCC4160832179757 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D0B90C6D3D774FE1408D6A075B9F445 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2CD3D016FF9CF7D41B70D677BBF35D1F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3280C2EC8CD6A0FAE5A5B0068E34D60 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1705434FE493B1023944A6C74EEE3EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		271964B720C18F03E778695CB1F65E94 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				178D94BF402D6AA935EDA269D3D447DF /* XLLKit.modulemap */,
+				BAD0B482620187FDA0CAA704685DDF5E /* XLLKit.xcconfig */,
+				3E074EC2DB2B24A19479928CAE702104 /* XLLKit-dummy.m */,
+				69EDC2649C089768CC29DB517355926A /* XLLKit-Info.plist */,
+				F6C44E74B5C51166E10F6D9CC4061BA0 /* XLLKit-prefix.pch */,
+				EBAE7DE80843D319886EF62F16F059D1 /* XLLKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/XLLKit";
+			sourceTree = "<group>";
+		};
 		340549EE1B24A7C9CFB6B6E19572ACF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,28 +148,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50215AC6DE008B2D754784A69D5679B9 /* Development Pods */ = {
+		435246CBE2E1D565C75AEC20BFC3E78F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D3443DA32DBDF1A8A400834DD0DBC7D2 /* XLLKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		60A292B348655E8425CB251E1C88CFD8 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				493D950A97FCFF4825AE68867D81A539 /* XLView.swift */,
-			);
-			name = Component;
-			sourceTree = "<group>";
-		};
-		64D01A3B79186D84E0C13F5F028E2779 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				9E6C3F0D0560F2F63F9C6A37011C5F37 /* LICENSE */,
-				51D3F892541F819ABA4AA95136437FF9 /* README.md */,
-				DC9F29DC79B49ECE99FBFB0116D0E15E /* XLLKit.podspec */,
+				D4E128A0357C68221AEC91D4ED07B17D /* LICENSE */,
+				8B0BC67DC038C04878A292340BB26904 /* README.md */,
+				9DFCC0874A743B6CB7BC6CB91554D72E /* XLLKit.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -189,15 +191,40 @@
 			path = "Target Support Files/Pods-XLLKit_Tests";
 			sourceTree = "<group>";
 		};
-		A8A6E7DAAB1916B9F4DD8B65A171CAE0 /* Extension */ = {
+		73B1DC0EAB67ED52DD134A01F10850C8 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				53724FCB229FA91E002B4795 /* UILabel+XLExtension.swift */,
-				2BF280D76ACFF400E739FBC62C8DFDBE /* UIButton+XLExtension.swift */,
-				40459168C6556CB3DC73E24B15794F1E /* UIView+XLExtension.swift */,
-				53724FC9229FA8AC002B4795 /* UIImageView+XLExtension.swift */,
-				53724FCD229FA94A002B4795 /* UITextField+XLExtension.swift */,
-				53724FCF229FAA25002B4795 /* String+Extension.swift */,
+				D243D6C156F78EB690E872A06AC27248 /* GlobeConstant.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		96FB8BB20E5AEA9298B15EFB33AD26D3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCAE8A551B9BEAECCB8F91C87EED6AEF /* XLLKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9B7E3E6FFA9FD3D237389053DA709DE5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				20F1E608DE69C07D6A45900FFCDEEAA4 /* XLView.swift */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		AF000221A874F7CAD23EB248102FBAD1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6035D2546665ACE6429A1F135A1D3F55 /* String+Extension.swift */,
+				8D938CC158BB5E035AAB702C0FFBC359 /* UIButton+XLExtension.swift */,
+				034AE308BA674B0E02EB3632E91192C7 /* UIColor+XLExtension.swift */,
+				7647052E598534166DE0A99609F6BD0E /* UIImageView+XLExtension.swift */,
+				CEBFE6FA7D3327CB5CDD1D77208DA7D0 /* UILabel+XLExtension.swift */,
+				6AED968057CC5EBBD4E35BEDE9D04CBA /* UITextField+XLExtension.swift */,
+				F4BC0B1DF6974E41744ADA81F8BFD887 /* UIView+XLExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -210,11 +237,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CCAE8A551B9BEAECCB8F91C87EED6AEF /* XLLKit */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E3E6FFA9FD3D237389053DA709DE5 /* Component */,
+				73B1DC0EAB67ED52DD134A01F10850C8 /* Constant */,
+				AF000221A874F7CAD23EB248102FBAD1 /* Extension */,
+				435246CBE2E1D565C75AEC20BFC3E78F /* Pod */,
+				271964B720C18F03E778695CB1F65E94 /* Support Files */,
+			);
+			name = XLLKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				50215AC6DE008B2D754784A69D5679B9 /* Development Pods */,
+				96FB8BB20E5AEA9298B15EFB33AD26D3 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				340549EE1B24A7C9CFB6B6E19572ACF2 /* Products */,
 				02226BF8D5028115EEABE0D4BAA94072 /* Targets Support Files */,
@@ -229,32 +269,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3443DA32DBDF1A8A400834DD0DBC7D2 /* XLLKit */ = {
-			isa = PBXGroup;
-			children = (
-				60A292B348655E8425CB251E1C88CFD8 /* Component */,
-				A8A6E7DAAB1916B9F4DD8B65A171CAE0 /* Extension */,
-				64D01A3B79186D84E0C13F5F028E2779 /* Pod */,
-				DE47D6D75DADF15AFA03CCBE5E565796 /* Support Files */,
-			);
-			name = XLLKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		DE47D6D75DADF15AFA03CCBE5E565796 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				60A8A8754073E25A0899C28EE8A51BED /* XLLKit.modulemap */,
-				5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */,
-				AB50EED0F0B0C8D16850CB86B537F358 /* XLLKit-dummy.m */,
-				171B335A28A5B3F0DE4CC16E529D67CD /* XLLKit-Info.plist */,
-				442D9FE4C3E3135364DDF9B327F25670 /* XLLKit-prefix.pch */,
-				1ADC71B42864BEFAF8C9E74A7B7B6991 /* XLLKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/XLLKit";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,11 +280,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAEED7849DE1BA9F76C90DEED4C95761 /* Headers */ = {
+		AA983DE20E93FC7C41F16906295E8C95 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D371D0DB33175905441591871FEBC67 /* XLLKit-umbrella.h in Headers */,
+				A9E4393CC2FBC9A3010E24ED53A0C02E /* XLLKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +320,12 @@
 		};
 		8B88C9CB8FC2308E0933E14DE48FFBD3 /* XLLKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF34B25FB247B51D92A3A54AAD2BC40F /* Build configuration list for PBXNativeTarget "XLLKit" */;
+			buildConfigurationList = 5B6ED4D1B6AE47BA300C9204FCFB7667 /* Build configuration list for PBXNativeTarget "XLLKit" */;
 			buildPhases = (
-				AAEED7849DE1BA9F76C90DEED4C95761 /* Headers */,
-				F0FB34AA89AEC63952085BC0DAF6F2E0 /* Sources */,
-				C3280C2EC8CD6A0FAE5A5B0068E34D60 /* Frameworks */,
-				3D61A0239B29FCA18E481BCD4AA35731 /* Resources */,
+				AA983DE20E93FC7C41F16906295E8C95 /* Headers */,
+				10716F10344C96CA262EDAF08F779F9B /* Sources */,
+				02455DEE188944793EFDFDD0C1B2C4F9 /* Frameworks */,
+				01B21A3BFA1CFEA39730642ACBB22C7D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -349,11 +363,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				TargetAttributes = {
-					A76C86D573C1DE73159846D0BF6E4B39 = {
-						LastSwiftMigration = 1020;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,14 +384,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		133F4010D9892C8C956A50627E4C1030 /* Resources */ = {
+		01B21A3BFA1CFEA39730642ACBB22C7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D61A0239B29FCA18E481BCD4AA35731 /* Resources */ = {
+		133F4010D9892C8C956A50627E4C1030 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,6 +408,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		10716F10344C96CA262EDAF08F779F9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486660931A84EB110A7346B75FDB74E9 /* GlobeConstant.swift in Sources */,
+				C4E192FEC2C3F63E8E9A221D0D8CFF6E /* String+Extension.swift in Sources */,
+				AAC65384C9CA85E465EB9A3937A47AAA /* UIButton+XLExtension.swift in Sources */,
+				DF06AF492E630ECF55ADAE66227E78E5 /* UIColor+XLExtension.swift in Sources */,
+				3DB98E3E0C25408BD3437AD5EFAF938F /* UIImageView+XLExtension.swift in Sources */,
+				AADC8B108E2DE2392BE4D10BC343E38D /* UILabel+XLExtension.swift in Sources */,
+				B51C0912B3B727DF297D9A90EDFE392F /* UITextField+XLExtension.swift in Sources */,
+				E062C20158F38CB47562E6BB27666A34 /* UIView+XLExtension.swift in Sources */,
+				CC3466EDFAB7D58538F72F0489B5EFD8 /* XLLKit-dummy.m in Sources */,
+				75494D872D494B0CFFE6B6A1DBFF920B /* XLView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		366F8405713DC742F1755AC45B0B307E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,22 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53724FCA229FA8AC002B4795 /* UIImageView+XLExtension.swift in Sources */,
 				3F320F8CC0726F341E6DDC2DCCAA34FE /* Pods-XLLKit_Example-dummy.m in Sources */,
-				53724FCC229FA91E002B4795 /* UILabel+XLExtension.swift in Sources */,
-				53724FD0229FAA25002B4795 /* String+Extension.swift in Sources */,
-				53724FCE229FA94A002B4795 /* UITextField+XLExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F0FB34AA89AEC63952085BC0DAF6F2E0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3033FEE4A057A8111F5278C926F05699 /* UIButton+XLExtension.swift in Sources */,
-				87B0D1FA95C6194D89791A806FEAF8CD /* UIView+XLExtension.swift in Sources */,
-				304A3974BF59293DF9177656663B5A6D /* XLLKit-dummy.m in Sources */,
-				6D180F15471F352CE3EF29AF604D1A7B /* XLView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +459,75 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		45A0499A76C1E29FAADD3F7924DA52C8 /* Debug */ = {
+		4902A8A93923C554C86FC6216DF214FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */;
+			baseConfigurationReference = 17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		526959DA2FF8F3079EA53151550D70CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD0B482620187FDA0CAA704685DDF5E /* XLLKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLLKit/XLLKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLLKit/XLLKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLLKit/XLLKit.modulemap";
+				PRODUCT_MODULE_NAME = XLLKit;
+				PRODUCT_NAME = XLLKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57C50349D856E2A80AEC856A37639AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD0B482620187FDA0CAA704685DDF5E /* XLLKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -478,42 +555,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		4902A8A93923C554C86FC6216DF214FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17C96E7F91E670D0BC8C1CAE4EEED8CB /* Pods-XLLKit_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		5BC06FFA0F05DD7CA2945A90FD952939 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -553,7 +594,6 @@
 			baseConfigurationReference = 7EE5D0E95D8E2223C2EBF3963EFA6430 /* Pods-XLLKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -576,45 +616,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6AB8706CAE4CA3E449ED0CCBC9CC9BCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F08E5B9F32EC48913E344B47649225A /* XLLKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XLLKit/XLLKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLLKit/XLLKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XLLKit/XLLKit.modulemap";
-				PRODUCT_MODULE_NAME = XLLKit;
-				PRODUCT_NAME = XLLKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -669,7 +675,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -794,20 +801,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5B6ED4D1B6AE47BA300C9204FCFB7667 /* Build configuration list for PBXNativeTarget "XLLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C50349D856E2A80AEC856A37639AA2 /* Debug */,
+				526959DA2FF8F3079EA53151550D70CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94419E63B7B5C563389DA41D92E6065C /* Build configuration list for PBXNativeTarget "Pods-XLLKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				637414F5A65020B9F8B217AFCC255576 /* Debug */,
 				4902A8A93923C554C86FC6216DF214FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF34B25FB247B51D92A3A54AAD2BC40F /* Build configuration list for PBXNativeTarget "XLLKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45A0499A76C1E29FAADD3F7924DA52C8 /* Debug */,
-				6AB8706CAE4CA3E449ED0CCBC9CC9BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

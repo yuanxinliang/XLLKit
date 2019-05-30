@@ -1,9 +1,11 @@
 PODS:
-  - XLLKit (0.1.0):
-    - XLLKit/Component (= 0.1.0)
-    - XLLKit/Extension (= 0.1.0)
-  - XLLKit/Component (0.1.0)
-  - XLLKit/Extension (0.1.0)
+  - XLLKit (0.1.1):
+    - XLLKit/Component (= 0.1.1)
+    - XLLKit/Constant (= 0.1.1)
+    - XLLKit/Extension (= 0.1.1)
+  - XLLKit/Component (0.1.1)
+  - XLLKit/Constant (0.1.1)
+  - XLLKit/Extension (0.1.1)
 
 DEPENDENCIES:
   - XLLKit (from `../`)
@@ -13,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XLLKit: 4c583a2a3e5c55beb4c7b96c9a542535be7baa9f
+  XLLKit: b7f421b21b5360d1c30827acfc6563e6de939743
 
 PODFILE CHECKSUM: 37bc1febcc95e30ac09470ac9f2b54757c7411f6
 

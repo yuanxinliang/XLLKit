@@ -13,11 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print(XLView())
-        print(TButton())
-        
-//        let a: TButton = TButton
+        print(xlAppName)
+        print(xlAppBuild)
+        print(xlAppVersion)
+        print(xlAppBundleID)
         
     }
 
