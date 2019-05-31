@@ -10,13 +10,13 @@ import Foundation
 // MARK: --<屏幕相关尺寸和宽高值>--
 
 /// 屏幕宽度
-public var xlScreenWidth: CGFloat
+public var xl_screenWidth: CGFloat
 {
     return UIScreen.main.bounds.width
 }
 
 /// 屏幕高度
-public var xlScreenHeight: CGFloat
+public var xl_screenHeight: CGFloat
 {
     return UIScreen.main.bounds.height
 }
@@ -32,127 +32,127 @@ public var xlScreenHeight: CGFloat
  */
 
 /// 3.5英寸屏幕
-public var xlIPhoneInch35: Bool
+public var xl_iPhoneInch35: Bool
 {
-    return (xlScreenWidth == 320.0) && (xlScreenHeight == 480.0)
+    return (xl_screenWidth == 320.0) && (xl_screenHeight == 480.0)
 }
 
 /// 4.0英寸屏幕
-public var xlIPhoneInch40: Bool
+public var xl_iPhoneInch40: Bool
 {
-    return (xlScreenWidth == 320.0) && (xlScreenHeight == 568.0)
+    return (xl_screenWidth == 320.0) && (xl_screenHeight == 568.0)
 }
 
 /// 4.7英寸屏幕
-public var xlIPhoneInch47: Bool
+public var xl_iPhoneInch47: Bool
 {
-    return (xlScreenWidth == 375.0) && (xlScreenHeight == 667.0)
+    return (xl_screenWidth == 375.0) && (xl_screenHeight == 667.0)
 }
 
 /// 5.5英寸屏幕
-public var xlIPhoneInch55: Bool
+public var xl_iPhoneInch55: Bool
 {
-    return (xlScreenWidth == 414.0) && (xlScreenHeight == 736.0)
+    return (xl_screenWidth == 414.0) && (xl_screenHeight == 736.0)
 }
 
 /// 5.8英寸屏幕
-public var xlIPhoneInch58: Bool
+public var xl_iPhoneInch58: Bool
 {
-    return (xlScreenWidth == 375.0) && (xlScreenHeight == 812.0)
+    return (xl_screenWidth == 375.0) && (xl_screenHeight == 812.0)
 }
 
 /// 6.1英寸屏幕
-public var xlIPhoneInch61: Bool
+public var xl_iPhoneInch61: Bool
 {
-    return (xlScreenWidth == 414.0) && (xlScreenHeight == 896.0)
+    return (xl_screenWidth == 414.0) && (xl_screenHeight == 896.0)
 }
 
 /// 6.5英寸屏幕
-public var xlIPhoneInch65: Bool
+public var xl_iPhoneInch65: Bool
 {
-    return (xlScreenWidth == 414.0) && (xlScreenHeight == 896.0)
+    return (xl_screenWidth == 414.0) && (xl_screenHeight == 896.0)
 }
 
 /// 是否全面屏
-public var xlIPhoneFullScreen: Bool
+public var xl_iPhoneFullScreen: Bool
 {
-    return xlIPhoneInch58 || xlIPhoneInch61 || xlIPhoneInch65
+    return xl_iPhoneInch58 || xl_iPhoneInch61 || xl_iPhoneInch65
 }
 
 /// 宽度比例 -- 以375的宽度为基准
-public var xlWidthScale: CGFloat
+public var xl_widthScale: CGFloat
 {
-    return xlScreenWidth / 375.0
+    return xl_screenWidth / 375.0
 }
 
 /// 高度比例 -- 以667的高度为基准
-public var xlHeightScale: CGFloat
+public var xl_heightScale: CGFloat
 {
-    return xlScreenHeight / 667.0
+    return xl_screenHeight / 667.0
 }
 
 /// 状态栏高度
-public var xlStatusBarHeight: CGFloat
+public var xl_statusBarHeight: CGFloat
 {
-    return xlIPhoneFullScreen ? 44.0 : 20.0
+    return xl_iPhoneFullScreen ? 44.0 : 20.0
 }
 
 /// 导航栏高度
-public var xlNavigationBarHeight: CGFloat
+public var xl_navigationBarHeight: CGFloat
 {
-    return xlIPhoneFullScreen ? 88.0 : 64.0
+    return xl_iPhoneFullScreen ? 88.0 : 64.0
 }
 
 /// 底部安全区域高度
-public var xlBottomSafeAeraHeight: CGFloat
+public var xl_bottomSafeAeraHeight: CGFloat
 {
-    return xlIPhoneFullScreen ? 34.0 : 0.0
+    return xl_iPhoneFullScreen ? 34.0 : 0.0
 }
 
 /// 底部分栏高度
-public var xlTabBarHeight: CGFloat
+public var xl_tabBarHeight: CGFloat
 {
-    return xlIPhoneFullScreen ? 83.0 : 49.0
+    return xl_iPhoneFullScreen ? 83.0 : 49.0
 }
 
 /// 等比例计算宽度值
-public func xlX(_ x: CGFloat) -> CGFloat
+public func xl_x(_ x: CGFloat) -> CGFloat
 {
-    return (xlWidthScale < 1.0) ? (x * xlWidthScale) : x
+    return (xl_widthScale < 1.0) ? (x * xl_widthScale) : x
 }
 
 /// 等比例计算高度值
-public func xlY(_ y: CGFloat) -> CGFloat
+public func xl_y(_ y: CGFloat) -> CGFloat
 {
-    return (xlHeightScale < 1.0) ? (y * xlHeightScale) : y
+    return (xl_heightScale < 1.0) ? (y * xl_heightScale) : y
 }
 
 // MARK: --<App应用信息>--
 
 /// APP 名称
-public var xlAppName: String
+public var xl_appName: String
 {
     return Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
 }
 
 /// APP 版本号
-public var xlAppVersion: String
+public var xl_appVersion: String
 {
     return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 }
 
 /// APP Build号
-public var xlAppBuild: String
+public var xl_appBuild: String
 {
     return Bundle.main.infoDictionary!["CFBundleVersion"] as! String
 }
 
 /// APP Bundle ID
-public var xlAppBundleID: String
+public var xl_appBundleID: String
 {
     return Bundle.main.bundleIdentifier!
 }
 
 // MARK: --<手机设备使用信息>--
-// MARK: --<手机设备硬件信息>--
+// MARK: --<手机设备硬件、内存等信息>--
 

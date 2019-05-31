@@ -8,13 +8,13 @@
 public extension UIColor
 {
     /// 通过16进制字符串，设置颜，透明度为1.0
-    class func xlHexString(hex: String) -> UIColor
+    class func xl_hexString(_ hex: String) -> UIColor
     {
-        return xlHexString(hex: hex, alpha: 1.0)
+        return xl_hexString(hex, 1.0)
     }
     
     /// 通过16进制字符串、透明度，设置颜色
-    class func xlHexString(hex: String, alpha: CGFloat) -> UIColor
+    class func xl_hexString(_ hex: String, _ alpha: CGFloat) -> UIColor
     {
         var tempHex = hex
         
@@ -53,26 +53,27 @@ public extension UIColor
         Scanner.init(string: greenHex).scanHexInt32(&g)
         Scanner.init(string: blueHex).scanHexInt32(&b)
         
-        return xlRGBA(r: CGFloat(r), g: CGFloat(g), b: CGFloat(b), a: alpha)
+        return xl_RGBA(CGFloat(r), CGFloat(g), CGFloat(b), alpha)
     }
     
     /// 随机色
-    class func xlRandomColor() -> UIColor
+    class func xl_randomColor() -> UIColor
     {
-        return xlRGB(r: CGFloat(arc4random() % 255),
-                     g: CGFloat(arc4random() % 255),
-                     b: CGFloat(arc4random() % 255))
+        return xl_RGB(CGFloat(arc4random() % 255),
+                      CGFloat(arc4random() % 255),
+                      CGFloat(arc4random() % 255))
     }
     
     /// 通过r、g、b设置颜色，透明度为1.0
-    class func xlRGB(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor
+    class func xl_RGB(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor
     {
-        return xlRGBA(r: r, g: g, b: b, a: 1.0)
+        return xl_RGBA(r, g, b, 1.0)
     }
     
     /// 通过r、g、b、a设置颜色
-    class func xlRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor
+    class func xl_RGBA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor
     {
         return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
     }
+    
 }
