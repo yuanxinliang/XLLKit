@@ -20,16 +20,16 @@ Pod::Spec.new do |s|
   
 #s.source_files = 'XLLKit/Classes/**/*'
 
+  s.subspec 'Constant' do |ss|
+    ss.source_files = 'XLLKit/Classes/Constant'
+  end
+  
   s.subspec 'Extension' do |ss|
     ss.source_files = 'XLLKit/Classes/Extension'
   end
   
   s.subspec 'Component' do |ss|
       ss.source_files = 'XLLKit/Classes/Component'
-  end
-  
-  s.subspec 'Constant' do |ss|
-      ss.source_files = 'XLLKit/Classes/Constant'
   end
 
 end

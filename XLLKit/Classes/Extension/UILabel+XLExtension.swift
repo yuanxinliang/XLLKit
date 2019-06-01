@@ -5,9 +5,9 @@
 //  Created by ZZCMXL on 2019/5/30.
 //
 
-var XLLabelDefaultAlignment: NSTextAlignment = .left
-var XLLabelDefaultNumberOfLines: Int = 1
-var XLLabelDefaultBackgroundColor: UIColor = .white
+public var XLLabelDefaultAlignment: NSTextAlignment = .left
+public var XLLabelDefaultNumberOfLines: Int = 1
+public var XLLabelDefaultBackgroundColor: UIColor = .white
 
 public extension UILabel
 {

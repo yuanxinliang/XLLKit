@@ -17,16 +17,17 @@
   },
   "subspecs": [
     {
+      "name": "Constant",
+      "source_files": "XLLKit/Classes/Constant"
+    },
+    {
       "name": "Extension",
       "source_files": "XLLKit/Classes/Extension"
     },
     {
       "name": "Component",
       "source_files": "XLLKit/Classes/Component"
-    },
-    {
-      "name": "Constant",
-      "source_files": "XLLKit/Classes/Constant"
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }

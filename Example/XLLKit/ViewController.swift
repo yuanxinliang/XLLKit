@@ -14,12 +14,26 @@ class ViewController: UIViewController , UITableViewDelegate{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        print("test")
         
+//        let phone = "13512341234"
+//        let tel = "17512344321"
+//        let code = "1234567"
+//        print(phone.xl_isPhoneNumber())
+//        print(phone.xl_isTelePhoneNumber())
+//        print(tel.xl_isPhoneNumber())
+//        print(tel.xl_isTelePhoneNumber())
+//        print(code.xl_isVericationCode())
+//        print(".".xl_isMatch(regularString: "^[\\.]+$"))
+        print("123A".xl_isMatch(regularString: "[a-z]"))
     }
     
     func test()
     {
+//        let text = "14511112222"
+//        let pattern = "^(1)([3|5|7|8])([0-9]{9})"
+//        let isMatch = NSRegularExpression.xl_isMatch(string: text, pattern: pattern, ignoreCase: false)
+//        print(isMatch)
+        
         print(xl_appName)
         print(xl_appBuild)
         print(xl_appVersion)
@@ -54,6 +68,14 @@ class ViewController: UIViewController , UITableViewDelegate{
         label.layer.borderColor = UIColor.red.cgColor
         label.layer.borderWidth = 1.0;
         label.numberOfLines = 0
+        
+        print("test")
+        XLBtnDefaultBackgroundColor = .gray
+        XLBtnDefaultTitleColor = .orange
+        let btn = UIButton.xl_createBtn(title: "button1")
+        btn.xl_setFrame(x: 20, y: 100, width: 100, height: 50)
+        self.view.addSubview(btn)
+        btn.xl_setHorizontalGradientLayer(startColor: .red, endColor: .orange, cornerRadius: 25)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
