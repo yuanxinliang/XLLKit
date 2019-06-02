@@ -16,6 +16,8 @@
  +  一个或一个以上
  ?  0个或一个
  .  匹配除换行符以外的任意字符
+ 
+ [\u4E00-\u9FA5] 汉字的正则匹配
  */
 
 // MARK: 正则字符串
@@ -32,10 +34,10 @@ public enum XLRegularString: String
     case verificationCode = "^(\\d{4}|\\d{6})$"
     
     /// 邮箱格式 - 只允许英文字母、数字、下划线、英文句号、以及中划线组成 y-30@qq.com
-    case email = "^([A-Za-z0-9_-]+)(@)([A-Za-z0-9]+)(\\.)([A-Za-z0-9]+)$"
+    case email = "^([\\w-]+)(@)([A-Za-z\\d]+)(\\.)([A-Za-z\\d]+)$"
     
     /// 用户名格式 - 只允许使用字母、数字、下滑线、横杠，3~20位
-    case username = "^[A-Za-z0-9_-]{3,20}$"
+    case username = "^[\\w-]{3,20}$"
     
     /*
      ^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{6,20}$
@@ -47,20 +49,21 @@ public enum XLRegularString: String
      $ 匹配行尾位置
      */
     
-    /// 密码格式 - 只允许字母和数字组合的密码，6~20位
-    case password = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{6,20}$"
+    /// 密码格式 - 1.至少包含一个字母；2.至少包含一个数字；3，长度为6~20位
+//    case password = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{6,20}$"
+    case password = "^(?=.*[\\d]+)(?=.*[A-Za-z]+)([A-Za-z\\d]{6,20})$"
     
-    /// 邮政编码格式 - 只允许由6位数字组成
+    /// 邮政编码格式 - 必须由6位数字组成
     case postalCode = "^\\d{6}$"
     
     /// 身份证号格式 - 15位或18位的身份证号
     case idCardNumber = "^(\\d{14}|\\d{17})([\\dxX])$"
     
     /// 数字 - 包含数字
-    case hasNumber = "[0-9]+"
+    case hasNumber = "[\\d]+"
     
     /// 数字 - 只包含数字
-    case allNumber = "^[0-9]+$"
+    case allNumber = "^[\\d]+$"
     
     /// 小写字母 - 包含小写字母
     case hasLowerCase = "[a-z]+"
@@ -74,12 +77,32 @@ public enum XLRegularString: String
     /// 大写字母 - 只包含大写字母
     case allUpperCase = "^[A-Z]+$"
     
-    /// 数字和字母 - 包含可能只有数字、可能只有字母、也可能字母和数字都有
-    case hasNumberLetter = "[A-Za-z0-9]+"
+    /// 字母 - 包含字母
+    case hasLetter = "[A-Za-z]+"
     
-    /// 数字和字母 - 同时包含字母和数字
-    case bothNumberLetter = "(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"
+    /// 字母 - 只包含字母
+    case allLetter = "^[A-Za-z]+$"
+    
+    /// 数字和字母 - 包含数字和字母
+    case hasNumberLetter = "[A-Za-z\\d]+"
+    
+    /// 数字和字母 - 同时包含数字和密码
+    case bothNumberLetter = "(?![0-9]+)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"
+    
+    /// 表情符
+    case emoji = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]"
+    
+    /// 中文
+    case chinese = "[\\u4E00-\\u9FA5]+"
+    
+    /// 限制输入： 只允许输入数字、字母、中文字符、九宫格输入法(➋➌➍➎➏➐➑➒)、·•、限制 1-30，应用场景：用户名
+    case limitInput1 = "[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}"
+    
+    /// 限制输入： 只允许输入 0-9和xX的字符，应用场景：身份证号
+    case limitInput2 = "[0-9xX]+"
 }
+
+// MARK: 正则匹配
 
 public extension String
 {
@@ -126,7 +149,7 @@ public extension String
     }
     
     /// 判断密码
-    func xl_isPasswork() -> Bool
+    func xl_isPassword() -> Bool
     {
         return xl_isMatch(regularString: .password)
     }
@@ -142,4 +165,95 @@ public extension String
     {
         return xl_isMatch(regularString: .idCardNumber)
     }
+    
+    /// 是否包含数字的字符串
+    func xl_hasNumber() -> Bool
+    {
+        return xl_isMatch(regularString: .hasNumber)
+    }
+    
+    /// 是否纯数字字符串
+    func xl_allNumber() -> Bool
+    {
+        return xl_isMatch(regularString: .allNumber)
+    }
+    
+    /// 是否包含小写字母的字符串
+    func xl_hasLowerCase() -> Bool
+    {
+        return xl_isMatch(regularString: .hasLowerCase)
+    }
+    
+    /// 是否纯小写字母字符串
+    func xl_allLowerCase() -> Bool
+    {
+        return xl_isMatch(regularString: .allLowerCase)
+    }
+    
+    /// 是否包含大写字母的字符串
+    func xl_hasUpperCase() -> Bool
+    {
+        return xl_isMatch(regularString: .hasUpperCase)
+    }
+    
+    /// 是否纯大写字母字符串
+    func xl_allUpperCase() -> Bool
+    {
+        return xl_isMatch(regularString: .allUpperCase)
+    }
+    
+    /// 是否包含字母的字符串
+    func xl_hasLetter() -> Bool
+    {
+        return xl_isMatch(regularString: .hasLetter)
+    }
+    
+    /// 是否纯字母字符串
+    func xl_allLetter() -> Bool
+    {
+        return xl_isMatch(regularString: .allLetter)
+    }
+    
+    /// 是否包含数字或字母的字符串
+    func xl_hasNumberOrLetter() -> Bool
+    {
+        return xl_isMatch(regularString: .hasNumberLetter)
+    }
+    
+    /// 是否同时包含数字和密码的字符串
+    func xl_bothNumberAndLetter() -> Bool
+    {
+        return xl_isMatch(regularString: .bothNumberLetter)
+    }
+    
+    /// 是否包含表情符
+    func xl_hasEmoji() -> Bool
+    {
+        return xl_isMatch(regularString: .emoji)
+    }
+    /// 是否包含中文字符
+    func xl_hasChinese() -> Bool
+    {
+        return xl_isMatch(regularString: .chinese)
+    }
 }
+
+// MARK: 计算字符串的宽高
+
+public extension String
+{
+    /// 根据固定宽度和字体，计算字符串的高度
+    func xl_height(width: CGFloat, font: UIFont) -> CGFloat
+    {
+        let frame = (self as NSString).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
+        return frame.height
+    }
+    
+    /// 根据固定高度和字体，计算字符串的宽度
+    func xl_width(height: CGFloat, font: UIFont) -> CGFloat
+    {
+        let frame = (self as NSString).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
+        return frame.width
+    }
+}
+

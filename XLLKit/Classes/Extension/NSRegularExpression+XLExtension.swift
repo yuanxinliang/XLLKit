@@ -5,7 +5,7 @@
 //  Created by XL Yuen on 2019/6/1.
 //
 
-// MARK: 检索 - Matching
+// MARK: 匹配 - Matching
 public extension NSRegularExpression
 {
     class func xl_isMatch(string: String, pattern: String) -> Bool
@@ -34,5 +34,16 @@ public extension NSRegularExpression
 // MARK: 替换 - Replacement
 public extension NSRegularExpression
 {
-    
+    class func xl_replacement(string: String, replace: String, pattern: String) -> String
+    {
+        var value = string
+        do {
+            let regular = try NSRegularExpression(pattern: pattern, options: [])
+            let range = NSRange(location: 0, length: string.count)
+            value = regular.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: replace)
+        } catch {
+            print(error)
+        }
+        return value
+    }
 }

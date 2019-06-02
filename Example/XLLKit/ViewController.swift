@@ -15,16 +15,77 @@ class ViewController: UIViewController , UITableViewDelegate{
     {
         super.viewDidLoad()
         
-//        let phone = "13512341234"
-//        let tel = "17512344321"
-//        let code = "1234567"
-//        print(phone.xl_isPhoneNumber())
-//        print(phone.xl_isTelePhoneNumber())
-//        print(tel.xl_isPhoneNumber())
-//        print(tel.xl_isTelePhoneNumber())
-//        print(code.xl_isVericationCode())
-//        print(".".xl_isMatch(regularString: "^[\\.]+$"))
-        print("123A".xl_isMatch(regularString: "[a-z]"))
+        regularReplace()
+    }
+    
+    func regularReplace()
+    {
+        let string = "ab-c=a0ZP"
+        let pattern = "[a-z]"
+        let replace = "k"
+        do {
+            let regular = try NSRegularExpression(pattern: pattern, options: [])
+            let range = NSRange(location: 0, length: string.count)
+            let str01 = regular.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: replace)
+            print(str01)
+        } catch {
+            print(error)
+        }
+        
+        print(NSRegularExpression.xl_replacement(string: string, replace: replace, pattern: pattern))
+    }
+    
+    func regularTest()
+    {
+        //        let phone = "13512341234"
+        //        let tel = "17512344321"
+        //        let code = "1234567"
+        //        print(phone.xl_isPhoneNumber())
+        //        print(phone.xl_isTelePhoneNumber())
+        //        print(tel.xl_isPhoneNumber())
+        //        print(tel.xl_isTelePhoneNumber())
+        //        print(code.xl_isVericationCode())
+        //        print(".".xl_isMatch(regularString: "^[\\.]+$"))
+        //        print(".".xl_isMatch(regularString: "^\\w+$"))
+        
+        //        let string = ")))_00000"
+        //        let pattern = "\\w+"
+        //        do {
+        //            let regular = try NSRegularExpression(pattern: pattern, options: [])
+        //            let range = NSRange(location: 0, length: string.count)
+        //            let result = regular.firstMatch(in: string, options: [], range: range)
+        //            print(result?.resultType as Any)
+        //            print(result?.regularExpression as Any)
+        //            print(result?.range as Any)
+        //        } catch {
+        //
+        //            print(error)
+        //        }
+        
+        //        print("abcabaab ab".xl_isMatch(regularString: "ab"))
+        
+        //        let string = "abcabaab ab"
+        //        let pattern = "\\bab\\b"
+        //        do {
+        //            let regular = try NSRegularExpression(pattern: pattern, options: [])
+        //            let range = NSRange(location: 0, length: string.count)
+        //            let result = regular.firstMatch(in: string, options: [], range: range)
+        //            let reuslts = regular.matches(in: string, options: [], range: range)
+        ////            print(result?.resultType as Any)
+        ////            print(result?.regularExpression as Any)
+        ////            print(result?.range as Any)
+        ////            print(reuslts)
+        //            for re in reuslts
+        //            {
+        //                print(re)
+        //            }
+        //        } catch {
+        //
+        //            print(error)
+        //        }
+        //        print("19..9uu9".xl_isMatch(regularString: "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"))
+        print("1哈哈😆".xl_hasEmoji())
+        print("1😁哈哈".xl_hasChinese())
     }
     
     func test()
