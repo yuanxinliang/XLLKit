@@ -21,7 +21,12 @@ class ViewController: UIViewController , UITableViewDelegate{
     {
         self.view.backgroundColor = UIColor.xl_randomColor()
 //        testAlertView()
-        self.present(AViewController(), animated: true, completion: nil)
+//        self.present(AViewController(), animated: true, completion: nil)
+        XLAlertController.xl_alertController(vc: self, title: "警告⚠️", message: "tishi", leftActionTitle: "cane", rightActionTitle: "ok", leftHandler: { (action) in
+            print("123")
+        }) { (action) in
+            print("231")
+        }
     }
     
     func testAlertView()
