@@ -7,6 +7,7 @@
 
 import UIKit
 
-class XLAlertController: NSObject {
-
+class XLAlertController: UIAlertController
+{
+    
 }

@@ -251,3 +251,29 @@ public extension UIView
         insertSubview(imageView, at: 0)
     }
 }
+
+// MARK: 获取当前控制器
+
+public extension UIView
+{
+    /// 通过视图响应者链条获取视图的当前控制器
+    var xl_viewController : UIViewController?
+    {
+        get
+        {
+            return xl_getCurrentViewController()
+        }
+    }
+    
+    fileprivate func xl_getCurrentViewController() -> UIViewController?
+    {
+        var nextRes: UIResponder? = self
+        repeat {
+            nextRes = nextRes?.next
+            if let vc = (nextRes as? UIViewController) {
+                return vc
+            }
+        } while nextRes != nil
+        return nil
+    }
+}

@@ -14,12 +14,14 @@ class ViewController: UIViewController , UITableViewDelegate{
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        print(self.view.xl_viewController ?? UIViewController() as UIViewController)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         self.view.backgroundColor = UIColor.xl_randomColor()
-        testAlertView()
+//        testAlertView()
+        self.present(AViewController(), animated: true, completion: nil)
     }
     
     func testAlertView()
