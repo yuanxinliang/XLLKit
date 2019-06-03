@@ -26,7 +26,12 @@
     },
     {
       "name": "Component",
-      "source_files": "XLLKit/Classes/Component"
+      "source_files": "XLLKit/Classes/Component",
+      "dependencies": {
+        "XLLKit/Extension": [
+
+        ]
+      }
     },
     {
       "name": "Tool",

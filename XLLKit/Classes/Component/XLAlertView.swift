@@ -19,11 +19,11 @@ let xl_alertViewTitieLeftM      : CGFloat =   15 // 标题距离左边的边距
 let xl_alertViewTitleW          : CGFloat =   (xl_alertViewW - xl_alertViewTitieLeftM * 2) // 标题宽度
 let xl_alertViewBtnH            : CGFloat =   44 // 按钮的高度
 
-public var xl_colorTitle           : UIColor = UIColor.xl_hex(0x07090C)
-public var xl_colorMessage         : UIColor = UIColor.xl_hex(0x07090C)
-public var xl_colorCancelTitle     : UIColor = UIColor.xl_hex(0x07090C)
-public var xl_colorConfirmTitle    : UIColor = UIColor.xl_hex(0x4685F0)
-public var xl_colorLine            : UIColor = UIColor.xl_hex(0xE9E9FF)
+public var xl_colorTitle        : UIColor = UIColor.xl_hex(0x07090C)
+public var xl_colorMessage      : UIColor = UIColor.xl_hex(0x07090C)
+public var xl_colorCancelTitle  : UIColor = UIColor.xl_hex(0x07090C)
+public var xl_colorConfirmTitle : UIColor = UIColor.xl_hex(0x4685F0)
+public var xl_colorLine         : UIColor = UIColor.xl_hex(0xE9E9FF)
 
 public class XLAlertView: UIView
 {
