@@ -3,9 +3,11 @@ PODS:
     - XLLKit/Component (= 0.1.4)
     - XLLKit/Constant (= 0.1.4)
     - XLLKit/Extension (= 0.1.4)
+    - XLLKit/Tool (= 0.1.4)
   - XLLKit/Component (0.1.4)
   - XLLKit/Constant (0.1.4)
   - XLLKit/Extension (0.1.4)
+  - XLLKit/Tool (0.1.4)
 
 DEPENDENCIES:
   - XLLKit (from `../`)
@@ -15,8 +17,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XLLKit: 1c711f1beda8c03fb6ff16facfe46879924a2d22
+  XLLKit: c55d6d6ed1b05135a1e161aab63dd18016096dd8
 
 PODFILE CHECKSUM: 37bc1febcc95e30ac09470ac9f2b54757c7411f6
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.0.rc.1

@@ -49,7 +49,7 @@ public enum XLRegularString: String
      $ 匹配行尾位置
      */
     
-    /// 密码格式 - 1.至少包含一个字母；2.至少包含一个数字；3，长度为6~20位
+    /// 密码格式 - 0.字母和数字组合的字符串 1.至少包含一个字母；2.至少包含一个数字；3，长度为6~20位
 //    case password = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{6,20}$"
     case password = "^(?=.*[\\d]+)(?=.*[A-Za-z]+)([A-Za-z\\d]{6,20})$"
     
@@ -87,7 +87,7 @@ public enum XLRegularString: String
     case hasNumberLetter = "[A-Za-z\\d]+"
     
     /// 数字和字母 - 同时包含数字和密码
-    case bothNumberLetter = "(?![0-9]+)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"
+    case bothNumberLetter = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"
     
     /// 表情符
     case emoji = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]"

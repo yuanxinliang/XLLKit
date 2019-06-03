@@ -30,6 +30,11 @@ Pod::Spec.new do |s|
   
   s.subspec 'Component' do |ss|
       ss.source_files = 'XLLKit/Classes/Component'
+      ss.dependency 'XLLKit/Extension'
+  end
+  
+  s.subspec 'Tool' do |ss|
+      ss.source_files = 'XLLKit/Classes/Tool'
   end
 
 end

@@ -14,8 +14,27 @@ class ViewController: UIViewController , UITableViewDelegate{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        regularReplace()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.backgroundColor = UIColor.xl_randomColor()
+        testAlertView()
+    }
+    
+    func testAlertView()
+    {
+        XLAlertView.showAlertView(title: "警告⚠️", message: "密码格式错误", cancelTitle: "取消", confirmTitle: "确认", cancelClosure: {
+
+        }) {
+
+        }
+//        XLAlertView.showAlertView(message: "警告⚠️警告⚠️警告⚠️警告⚠️警告⚠️警告⚠️")
+    }
+    
+    func test01()
+    {
+        print("appppp".xl_bothNumberAndLetter())
     }
     
     func regularReplace()
@@ -139,10 +158,7 @@ class ViewController: UIViewController , UITableViewDelegate{
         btn.xl_setHorizontalGradientLayer(startColor: .red, endColor: .orange, cornerRadius: 25)
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        self.view.backgroundColor = UIColor.xl_randomColor()
-    }
+    
 
 }
 
