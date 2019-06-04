@@ -8,20 +8,70 @@
 
 import UIKit
 import XLLKit
+import Toast_Swift
+import Then
 
-class ViewController: UIViewController , UITableViewDelegate{
-
+class ViewController: UIViewController
+{
+    var titles = ["导航栏转场", "MBProgressHUD"]
+    var view1: UIView!
+    
+    var customView: UIView =
+    {
+        let view = UIView()
+        view.backgroundColor = .red
+        return view
+    }()
+    
+//    let tableView = UITableView().then { (tv) in
+//
+//    }
+    
+    let tableView: UITableView =
+    {
+        let tv = UITableView()
+        tv.backgroundColor = .white
+        tv.tableFooterView = UIView()
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        print(self)
+        return tv
+    }()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        print(self.view.xl_viewController ?? UIViewController() as UIViewController)
+        
+        print(self)
+//        navigationController?.navigationBar.isHidden = true
+        view.backgroundColor = .orange
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = self.view.bounds
+        self.view.addSubview(tableView)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        self.view.backgroundColor = UIColor.xl_randomColor()
-//        testAlertView()
-//        self.present(AViewController(), animated: true, completion: nil)
+    
+    }
+    
+    func testAnimation()
+    {
+        let animation = CATransition()
+        animation.duration = 0.5
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+        animation.type = CATransitionType.moveIn
+        animation.subtype = CATransitionSubtype.fromTop
+        navigationController?.view.layer.add(animation, forKey: nil)
+        //        navigationController?.navigationBar.isHidden = true
+        let next = AViewController()
+        navigationController?.pushViewController(next, animated: false)
+    }
+    
+    func testAlertController()
+    {
+        self.present(AViewController(), animated: true, completion: nil)
         XLAlertController.xl_alertController(vc: self, title: "警告⚠️", message: "tishi", leftActionTitle: "cane", rightActionTitle: "ok", leftHandler: { (action) in
             print("123")
         }) { (action) in
@@ -164,8 +214,59 @@ class ViewController: UIViewController , UITableViewDelegate{
         self.view.addSubview(btn)
         btn.xl_setHorizontalGradientLayer(startColor: .red, endColor: .orange, cornerRadius: 25)
     }
-
     
+}
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.titles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = self.titles[indexPath.row]
+        cell?.accessoryType = .disclosureIndicator
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0:
+            let animation = CATransition()
+            animation.duration = 0.5
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+            animation.type = CATransitionType.moveIn
+            animation.subtype = CATransitionSubtype.fromTop
+            navigationController?.view.layer.add(animation, forKey: nil)
+            let next = AViewController()
+            navigationController?.pushViewController(next, animated: false)
+        case 1:
+            print("123")
+//            XLProgressView.xl_showOnlyMessage(message: "警告⚠️警告")
+//            XLProgressView.xl_showIndicator(message: "Loading...", superview: nil)
+            let hud = XLProgressView.xl_showIndicator()
+            hud.hide(animated: true, afterDelay: 3)
+        case 2:
+            print("123")
+        case 3:
+            print("123")
+        case 4:
+            print("123")
+        case 5:
+            print("123")
+        case 6:
+            print("123")
+        default:
+            break
+        }
+    }
+    
+    
 }
 

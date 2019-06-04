@@ -3,7 +3,8 @@ use_frameworks!
 
 target 'XLLKit_Example' do
   pod 'XLLKit', :path => '../'
-
+  pod 'Then'
+  
   target 'XLLKit_Tests' do
     inherit! :search_paths
 

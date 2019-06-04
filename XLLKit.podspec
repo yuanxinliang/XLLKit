@@ -17,9 +17,10 @@ Pod::Spec.new do |s|
   s.source                  = { :git => 'https://github.com/yuanxinliang/XLLKit.git', :tag => s.version.to_s }
   s.swift_version           = '5.0'
   s.ios.deployment_target   = '9.0'
+  s.requires_arc            = true
+  s.dependency              'Toast-Swift'
+  s.dependency              'MBProgressHUD'
   
-#s.source_files = 'XLLKit/Classes/**/*'
-
   s.subspec 'Constant' do |ss|
     ss.source_files = 'XLLKit/Classes/Constant'
   end
@@ -36,5 +37,7 @@ Pod::Spec.new do |s|
   s.subspec 'Tool' do |ss|
     ss.source_files = 'XLLKit/Classes/Tool'
   end
+  
+  #s.source_files = 'XLLKit/Classes/**/*'
 
 end
