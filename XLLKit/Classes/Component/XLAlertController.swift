@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 对话框
 public class XLAlertController: UIAlertController
 {
     public class func xl_alertController(vc: UIViewController, title: String?, message: String?, leftActionTitle: String?, rightActionTitle: String?, leftHandler: ((UIAlertAction) -> Void)?, rightHandler: ((UIAlertAction) -> Void)?)

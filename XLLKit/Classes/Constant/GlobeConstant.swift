@@ -116,15 +116,15 @@ public var xl_tabBarHeight: CGFloat
 }
 
 /// 等比例计算宽度值
-public func xl_x(_ x: CGFloat) -> CGFloat
+public func xl_w(_ w: CGFloat) -> CGFloat
 {
-    return (xl_widthScale < 1.0) ? (x * xl_widthScale) : x
+    return (xl_widthScale < 1.0) ? (w * xl_widthScale) : w
 }
 
 /// 等比例计算高度值
-public func xl_y(_ y: CGFloat) -> CGFloat
+public func xl_h(_ h: CGFloat) -> CGFloat
 {
-    return (xl_heightScale < 1.0) ? (y * xl_heightScale) : y
+    return (xl_heightScale < 1.0) ? (h * xl_heightScale) : h
 }
 
 // MARK: --<App应用信息>--

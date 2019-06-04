@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 单列选择器
 public class XLNormalSelectorView: UIView
 {
 

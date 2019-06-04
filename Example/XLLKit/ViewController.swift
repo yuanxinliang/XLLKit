@@ -13,7 +13,7 @@ import Then
 
 class ViewController: UIViewController
 {
-    var titles = ["导航栏转场", "MBProgressHUD"]
+    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动"]
     var view1: UIView!
     
     var customView: UIView =

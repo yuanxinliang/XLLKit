@@ -75,6 +75,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592A994522A6AF9100D3F24C /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "轮播图";
+			sourceTree = "<group>";
+		};
+		592A994622A6AF9E00D3F24C /* 选择标签栏 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "选择标签栏";
+			sourceTree = "<group>";
+		};
+		592A994722A6AFAA00D3F24C /* 分页视图左右滑动 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "分页视图左右滑动";
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +120,9 @@
 		607FACD21AFB9204008FA782 /* Example for XLLKit */ = {
 			isa = PBXGroup;
 			children = (
+				592A994722A6AFAA00D3F24C /* 分页视图左右滑动 */,
+				592A994622A6AF9E00D3F24C /* 选择标签栏 */,
+				592A994522A6AF9100D3F24C /* 轮播图 */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				536B44FE22A51CD7004D1FD5 /* AViewController.swift */,

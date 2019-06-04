@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 城市选择器
 public class XLCitySelectorView: UIView
 {
 

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 对话框
 public typealias XLAlertViewClosure = () -> Void
 
 let xl_screenW                  : CGFloat =   UIScreen.main.bounds.size.width // 屏幕宽度

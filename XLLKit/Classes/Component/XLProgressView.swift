@@ -13,16 +13,19 @@ let xl_progressMaximumDuration: CGFloat = 10.0  // 默认最大小时间
 
 public class XLProgressView: UIView
 {
+    /// 显示等待指示器，N秒之后消失
     public class func xl_showIndicator(afterDelay: TimeInterval)
     {
         xl_showIndicator().hide(animated: true, afterDelay: afterDelay)
     }
     
+    /// 显示等待指示器
     public class func xl_showIndicator() -> MBProgressHUD
     {
         return xl_showIndicator(message: nil, superview: nil)
     }
     
+    /// 显示等待指示器和文字
     public class func xl_showIndicator(message: String?, superview: UIView?) -> MBProgressHUD
     {
         let view: UIView? = toView(toView: superview)
@@ -33,11 +36,13 @@ public class XLProgressView: UIView
         return hud
     }
     
+    /// 显示文字
     public class func xl_showOnlyMessage(message: String)
     {
         xl_showOnlyMessage(message: message, superview: nil)
     }
     
+    /// 显示文字
     public class func xl_showOnlyMessage(message: String, superview: UIView?)
     {
         let view: UIView? = toView(toView: superview)
@@ -61,6 +66,7 @@ public class XLProgressView: UIView
 //        hud.bezelView.backgroundColor = .orange
     }
     
+    /// 返回视图，如果视图为 nil，则返回屏幕
     fileprivate class func toView(toView: UIView?) -> UIView?
     {
         var view: UIView? = toView
@@ -70,6 +76,7 @@ public class XLProgressView: UIView
         return view
     }
     
+    /// 通过文字长度计算显示的时长
     fileprivate class func displayDurationForString(string: String) -> CGFloat
     {
         let minimum = max(CGFloat(string.count) * 0.06 + 0.5, xl_progressMinimumDuration)
