@@ -40,6 +40,9 @@
       "dependencies": {
         "XLLKit/Extension": [
 
+        ],
+        "SDWebImage": [
+
         ]
       }
     },

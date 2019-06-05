@@ -33,6 +33,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'XLLKit/Classes/Component'
     ss.resource     = 'XLLKit/Classes/Component/Resource'
     ss.dependency     'XLLKit/Extension'
+    ss.dependency     'SDWebImage'
   end
   
   s.subspec 'Tool' do |ss|

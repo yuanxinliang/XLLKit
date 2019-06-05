@@ -254,6 +254,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             hud.hide(animated: true, afterDelay: 3)
         case 2:
             print("123")
+            self.navigationController?.pushViewController(TestCycleScrollViewController(), animated: true)
         case 3:
             print("123")
         case 4:

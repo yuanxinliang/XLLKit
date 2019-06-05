@@ -11,6 +11,7 @@
 		536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B44FE22A51CD7004D1FD5 /* AViewController.swift */; };
 		536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B44FF22A51CD7004D1FD5 /* BViewController.swift */; };
 		53724FC8229FA58A002B4795 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FC7229FA58A002B4795 /* TButton.swift */; };
+		53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		536B44FE22A51CD7004D1FD5 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		536B44FF22A51CD7004D1FD5 /* BViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
 		53724FC7229FA58A002B4795 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
+		53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCycleScrollViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XLLKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		592A994522A6AF9100D3F24C /* 轮播图 */ = {
 			isa = PBXGroup;
 			children = (
+				53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */,
 			);
 			name = "轮播图";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -358,6 +362,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -377,6 +382,7 @@
 			files = (
 				536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */,
 				53724FC8229FA58A002B4795 /* TButton.swift in Sources */,
+				53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
