@@ -13,7 +13,7 @@ import Then
 
 class ViewController: UIViewController
 {
-    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动"]
+    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动", "城市选择", "单个选择"]
     var view1: UIView!
     
     var customView: UIView =
@@ -260,8 +260,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             print("123")
         case 5:
             print("123")
+            let view = XLCityPickerView()
+            
+            view.areaPickerViewWithareaBlock { (province, city, area) in
+                print(province, city, area)
+            }
+            
         case 6:
             print("123")
+            let data = ["1", "2", "3"]
+            XLNormalSelectorView.showPickerView(dataSource: data, title: "选择", cancelBtnTitle: "取消", confirmBtnTitle: "确认", cancelClosure: {
+                
+            }) { (str) in
+                print(str as Any)
+            }
         default:
             break
         }

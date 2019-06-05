@@ -4,6 +4,8 @@ use_frameworks!
 target 'XLLKit_Example' do
   pod 'XLLKit', :path => '../'
   pod 'Then'
+  pod 'SVProgressHUD'
+  pod 'MJRefresh'
   
   target 'XLLKit_Tests' do
     inherit! :search_paths

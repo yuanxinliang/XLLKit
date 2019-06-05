@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Component' do |ss|
     ss.source_files = 'XLLKit/Classes/Component'
+    ss.resource     = 'XLLKit/Classes/Component/Resource'
     ss.dependency     'XLLKit/Extension'
   end
   
