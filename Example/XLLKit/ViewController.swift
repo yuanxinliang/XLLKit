@@ -49,6 +49,8 @@ class ViewController: UIViewController
         tableView.dataSource = self
         tableView.frame = self.view.bounds
         self.view.addSubview(tableView)
+        
+        print("09x_".xl_isMatch(regularString: "^[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}$"))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

@@ -83,11 +83,11 @@ public enum XLRegularString: String
     /// 字母 - 只包含字母
     case allLetter = "^[A-Za-z]+$"
     
-    /// 数字和字母 - 包含数字和字母
+    /// 数字和字母 - 包含数字或字母
     case hasNumberLetter = "[A-Za-z\\d]+"
     
     /// 数字和字母 - 同时包含数字和密码
-    case bothNumberLetter = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"
+    case bothNumberLetter = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}$"
     
     /// 表情符
     case emoji = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]"
@@ -96,10 +96,10 @@ public enum XLRegularString: String
     case chinese = "[\\u4E00-\\u9FA5]+"
     
     /// 限制输入： 只允许输入数字、字母、中文字符、九宫格输入法(➋➌➍➎➏➐➑➒)、·•、限制 1-30，应用场景：用户名
-    case limitInput1 = "[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}"
+    case limitInput1 = "^[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}$"
     
     /// 限制输入： 只允许输入 0-9和xX的字符，应用场景：身份证号
-    case limitInput2 = "[0-9xX]+"
+    case limitInput2 = "^[0-9xX]+$"
 }
 
 // MARK: 正则匹配
