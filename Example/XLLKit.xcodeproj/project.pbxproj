@@ -11,6 +11,7 @@
 		536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B44FE22A51CD7004D1FD5 /* AViewController.swift */; };
 		536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B44FF22A51CD7004D1FD5 /* BViewController.swift */; };
 		53724FC8229FA58A002B4795 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FC7229FA58A002B4795 /* TButton.swift */; };
+		5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DCDA22AF9D5F0051476C /* TestTabViewController.swift */; };
 		53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		536B44FE22A51CD7004D1FD5 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		536B44FF22A51CD7004D1FD5 /* BViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
 		53724FC7229FA58A002B4795 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
+		5377DCDA22AF9D5F0051476C /* TestTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabViewController.swift; sourceTree = "<group>"; };
 		53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCycleScrollViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XLLKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		592A994622A6AF9E00D3F24C /* 选择标签栏 */ = {
 			isa = PBXGroup;
 			children = (
+				5377DCDA22AF9D5F0051476C /* TestTabViewController.swift */,
 			);
 			name = "选择标签栏";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */,
 				53724FC8229FA58A002B4795 /* TButton.swift in Sources */,
+				5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */,
 				53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */,

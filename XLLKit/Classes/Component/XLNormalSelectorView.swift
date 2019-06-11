@@ -198,8 +198,11 @@ public class XLNormalSelectorView: UIView {
     
     fileprivate func hidePickerView()
     {
-        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.alpha = 0.0
+            var frame = self.contentView.frame
+            frame.origin.y = self.bounds.height
+            self.contentView.frame = frame
         }) { (finished) in
             self.removeFromSuperview()
         }
