@@ -19,9 +19,10 @@ class TestCycleScrollViewController: UIViewController {
 //        let image = ["0"]
 //        let image = ["0", "1"]
         let image = ["0", "1", "2", "3", "4"]
-        let a = XLCycleScrollView.cycleScrollView(frame: frame, margin: 10, imageArray: image)
+        let a = XLCycleScrollView.cycleScrollView(frame: frame, margin: 20, imageArray: image, needPageControl: true)
         a.backgroundColor = .orange
         view.addSubview(a)
+//        a.imageArray = ["1", "2"]
     }
 
 }

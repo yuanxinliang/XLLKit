@@ -18,12 +18,12 @@ let timerInterval = 2.0
 
 public class XLCycleScrollView: UIView
 {
-    
     weak var delegate: XLCycleScrollViewDelegate?
     
-    public class func cycleScrollView(frame: CGRect, margin: Int, imageArray: [Any]) -> XLCycleScrollView
+    public class func cycleScrollView(frame: CGRect, margin: Int, imageArray: [Any], needPageControl: Bool) -> XLCycleScrollView
     {
-        let view = XLCycleScrollView(frame: frame, margin: margin, imageArray: imageArray)
+        let view = XLCycleScrollView(frame: frame, margin: margin, imageArray: imageArray, needPageControl: needPageControl)
+        view.layer.masksToBounds = true
         return view
     }
     
@@ -42,40 +42,35 @@ public class XLCycleScrollView: UIView
     var currenIndex      = 0
     
     var _imageArray: [Any] = [Any]()
-    var imageArray: [Any] {
+    public var imageArray: [Any] {
         set
         {
             _imageArray = newValue
             
-            leftIV.removeFromSuperview()
-            middleIV.removeFromSuperview()
-            rightIV.removeFromSuperview()
+            for subview in mainScrollView.subviews {
+                subview.removeFromSuperview()
+            }
             
             currenIndex = 0
-            pageControl.numberOfPages = newValue.count
             pageControl.currentPage = currenIndex
+            pageControl.numberOfPages = newValue.count
             
             if newValue.count == 1 {
-                mainScrollView.contentSize = CGSize(width: scrollViewWidth + 1, height: scrollViewHeight)
                 mainScrollView.addSubview(leftIV)
+                mainScrollView.contentSize = CGSize(width: scrollViewWidth, height: scrollViewHeight)
                 mainScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
                 setupImage(iv: leftIV, image: newValue.first!)
-            } else if newValue.count == 2 {
-                mainScrollView.addSubview(leftIV)
-                mainScrollView.addSubview(middleIV)
-                mainScrollView.contentSize = CGSize(width: scrollViewWidth * 2, height: scrollViewHeight)
-                mainScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
-                setupImage(iv: leftIV, image: newValue.first!)
-                setupImage(iv: middleIV, image: newValue.last!)
-                setupTimer()
-            } else if newValue.count > 2 {
+                clearTimer()
+            } else if newValue.count > 1 {
                 mainScrollView.addSubview(leftIV)
                 mainScrollView.addSubview(middleIV)
                 mainScrollView.addSubview(rightIV)
                 mainScrollView.contentSize = CGSize(width: scrollViewWidth * 3, height: scrollViewHeight)
                 mainScrollView.setContentOffset(CGPoint(x: scrollViewWidth, y: 0), animated: false)
-                setupTimer()
                 resetImage()
+                setupTimer()
+            } else {
+                clearTimer()
             }
         }
         get
@@ -98,7 +93,7 @@ public class XLCycleScrollView: UIView
         }
     }
     
-    convenience init(frame: CGRect, margin: Int, imageArray: [Any])
+    convenience init(frame: CGRect, margin: Int, imageArray: [Any], needPageControl: Bool)
     {
         self.init(frame: frame)
         
@@ -106,7 +101,12 @@ public class XLCycleScrollView: UIView
         self.viewHeight = Int(frame.height)
         
         self.scrollViewWidth = self.viewWidth - margin
-        self.scrollViewHeight = self.viewHeight - pageControlHeight
+        if !needPageControl {
+            self.pageControlHeight = 0
+        } else {
+            self.pageControlHeight = 30
+        }
+        self.scrollViewHeight = self.viewHeight - self.pageControlHeight
         
         self.imageWidth = self.scrollViewWidth - margin
         self.imageHeight = self.scrollViewHeight
@@ -128,6 +128,12 @@ public class XLCycleScrollView: UIView
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit
+    {
+        clearTimer()
+    }
+    
+    /// 自动轮播定时器
     var timer: Timer?
     
     func setupDefault()
@@ -137,12 +143,16 @@ public class XLCycleScrollView: UIView
     
     func setupTimer()
     {
+        clearTimer() // 先移除之前的timer
+        timer = Timer(timeInterval: timerInterval, target: XLTimerProxy.proxy(target: self), selector: #selector(timerAction), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .default)
+    }
+    
+    func clearTimer()
+    {
         if timer != nil {
             timer?.invalidate()
             timer = nil
-        } else {
-            timer = Timer(timeInterval: timerInterval, target: XLTimerProxy.proxy(target: self), selector: #selector(timerAction), userInfo: nil, repeats: true)
-            RunLoop.main.add(timer!, forMode: .default)
         }
     }
     
@@ -198,26 +208,26 @@ public class XLCycleScrollView: UIView
         let page = UIPageControl(frame: CGRect(x: 0, y: 0, width: Int(self.frame.width), height: pageControlHeight))
         page.numberOfPages = imageArray.count
         page.currentPage = 0
-        page.pageIndicatorTintColor = UIColor(red: 0.9, green: 0.9, blue: 0.91, alpha: 1)
-        page.currentPageIndicatorTintColor = UIColor(red: 0.6, green: 0.61, blue: 0.62, alpha: 1)
+        page.pageIndicatorTintColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+        page.currentPageIndicatorTintColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         return page
     }()
     
     func setupUI()
     {
         addSubview(mainScrollView)
-        addSubview(pageControlView)
-        pageControlView.addSubview(pageControl)
+        if self.pageControlHeight > 0 {
+            addSubview(pageControlView)
+            pageControlView.addSubview(pageControl)
+        }
     }
     
     func resetImage()
     {
-        if currenIndex >= imageArray.count {
-            currenIndex = 0
-        }
-        
         if  currenIndex < 0 {
             currenIndex = imageArray.count - 1
+        } else if currenIndex >= imageArray.count {
+            currenIndex = 0
         }
         
         var left = currenIndex - 1
@@ -235,68 +245,41 @@ public class XLCycleScrollView: UIView
         setupImage(iv: leftIV, image: imageArray[left])
         setupImage(iv: middleIV, image: imageArray[middle])
         setupImage(iv: rightIV, image: imageArray[right])
+        mainScrollView.setContentOffset(CGPoint(x: scrollViewWidth, y: 0), animated: false)
         
         pageControl.currentPage = currenIndex
-        mainScrollView.setContentOffset(CGPoint(x: scrollViewWidth, y: 0), animated: false)
     }
     
     @objc fileprivate func timerAction()
     {
-        if imageArray.count >= 3 {
+        if imageArray.count > 1 {
             mainScrollView.scrollRectToVisible(CGRect(x: scrollViewWidth * 2, y: 0, width: scrollViewWidth, height: scrollViewHeight), animated: true)
-        } else if imageArray.count == 2 {
-            if currenIndex == 0 {
-                mainScrollView.scrollRectToVisible(CGRect(x: scrollViewWidth, y: 0, width: scrollViewWidth, height: scrollViewHeight), animated: true)
-                currenIndex = 1
-                pageControl.currentPage = currenIndex
-            } else if currenIndex == 1 {
-                mainScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: scrollViewWidth, height: scrollViewHeight), animated: true)
-                currenIndex = 0
-                pageControl.currentPage = currenIndex
-            }
         }
-        
     }
     
-    deinit
-    {
-        if timer != nil {
-            timer?.invalidate()
-            timer = nil
-        }
-    }
+    
 }
 
 
-extension XLCycleScrollView {
-    
-    @objc private func cycleViewSelected() {
+extension XLCycleScrollView
+{
+    @objc private func cycleViewSelected()
+    {
         self.delegate?.xl_cycleScrollViewSelected(currenIndex)
     }
 }
 
 
-extension XLCycleScrollView: UIScrollViewDelegate {
+extension XLCycleScrollView: UIScrollViewDelegate
+{
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
     {
-        if imageArray.count == 1 {
+        if imageArray.count <= 1 {
             return
         }
         
-        if imageArray.count == 2 {
-            let contentX = scrollView.contentOffset.x
-            if contentX == 0 {
-                currenIndex = 0
-                pageControl.currentPage = currenIndex
-            } else {
-                currenIndex = 1
-                pageControl.currentPage = currenIndex
-            }
-            return
-        }
-        
-        /// 三张或以上时轮播滚动
+        /// 两张或以上时轮播滚动
         let contentX = scrollView.contentOffset.x
         if contentX <= 0 { // 向右滑动，上一张
             currenIndex -= 1
@@ -311,7 +294,7 @@ extension XLCycleScrollView: UIScrollViewDelegate {
     
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView)
     {
-        if imageArray.count < 3 {
+        if imageArray.count <= 1 {
             return
         }
         
@@ -324,7 +307,7 @@ extension XLCycleScrollView: UIScrollViewDelegate {
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView)
     {
-        if imageArray.count < 2 {
+        if imageArray.count <= 1 {
             return
         }
         timer?.fireDate = Date.distantFuture
@@ -332,7 +315,7 @@ extension XLCycleScrollView: UIScrollViewDelegate {
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool)
     {
-        if imageArray.count < 2 {
+        if imageArray.count <= 1 {
             return
         }
         timer?.fireDate = Date(timeIntervalSinceNow: timerInterval)
@@ -340,8 +323,8 @@ extension XLCycleScrollView: UIScrollViewDelegate {
     
 }
 
-
-class XLTimerProxy: NSObject {
+class XLTimerProxy: NSObject
+{
     
     weak var target : AnyObject?
     
