@@ -89,11 +89,16 @@ public enum XLRegularString: String
     /// 数字和字母 - 同时包含数字和密码
     case bothNumberLetter = "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}$"
     
-    /// 表情符
-    case emoji = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]"
+    /// 表情符 - 包含表情符
+    case hasEmoji = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]+"
     
-    /// 中文
-    case chinese = "[\\u4E00-\\u9FA5]+"
+    /// 表情符 - 只包含表情符
+    case allEmoji = "^[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]+$"
+    
+    /// 中文 - 包含中文
+    case hasChinese = "[\\u4E00-\\u9FA5]+"
+    /// 中文 - 只包含中文
+    case allChinese = "^[\\u4E00-\\u9FA5]+$"
     
     /// 限制输入： 只允许输入数字、字母、中文字符、九宫格输入法(➋➌➍➎➏➐➑➒)、·•、限制 1-30，应用场景：用户名
     case limitInput1 = "^[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}$"
@@ -229,12 +234,12 @@ public extension String
     /// 是否包含表情符
     func xl_hasEmoji() -> Bool
     {
-        return xl_isMatch(regularString: .emoji)
+        return xl_isMatch(regularString: .hasEmoji)
     }
     /// 是否包含中文字符
     func xl_hasChinese() -> Bool
     {
-        return xl_isMatch(regularString: .chinese)
+        return xl_isMatch(regularString: .hasChinese)
     }
 }
 
