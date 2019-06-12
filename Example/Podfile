@@ -6,6 +6,7 @@ target 'XLLKit_Example' do
   pod 'Then'
   pod 'SVProgressHUD'
   pod 'MJRefresh'
+  pod 'SnapKit'
   
   target 'XLLKit_Tests' do
     inherit! :search_paths

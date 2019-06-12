@@ -33,7 +33,7 @@ class ViewController: UIViewController
         tv.backgroundColor = .white
         tv.tableFooterView = UIView()
         tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        print(self)
+//        print(self)
         return tv
     }()
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        print(self)
+//        print(self)
 //        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .orange
         
@@ -50,7 +50,7 @@ class ViewController: UIViewController
         tableView.frame = self.view.bounds
         self.view.addSubview(tableView)
         
-        print("09x_".xl_isMatch(regularString: "^[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}$"))
+//        print("09x_".xl_isMatch(regularString: "^[·•➋➌➍➎➏➐➑➒A-Za-z0-9\\u4E00-\\u9FA5]{1,30}$"))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -258,7 +258,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             print("123")
             self.navigationController?.pushViewController(TestCycleScrollViewController(), animated: true)
         case 3:
-            print("123")
+//            print("123")
+            self.navigationController?.pushViewController(TestTabViewController(), animated: true)
         case 4:
             print("123")
         case 5:

@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-/// 轮播图
+/// 自动轮播图
 let timerInterval = 2.0
 
 @objc public protocol XLCycleScrollViewDelegate
