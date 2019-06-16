@@ -262,3 +262,27 @@ public extension String
     }
 }
 
+// MARK: 给字符串添加下标索引存取功能
+
+public extension String
+{
+    subscript(index: Int) -> String
+    {
+        get {
+            return String(self[self.index(self.startIndex, offsetBy: index)])
+        }
+        
+        set {
+            let tmp = self
+            self = ""
+            for (idx, item) in tmp.enumerated() {
+                if idx == index {
+                    self += "\(newValue)"
+                }else{
+                    self += "\(item)"
+                }
+            }
+        }
+    }
+}
+
