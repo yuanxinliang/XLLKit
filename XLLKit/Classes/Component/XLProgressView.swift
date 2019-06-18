@@ -9,7 +9,7 @@ import UIKit
 import MBProgressHUD
 
 let xl_progressMinimumDuration: CGFloat = 2.0   // 默认最小显示时间
-let xl_progressMaximumDuration: CGFloat = 10.0  // 默认最大小时间
+let xl_progressMaximumDuration: CGFloat = 10.0  // 默认最大显示时间
 
 public class XLProgressView: UIView
 {

@@ -66,9 +66,7 @@ extension TestCategoryView: UICollectionViewDelegate, UICollectionViewDataSource
     {
 
         let size = CGSize(width: CGFloat(ceilf(Float(stringWidth(string: self.sources[indexPath.row])))), height: bounds.size.height - 5)
-//        print(" -- \(indexPath.row) -- \(size)")
         return size
-//        return CGSize(width: CGFloat(ceilf(Float(stringWidth(string: self.sources[indexPath.row])))), height: bounds.size.height - 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets

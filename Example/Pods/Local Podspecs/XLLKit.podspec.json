@@ -50,6 +50,5 @@
       "name": "Tool",
       "source_files": "XLLKit/Classes/Tool"
     }
-  ],
-  "swift_version": "5.0"
+  ]
 }
