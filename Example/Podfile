@@ -7,6 +7,7 @@ target 'XLLKit_Example' do
   pod 'SVProgressHUD'
   pod 'MJRefresh'
   pod 'SnapKit'
+  pod 'JXPagingView/Paging'
   
   target 'XLLKit_Tests' do
     inherit! :search_paths
