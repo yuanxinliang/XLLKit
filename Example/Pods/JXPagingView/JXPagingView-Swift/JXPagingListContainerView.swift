@@ -97,7 +97,7 @@ open class JXPagingListContainerView: UIView {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
-        collectionView.bounces = false
+        collectionView.bounces = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.scrollsToTop = false
@@ -166,6 +166,11 @@ extension JXPagingListContainerView: UICollectionViewDataSource, UICollectionVie
 
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.mainTableView?.isScrollEnabled = true
+        let x = scrollView.contentOffset.x
+        let w = scrollView.bounds.width
+        let index = Int(x / w)
+        print(index)
+        NotificationCenter.default.post(name: NSNotification.Name("JXScrollViewDidEndDecelerating"), object: index)
     }
 
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

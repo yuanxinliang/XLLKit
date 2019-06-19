@@ -262,6 +262,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             self.navigationController?.pushViewController(TestTabViewController(), animated: true)
         case 4:
             print("123")
+            self.navigationController?.pushViewController(TestPageViewController(), animated: true)
         case 5:
             print("123")
             let view = XLCityPickerView()
