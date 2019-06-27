@@ -56,4 +56,46 @@ public class XLTool: NSObject
             return vc
         }
     }
+    
+    /// 金额格式化 - http://www.hangge.com/blog/cache/detail_2086.html
+    public class func xl_moneyFormatter(value: Float) -> String
+    {
+        let number = NSNumber(value: value)
+        let formatter = NumberFormatter()
+        // 设置显示样式
+        formatter.numberStyle = .decimal
+        // 设置小数点后最多2位
+        formatter.maximumFractionDigits = 2
+        // 设置小数点后最少2位（不足补0）
+        formatter.minimumFractionDigits = 2
+        // 自定义前缀
+        formatter.positivePrefix = "￥"
+        // 设置用组分隔
+        formatter.usesGroupingSeparator = true
+        // 分隔符号
+        formatter.groupingSeparator = ","
+        // 分隔位数
+        formatter.groupingSize = 3
+        // 格式化
+        let format = formatter.string(from: number)
+        return format ?? "￥0.00"
+    }
+    
+    /// 时间转换：date -> string - http://www.hangge.com/blog/cache/detail_2182.html
+    public class func xl_dateConverToString(date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> String
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        let str = formatter.string(from: date)
+        return str
+    }
+    
+    /// 时间转换：string -> date
+    public class func xl_stringConverToDate(string: String, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> Date
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        let date = formatter.date(from: string)
+        return date!
+    }
 }

@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let a = XLTool.xl_moneyFormatter(value: 10000.787777)
+        let b = XLTool.xl_dateConverToString(date: Date())
+        let c = XLTool.xl_dateConverToString(date: Date(), dateFormat: "yyyy/MM/dd")
+        let d = XLTool.xl_stringConverToDate(string: "2019-06-22 14:00:00")
+        let e = XLTool.xl_stringConverToDate(string: "2019-06-23", dateFormat: "yyyy/MM/dd")
+        print(a)
+        print(b)
+        print(c)
+        print(XLTool.xl_dateConverToString(date: d))
+        print(XLTool.xl_dateConverToString(date: e))
         self.window?.backgroundColor = UIColor.xl_hex(0xeeeeee)
         return true
     }
