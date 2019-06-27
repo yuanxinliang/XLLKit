@@ -13,7 +13,7 @@ import Then
 
 class ViewController: UIViewController
 {
-    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动", "城市选择", "单个选择", "手机号、银行卡号格式化"]
+    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动", "城市选择", "单个选择", "手机号、银行卡号格式化", "饼状图"]
     var view1: UIView!
     
     var customView: UIView =
@@ -281,6 +281,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             }
         case 7:
             self.navigationController?.pushViewController(TestNumberFormatController(), animated: true)
+        case 8:
+            self.navigationController?.pushViewController(TestPieViewController(), animated: true)
 
         default:
             break

@@ -20,17 +20,17 @@
 
 | 效果  | 预览图 |
 |-------|-------|
-| **头图缩放** <br/>参考[ZoomViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Zoom/ZoomViewController.m)类 | ![Zoom](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/Zoom.gif) | 
-| **主页下拉刷新&列表上拉加载更多** <br/>参考[RefreshViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Refresh/RefreshViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/Refresh.gif) |
-| **列表下拉刷新** <br/>参考[ListRefreshViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Refresh/ListRefreshViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/ListRefresh.gif) |
-| **悬浮sectionHeader位置调整**  | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/PinSectionHeaderPosition.gif) |
-| **导航栏隐藏** <br/> 参考[NaviBarHiddenViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/NavigationBarHidden/NaviBarHiddenViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/NaviHidden.gif) |
-| **CollectionView列表示例**<br/>参考[CollectionViewViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/CollectionView/CollectionViewViewController.swift)类 <br/> 只有swift的demo工程有该示例 | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/CollectionViewList.gif) |
-| **HeaderView高度改动示例**<br/> 参考[HeightChangeViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/HeightChange/HeightChangeViewController.swift)类 <br/> 只有swift demo工程才有该示例 | ![Refresh](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/HeaderViewHeightChange.gif) |
-| **PagingView嵌套CategoryView** <br/> 参考[NestViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Nest/NestViewController.m)类 <br/> 只有 **OC!OC!OC!** 的demo工程才有该示例 <br/> 操作比较特殊，如果需要此效果，<br/> 请认真参考源码，有问题多试试 <br/> 参考NestViewController.h类 | ![Nest](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/Nest.gif) |
-| **CategoryView嵌套PagingView** <br/> 参考[NestViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/CategoryNestPaging/NestViewController.swift)类 <br/> 只有 **Swift!Swift!Swift!** 的demo工程才有该示例 <br/> 操作比较特殊，如果需要此效果，<br/> 请认真参考源码，有问题多试试 <br/> 参考NestViewController.swift类 | ![Nest](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/CategoryNestPaging.gif) |
-| **点击状态栏**  | ![Zoom](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/StatusBarClicked.gif) | 
-| **横竖屏旋转**  | ![Zoom](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Gif/ScreenRotate.gif) | 
+| **头图缩放** <br/>参考[ZoomViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Zoom/ZoomViewController.m)类 | ![Zoom](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/Zoom.gif) | 
+| **主页下拉刷新&列表上拉加载更多** <br/>参考[RefreshViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Refresh/RefreshViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/Refresh.gif) |
+| **列表下拉刷新** <br/>参考[ListRefreshViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Refresh/ListRefreshViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/ListRefresh.gif) |
+| **悬浮sectionHeader位置调整**  | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/PinSectionHeaderPosition.gif) |
+| **导航栏隐藏** <br/> 参考[NaviBarHiddenViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/NavigationBarHidden/NaviBarHiddenViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/NaviHidden.gif) |
+| **CollectionView列表示例**<br/>参考[CollectionViewViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/CollectionView/CollectionViewViewController.swift)类 <br/> 只有swift的demo工程有该示例 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/CollectionViewList.gif) |
+| **HeaderView高度改动示例**<br/> 参考[HeightChangeViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/HeightChange/HeightChangeViewController.swift)类 <br/> 只有swift demo工程才有该示例 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/HeaderViewHeightChange.gif) |
+| **PagingView嵌套CategoryView** <br/> 参考[NestViewController](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Nest/NestViewController.m)类 <br/> 只有 **OC!OC!OC!** 的demo工程才有该示例 <br/> 操作比较特殊，如果需要此效果，<br/> 请认真参考源码，有问题多试试 <br/> 参考NestViewController.h类 | ![Nest](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/Nest.gif) |
+| **CategoryView嵌套PagingView** <br/> 参考[NestViewController.swift](https://github.com/pujiaxin33/JXPagingView/blob/master/JXPagingView/Example/CategoryNestPaging/NestViewController.swift)类 <br/> 只有 **Swift!Swift!Swift!** 的demo工程才有该示例 <br/> 操作比较特殊，如果需要此效果，<br/> 请认真参考源码，有问题多试试 <br/> 参考NestViewController.swift类 | ![Nest](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/CategoryNestPaging.gif) |
+| **点击状态栏**  | ![Zoom](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/StatusBarClicked.gif) | 
+| **横竖屏旋转**  | ![Zoom](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/ScreenRotate.gif) | 
 | **JXPageListView**<br/> 顶部需要自定义cell的场景，类似于电商APP首页，滑动到列表最底部才是分类控制器 <br/> 该效果是另一个库，点击查看[JXPageListView](https://github.com/pujiaxin33/JXPageListView) <br/> 该效果是另一个库，点击查看[JXPageListView](https://github.com/pujiaxin33/JXPageListView) <br/> 该效果是另一个库，点击查看[JXPageListView](https://github.com/pujiaxin33/JXPageListView) | ![list](https://github.com/pujiaxin33/JXPageListView/blob/master/JXPageListView/Gif/headerLoading.gif) |
 
 ## 安装
@@ -45,7 +45,7 @@
 
 - **Swift版本**
 
-支持swift最新版本：4.2
+支持swift版本：5.0+
 
 ```ruby
 target '<Your Target Name>' do
@@ -202,13 +202,13 @@ self.categoryView.contentScrollView = self.pagerView.listContainerView.collectio
 
 代码：请参考`TestTableViewCell`类的配置。
 
-### TableHeaderView使用tips
+### 指定默认选中index
 
-如果TableHeaderView逻辑较多，一般都会用ViewController来包裹，然后使用ViewController.view当做TableHeaderView。又或者视图较多，使用xib来布局。
-
-以上两种情况，都需要创建一个ContainerView，把ContainerView赋值给TableHeaderView，然后add真正的ViewController.view或xib视图到ContainerView上面。不这么做布局会有异常。
-
-参考：swift工程`userHeaderContainerView`类的`userHeaderContainerView`属性的使用方式。
+默认显示index=2的列表，代码如下：
+```
+self.pagerView.defaultSelectedIndex = 2;
+self.categoryView.defaultSelectedIndex = 2;
+```
 
 ### 顶部轮播图手势处理
 

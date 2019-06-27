@@ -18,6 +18,7 @@
 		53724FC8229FA58A002B4795 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53724FC7229FA58A002B4795 /* TButton.swift */; };
 		5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DCDA22AF9D5F0051476C /* TestTabViewController.swift */; };
 		53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */; };
+		53FF4F5722C1BCCA00490000 /* TestPieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FF4F5622C1BCCA00490000 /* TestPieViewController.swift */; };
 		599A24DA22B5FF2300D77BCC /* TestNumberFormatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		53724FC7229FA58A002B4795 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		5377DCDA22AF9D5F0051476C /* TestTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabViewController.swift; sourceTree = "<group>"; };
 		53B7E5BD22A7C1F8002F035B /* TestCycleScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCycleScrollViewController.swift; sourceTree = "<group>"; };
+		53FF4F5622C1BCCA00490000 /* TestPieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPieViewController.swift; sourceTree = "<group>"; };
 		599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumberFormatController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XLLKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53FF4F5522C1BC9800490000 /* 饼状图 */ = {
+			isa = PBXGroup;
+			children = (
+				53FF4F5622C1BCCA00490000 /* TestPieViewController.swift */,
+			);
+			name = "饼状图";
+			sourceTree = "<group>";
+		};
 		592A994522A6AF9100D3F24C /* 轮播图 */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		607FACD21AFB9204008FA782 /* Example for XLLKit */ = {
 			isa = PBXGroup;
 			children = (
+				53FF4F5522C1BC9800490000 /* 饼状图 */,
 				599A24D822B5FECF00D77BCC /* 号码格式化 */,
 				592A994722A6AFAA00D3F24C /* 分页视图左右滑动 */,
 				592A994622A6AF9E00D3F24C /* 选择标签栏 */,
@@ -379,6 +390,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAInfographics/AAInfographics.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -391,6 +404,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAInfographics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPagingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -418,6 +433,7 @@
 				53724FC8229FA58A002B4795 /* TButton.swift in Sources */,
 				5356943322B0A01400C024B3 /* TestCategoryView.swift in Sources */,
 				53691F4522B9C6D500687AAD /* TestPageHeaderView.swift in Sources */,
+				53FF4F5722C1BCCA00490000 /* TestPieViewController.swift in Sources */,
 				5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */,
 				53691F4722B9C6FE00687AAD /* TestPageListView.swift in Sources */,
 				53691F4322B90C8C00687AAD /* TestPageViewController.swift in Sources */,
@@ -574,7 +590,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XLLKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -592,7 +608,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XLLKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

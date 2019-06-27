@@ -8,7 +8,9 @@ target 'XLLKit_Example' do
   pod 'MJRefresh'
   pod 'SnapKit'
   pod 'JXPagingView/Paging'
-  
+  pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
+  pod 'Charts'
+
   target 'XLLKit_Tests' do
     inherit! :search_paths
 
