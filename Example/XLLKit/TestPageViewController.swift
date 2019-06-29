@@ -18,7 +18,7 @@ class TestPageViewController: UIViewController {
     var categoryView: XLCategoryView!
     var titles1: [String] = ["深圳", "广州", "中山", "珠海", "海丰", "惠州", "汕尾", "梅陇", "小路破"]
 //    var titles2: [String] = ["🍎", "🍉", "🍌", "🌰", "🍆", "🍇", "🍅", "🥔", "🍅"]
-    var titles2: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var titles2: [String] = ["惠州1", "惠州2", "惠州3", "惠州4", "惠州5", "惠州6", "惠州7", "惠州8", "惠州9"]
     var titles: [String] = [String]()
     var mjHeader: MJRefreshNormalHeader = MJRefreshNormalHeader()
     

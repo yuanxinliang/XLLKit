@@ -16,8 +16,6 @@ class TestPieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
-        
-
         demo1()
 //        demo2()
     }
@@ -124,10 +122,7 @@ class TestPieViewController: UIViewController {
         let datas = [["工资: 50%", 50]]
         element.data(datas)
         
-        
-        
         model.series = [element.toDic()!]
-        
         chart.aa_drawChartWithChartModel(model)
     }
 

@@ -14,7 +14,7 @@ import UIKit
     @objc optional func addressPickerViewArea(province: String?, city: String?, area: String?)
 }
 
-enum XLAddressPickerType: Int
+public enum XLAddressPickerType: Int
 {
     /// 显示省份
     case province   = 1
