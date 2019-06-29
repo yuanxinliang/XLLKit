@@ -51,6 +51,12 @@ class TestPageViewController: UIViewController {
         pageView.mainTableView.mj_header = self.mjHeader
     }
     
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
     deinit
     {
         NotificationCenter.default.removeObserver(self)

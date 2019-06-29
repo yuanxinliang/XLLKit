@@ -40,7 +40,10 @@ print(String(describing: type(of: self)))
 print(String(describing: ViewController.self))
 print(String(describing: self.self))
 
-// 设置textview内边距
+
+
+// 设置textview内边距 -- https://www.jianshu.com/p/32a4747a19fb
+
 tv.textContainerInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: -5);
 
 CGFlot xMargin =12, yMargin = 10;
@@ -81,5 +84,96 @@ fileprivate func moneyFormatter(money: Float) -> String
     let format = formatter.string(from: number)
     return format ?? "￥0.00"
 }
+
+// 状态栏
+override var preferredStatusBarStyle: UIStatusBarStyle
+{
+    return .lightContent
+}
+
+fileprivate func setupChildren(title: String,
+                               imageName: String,
+                               selectedImageName: String,
+                               rootVC: UIViewController) -> BKNavigationController
+{
+    let image = UIImage(named: imageName)
+    let selectedImage = UIImage(named: selectedImageName)
+    let item = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
+    item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : bkColor("#999999")], for: .normal)
+    item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : bkColor("#333333")], for: .selected)
+    rootVC.tabBarItem = item
+    let navi = BKNavigationController(rootViewController: rootVC)
+    return navi
+}
+
+// 导航栏
+
+class BKNavigationController: UINavigationController
+{
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.delegate = self
+    }
+
+    override func pushViewController(_ viewController: UIViewController, animated: Bool)
+    {
+        if self.children.count >= 1 {
+            viewController.hidesBottomBarWhenPushed = true
+            let leftItem = UIBarButtonItem(image: UIImage(named: "nav_back"),
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(bk_leftItemAction(sender:)))
+            viewController.navigationItem.leftBarButtonItem = leftItem
+        }
+        super.pushViewController(viewController, animated: true)
+    }
+
+    @objc fileprivate func bk_leftItemAction(sender: UIBarButtonItem)
+    {
+        self.popViewController(animated: true)
+    }
+}
+
+extension BKNavigationController: UINavigationControllerDelegate
+{
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool)
+    {
+        /// 设置隐藏导航栏
+        if (viewController.isKind(of: BKBookkeepingController.self) ||
+            viewController.isKind(of: BKBillController.self) ||
+            viewController.isKind(of: BKReportFormController.self) ||
+            viewController.isKind(of: BKMineController.self)) {
+            self.setNavigationBarHidden(true, animated: true)
+            self.navigationBar.setBackgroundImage(nil, for: .default)
+        } else {
+            self.setNavigationBarHidden(false, animated: true)
+            self.navigationBar.setBackgroundImage(bkgetNaviBackImage(), for: .default)
+        }
+        self.navigationBar.shadowImage = UIImage()
+    }
+
+// MARK: --------------------------- 把view变成image ---------------------
+
+    func bkviewToImage(_ view: UIView) -> UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+
+    ///导航栏背景图片
+    func bkgetNaviBackImage() -> UIImage 
+    {
+        let navigationView = UIView(frame: CGRect(x: 0, y: 0, width: bk_w, height: bk_navigation_h))
+        navigationView.backgroundColor = bkColor("#FFFFFF")
+        return bkviewToImage (navigationView)
+    }
+
+}
+
 ```
 
