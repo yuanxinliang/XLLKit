@@ -16,14 +16,6 @@
     "ios": "9.0"
   },
   "requires_arc": true,
-  "dependencies": {
-    "Toast-Swift": [
-
-    ],
-    "MBProgressHUD": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "Constant",
@@ -41,7 +33,13 @@
         "XLLKit/Extension": [
 
         ],
+        "XLLKit/Constant": [
+
+        ],
         "SDWebImage": [
+
+        ],
+        "MBProgressHUD": [
 
         ]
       }
@@ -50,5 +48,6 @@
       "name": "Tool",
       "source_files": "XLLKit/Classes/Tool"
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }

@@ -10,6 +10,7 @@ target 'XLLKit_Example' do
   pod 'JXPagingView/Paging'
   pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
   pod 'Charts'
+  pod 'Toast-Swift'
 
   target 'XLLKit_Tests' do
     inherit! :search_paths

@@ -18,8 +18,7 @@ Pod::Spec.new do |s|
   s.swift_version           = '5.0'
   s.ios.deployment_target   = '9.0'
   s.requires_arc            = true
-  # s.dependency              'Toast-Swift'
-  s.dependency              'MBProgressHUD'
+  
   
   s.subspec 'Constant' do |ss|
     ss.source_files = 'XLLKit/Classes/Constant'
@@ -33,7 +32,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'XLLKit/Classes/Component'
     ss.resource     = 'XLLKit/Classes/Component/Resource'
     ss.dependency     'XLLKit/Extension'
+    ss.dependency     'XLLKit/Constant'
     ss.dependency     'SDWebImage'
+    ss.dependency     'MBProgressHUD'
   end
   
   s.subspec 'Tool' do |ss|
