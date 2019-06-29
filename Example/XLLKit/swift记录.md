@@ -60,31 +60,6 @@ let temp = (textField.text! as NSString).replacingCharacters(in: range, with: st
 // 沙盒位置
 let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
 
-
-/// 金额格式化
-fileprivate func moneyFormatter(money: Float) -> String
-{
-    let number = NSNumber(value: money)
-    let formatter = NumberFormatter()
-    // 设置显示样式
-    formatter.numberStyle = .decimal
-    // 设置小数点后最多2位
-    formatter.maximumFractionDigits = 2
-    // 设置小数点后最少2位（不足补0）
-    formatter.minimumFractionDigits = 2
-    // 自定义前缀
-    formatter.positivePrefix = "￥"
-    // 设置用组分隔
-    formatter.usesGroupingSeparator = true
-    // 分隔符号
-    formatter.groupingSeparator = ","
-    // 分隔位数
-    formatter.groupingSize = 3
-    // 格式化
-    let format = formatter.string(from: number)
-    return format ?? "￥0.00"
-}
-
 // 状态栏
 override var preferredStatusBarStyle: UIStatusBarStyle
 {
