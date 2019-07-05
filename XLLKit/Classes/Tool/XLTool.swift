@@ -58,7 +58,7 @@ public class XLTool: NSObject
     }
     
     /// 金额格式化 - http://www.hangge.com/blog/cache/detail_2086.html
-    public class func xl_moneyFormatter(value: Float) -> String
+    public class func xl_moneyFormatter(value: Double) -> String
     {
         let number = NSNumber(value: value)
         let formatter = NumberFormatter()

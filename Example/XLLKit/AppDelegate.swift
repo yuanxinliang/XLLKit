@@ -17,18 +17,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let a = XLTool.xl_moneyFormatter(value: 10000.787777)
-        let b = XLTool.xl_dateConverToString(date: Date())
-        let c = XLTool.xl_dateConverToString(date: Date(), dateFormat: "yyyy/MM/dd")
-        let d = XLTool.xl_stringConverToDate(string: "2019-06-22 14:00:00")
-        let e = XLTool.xl_stringConverToDate(string: "2019-06-23", dateFormat: "yyyy/MM/dd")
-        print(a)
-        print(b)
-        print(c)
-        print(XLTool.xl_dateConverToString(date: d))
-        print(XLTool.xl_dateConverToString(date: e))
-        self.window?.backgroundColor = UIColor.xl_hex(0xeeeeee)
+//        let a = XLTool.xl_moneyFormatter(value: 10000.787777)
+//        let b = XLTool.xl_dateConverToString(date: Date())
+//        let c = XLTool.xl_dateConverToString(date: Date(), dateFormat: "yyyy/MM/dd")
+//        let d = XLTool.xl_stringConverToDate(string: "2019-06-22 14:00:00")
+//        let e = XLTool.xl_stringConverToDate(string: "2019-06-23", dateFormat: "yyyy/MM/dd")
+//        print(a)
+//        print(b)
+//        print(c)
+//        print(XLTool.xl_dateConverToString(date: d))
+//        print(XLTool.xl_dateConverToString(date: e))
+//        self.window?.backgroundColor = UIColor.xl_hex(0xeeeeee)
+//        let a = moneyFormatter(money: 12345678.88)
+//        let b = Int.max
+//       let none = NumberFormatter.localizedString(from: NSNumber(value: 123456789), number: .decimal)
         return true
+    }
+    
+    /// 金额格式化
+    fileprivate func moneyFormatter(money: Float) -> String
+    {
+        let number = NSNumber(value: money)
+        let formatter = NumberFormatter()
+        // 设置显示样式
+        formatter.numberStyle = .decimal
+        // 设置小数点后最多2位
+        formatter.maximumFractionDigits = 2
+        // 设置小数点后最少2位（不足补0）
+        formatter.minimumFractionDigits = 2
+        // 自定义前缀
+        formatter.positivePrefix = "￥"
+        // 设置用组分隔
+        formatter.usesGroupingSeparator = true
+        // 分隔符号
+        formatter.groupingSeparator = ","
+        // 分隔位数
+        formatter.groupingSize = 3
+        // 格式化
+        let format = formatter.string(from: number)
+        return format ?? "￥0.00"
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

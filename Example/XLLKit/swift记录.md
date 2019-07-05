@@ -150,5 +150,54 @@ extension BKNavigationController: UINavigationControllerDelegate
 
 }
 
+
+override func layoutSubviews()
+{
+    super.layoutSubviews()
+
+    titleLabel?.adjustsFontSizeToFitWidth = true
+
+    let w = self.frame.width
+    let h = self.frame.height
+    let margin: CGFloat = 3
+
+    var label_frame = self.titleLabel?.frame
+    var image_frame = self.imageView?.frame
+
+    let label_size = label_frame?.size ?? CGSize(width: 0, height: 0)
+    let label_w = label_size.width
+    let label_h = label_size.height
+
+    let image_size = image_frame?.size ?? CGSize(width: 0, height: 0)
+    let image_w = image_size.width
+    let image_h = image_size.height
+
+    label_frame?.origin.x = (w - label_w) / 2
+    label_frame?.origin.y = h / 2.0 - (image_h + margin)
+
+    image_frame?.origin.x = (w - image_w) / 2
+    image_frame?.origin.y = h / 2.0 + margin
+
+    titleLabel?.frame = label_frame!
+    imageView?.frame = image_frame!
+}
+
+if let resultData = result as? Data {
+    do {
+        let resultDic = try JSONSerialization.jsonObject(with: resultData, options: .allowFragments)
+        print(resultDic)
+        let model = try JSONDecoder().decode(HDMainBaseModel.self, from: resultData)
+    } catch {
+        print(error)
+    }
+}
+
+let tempArray = NSMutableArray(array: (vc?.navigationController!.viewControllers)!)
+print(tempArray)
+// tempArray.removeObject(at: 2)
+tempArray.remove(loginVC)
+vc?.navigationController?.setViewControllers(tempArray as! [UIViewController], animated: true)
+
+
 ```
 
