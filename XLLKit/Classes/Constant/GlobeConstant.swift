@@ -22,6 +22,7 @@ public var xl_screenHeight: CGFloat
 }
 
 /*
+ 
  width = 320, height = 480      640 x 960      3.5吋（iPhone 4S）
  width = 320, height = 568      640 x 1136     4.0吋（iPhone SE）
  width = 375, height = 667      750 x 1334     4.7吋（iPhone 8）
@@ -29,6 +30,7 @@ public var xl_screenHeight: CGFloat
  width = 375, height = 812     1125 x 2436     5.8吋（iPhone X、iPhone XS）
  width = 414, height = 896      828 x 1792     6.1吋（iPhone XR）
  width = 414, height = 896     1242 x 2688     6.5吋（iPhone XS Max）
+ 
  */
 
 /// 3.5英寸屏幕
@@ -154,5 +156,6 @@ public var xl_appBundleID: String
 }
 
 // MARK: --<手机设备使用信息>--
+
 // MARK: --<手机设备硬件、内存等信息>--
 
