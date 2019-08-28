@@ -9,37 +9,38 @@ public var XLLabelDefaultAlignment: NSTextAlignment = .left
 public var XLLabelDefaultNumberOfLines: Int = 1
 public var XLLabelDefaultBackgroundColor: UIColor = .white
 
-public extension UILabel
-{
+extension UILabel: XLCompatible { }
+
+public extension XL where Base: UILabel {
     
     /// 创建文本：内容、颜色、字体
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont) -> Base
     {
-        return xl_createLabel(text, textColor, textFont, XLLabelDefaultAlignment, XLLabelDefaultNumberOfLines, XLLabelDefaultBackgroundColor)
+        return createLabel(text, textColor, textFont, XLLabelDefaultAlignment, XLLabelDefaultNumberOfLines, XLLabelDefaultBackgroundColor)
     }
     
     /// 创建文本：内容、颜色、字体、对齐方式
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment) -> Base
     {
-        return xl_createLabel(text, textColor, textFont, textAlignment, XLLabelDefaultNumberOfLines, XLLabelDefaultBackgroundColor)
+        return createLabel(text, textColor, textFont, textAlignment, XLLabelDefaultNumberOfLines, XLLabelDefaultBackgroundColor)
     }
     
     /// 创建文本：内容、颜色、字体、行数
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ numberOfLines: Int) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ numberOfLines: Int) -> Base
     {
-        return xl_createLabel(text, textColor, textFont, XLLabelDefaultAlignment, numberOfLines, XLLabelDefaultBackgroundColor)
+        return createLabel(text, textColor, textFont, XLLabelDefaultAlignment, numberOfLines, XLLabelDefaultBackgroundColor)
     }
     
     /// 创建文本：内容、颜色、字体、背景颜色
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ backgroundColor: UIColor) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ backgroundColor: UIColor) -> Base
     {
-        return xl_createLabel(text, textColor, textFont, XLLabelDefaultAlignment, XLLabelDefaultNumberOfLines, backgroundColor)
+        return createLabel(text, textColor, textFont, XLLabelDefaultAlignment, XLLabelDefaultNumberOfLines, backgroundColor)
     }
     
     /// 创建文本：内容、颜色、字体、对齐方式、行数
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment, _ numberOfLines: Int) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment, _ numberOfLines: Int) -> Base
     {
-        return xl_createLabel(text, textColor, textFont, textAlignment, numberOfLines, XLLabelDefaultBackgroundColor)
+        return createLabel(text, textColor, textFont, textAlignment, numberOfLines, XLLabelDefaultBackgroundColor)
     }
     
     /// 创建Label
@@ -51,9 +52,9 @@ public extension UILabel
     ///   - textAlignment: 文本对齐方式
     ///   - numberOfLines: 文本行数
     ///   - backgroundColor: 文本背景颜色
-    class func xl_createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment, _ numberOfLines: Int, _ backgroundColor: UIColor) -> Self
+    static func createLabel(_ text: String, _ textColor: UIColor, _ textFont: UIFont, _ textAlignment: NSTextAlignment, _ numberOfLines: Int, _ backgroundColor: UIColor) -> Base
     {
-        let label = self.init()
+        let label = Base.init()
         label.text = text
         label.textColor = textColor
         label.font = textFont

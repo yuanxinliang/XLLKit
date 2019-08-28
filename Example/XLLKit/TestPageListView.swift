@@ -21,7 +21,7 @@ class TestPageListView: UIView {
         tv.estimatedRowHeight = 80.0
         tv.separatorStyle = .none
         tv.tableFooterView = UIView()
-        tv.backgroundColor = UIColor.xl_randomColor()
+        tv.backgroundColor = UIColor.xl.randomColor()
         setupTableViewRegisterCell(tv: tv)
         return tv
     }()
@@ -45,7 +45,7 @@ class TestPageListView: UIView {
     
     fileprivate func setupDefault()
     {
-        backgroundColor = UIColor.xl_randomColor()
+        backgroundColor = UIColor.xl.randomColor()
     }
     
     fileprivate func setupUI()

@@ -46,7 +46,7 @@ class TestTabViewController: UIViewController {
         for i in 0..<a.sources.count {
             let frame = CGRect(x: CGFloat(i) * w, y: 0, width: w, height: h)
             let view = UIView(frame: frame)
-            view.backgroundColor = UIColor.xl_randomColor()
+            view.backgroundColor = UIColor.xl.randomColor()
             s.addSubview(view)
         }
         self.scrollView = s

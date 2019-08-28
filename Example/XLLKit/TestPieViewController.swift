@@ -68,7 +68,7 @@ class TestPieViewController: UIViewController {
         set.xValuePosition = .outsideSlice
         set.yValuePosition = .outsideSlice
         set.valueLineWidth = 1.0
-        set.valueLineColor = UIColor.xl_hexString("#333333")
+        set.valueLineColor = UIColor.xl.hexString("#333333")
         set.valueLinePart1OffsetPercentage = 0.8
         
         let data = PieChartData(dataSet: set)

@@ -161,7 +161,7 @@ public class XLCityPickerView: UIView
     lazy var titleToolBar: UIView = {
         let frame = CGRect(x: 0, y: 0, width: xl_screenWidth, height: xl_h(60))
         let titleToolBar = UIView(frame: frame)
-        titleToolBar.backgroundColor = UIColor.xl_hex(0xF9F9FF)
+        titleToolBar.backgroundColor = UIColor.xl.hex(0xF9F9FF)
         return titleToolBar
     }()
     
@@ -506,7 +506,7 @@ extension XLCityPickerView: UIPickerViewDataSource, UIPickerViewDelegate
             label = UILabel(frame: CGRect(x: 0, y: 0, width: xl_screenWidth / 3.0, height: 30))
             label?.adjustsFontSizeToFitWidth = true
             label?.textAlignment = .center
-            label?.textColor = pickerLabelTextCoclor == nil ? UIColor.xl_hex(0x666666): pickerLabelTextCoclor
+            label?.textColor = pickerLabelTextCoclor == nil ? UIColor.xl.hex(0x666666): pickerLabelTextCoclor
             label?.font = pickerLabelFont == nil ? UIFont.systemFont(ofSize: 17) : pickerLabelFont
         }
         

@@ -24,7 +24,7 @@ class TestPageHeaderView: UIView {
     
     fileprivate func setupDefault()
     {
-        backgroundColor = UIColor.xl_randomColor()
+        backgroundColor = UIColor.xl.randomColor()
     }
     
     fileprivate func setupUI()

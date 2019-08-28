@@ -9,57 +9,59 @@ public var XLBtnDefaultTitleFont: UIFont = UIFont.systemFont(ofSize: 15)
 public var XLBtnDefaultTitleColor: UIColor = .black
 public var XLBtnDefaultBackgroundColor: UIColor = .white
 
-public extension UIButton
-{
-    func xl_setFrame(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat)
+extension UIButton: XLCompatible { }
+
+public extension XL where Base: UIButton {
+    
+    func setFrame(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat)
     {
         let frame = CGRect(x: x, y: y, width: width, height: height)
-        self.frame = frame
+        base.frame = frame
     }
     
-    class func xl_createBtn(title: String) -> Self
+    static func createBtn(title: String) -> Base
     {
-        return xl_createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: XLBtnDefaultBackgroundColor)
+        return createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: XLBtnDefaultBackgroundColor)
     }
     
-    class func xl_createBtn(title: String, titleFont: UIFont) -> Self
+    static func createBtn(title: String, titleFont: UIFont) -> Base
     {
-        return xl_createBtn(title: title, titleFont: titleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: XLBtnDefaultBackgroundColor)
-    }
-    
-    class func xl_createBtn(title: String, titleColor: UIColor) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: titleColor, backgroundColor: XLBtnDefaultBackgroundColor)
-    }
-    
-    class func xl_createBtn(title: String, backgroundColor: UIColor) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: backgroundColor)
-    }
-    
-    class func xl_createBtn(title: String, titleFont: UIFont, titleColor: UIColor) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: titleFont, titleColor: titleColor, backgroundColor: XLBtnDefaultBackgroundColor)
-    }
-    
-    class func xl_createBtn(title: String, imageName: String) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, imageName: imageName)
-    }
-    
-    class func xl_createBtn(title: String, titleFont: UIFont, imageName: String) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: titleFont, titleColor: XLBtnDefaultTitleColor, imageName: imageName)
-    }
-    
-    class func xl_createBtn(title: String, titleColor: UIColor, imageName: String) -> Self
-    {
-        return xl_createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: titleColor, imageName: imageName)
+        return createBtn(title: title, titleFont: titleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: XLBtnDefaultBackgroundColor)
     }
 
-    class func xl_createBtn(title: String?, titleFont: UIFont?, titleColor: UIColor?, backgroundColor: UIColor?) -> Self
+    static func createBtn(title: String, titleColor: UIColor) -> Base
     {
-        let btn = self.init()
+        return createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: titleColor, backgroundColor: XLBtnDefaultBackgroundColor)
+    }
+
+    static func createBtn(title: String, backgroundColor: UIColor) -> Base
+    {
+        return createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, backgroundColor: backgroundColor)
+    }
+
+    static func createBtn(title: String, titleFont: UIFont, titleColor: UIColor) -> Base
+    {
+        return createBtn(title: title, titleFont: titleFont, titleColor: titleColor, backgroundColor: XLBtnDefaultBackgroundColor)
+    }
+
+    static func createBtn(title: String, imageName: String) -> Base
+    {
+        return createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: XLBtnDefaultTitleColor, imageName: imageName)
+    }
+
+    static func createBtn(title: String, titleFont: UIFont, imageName: String) -> Base
+    {
+        return createBtn(title: title, titleFont: titleFont, titleColor: XLBtnDefaultTitleColor, imageName: imageName)
+    }
+
+    static func createBtn(title: String, titleColor: UIColor, imageName: String) -> Base
+    {
+        return createBtn(title: title, titleFont: XLBtnDefaultTitleFont, titleColor: titleColor, imageName: imageName)
+    }
+
+    static func createBtn(title: String?, titleFont: UIFont?, titleColor: UIColor?, backgroundColor: UIColor?) -> Base
+    {
+        let btn = Base.init()
         btn.setTitle(title, for: .normal)
         btn.titleLabel?.font = titleFont
         btn.setTitleColor(titleColor, for: .normal)
@@ -67,9 +69,9 @@ public extension UIButton
         return btn
     }
     
-    class func xl_createBtn(title: String?, titleFont: UIFont?, titleColor: UIColor?, imageName: String?) -> Self
+    static func createBtn(title: String?, titleFont: UIFont?, titleColor: UIColor?, imageName: String?) -> Base
     {
-        let btn = self.init()
+        let btn = Base.init()
         btn.setTitle(title, for: .normal)
         btn.titleLabel?.font = titleFont
         btn.setTitleColor(titleColor, for: .normal)

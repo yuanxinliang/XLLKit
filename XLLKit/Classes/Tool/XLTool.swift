@@ -6,9 +6,33 @@
 //
 
 import UIKit
+import StoreKit
 
 public class XLTool: NSObject
 {
+    /// 去评分
+    class func xl_toScore(idString: String) {
+        
+        let urlString = "itms-apps://itunes.apple.com/app/id\(idString)?action=write-review"
+        
+        if let url = URL(string: urlString) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+        
+        
+//        let urlString = "itms-apps://itunes.apple.com/app/id1474192596?action=write-review"
+//        if #available(iOS 10.3, *) {
+//            SKStoreReviewController.requestReview()
+//        } else {
+//            let str = "itms-apps://itunes.apple.com/app/id\(idString)?action=write-review"
+//            UIApplication.shared.openURL(URL(string: str)!)
+//        }
+    }
+    
     /// 拨打电话
     public class func xl_call(number: String)
     {

@@ -5,16 +5,17 @@
 //  Created by XL Yuen on 2019/6/1.
 //
 
+extension NSRegularExpression: XLCompatible { }
+
 // MARK: - 匹配 - Matching
-public extension NSRegularExpression
-{
-    class func xl_isMatch(string: String, pattern: String) -> Bool
-    {
-        return xl_isMatch(string: string, pattern: pattern, ignoreCase: false)
+
+public extension XL where Base: NSRegularExpression {
+    
+    static func isMatch(string: String, pattern: String) -> Bool {
+        return isMatch(string: string, pattern: pattern, ignoreCase: false)
     }
     
-    class func xl_isMatch(string: String, pattern: String, ignoreCase: Bool) -> Bool
-    {
+    static func isMatch(string: String, pattern: String, ignoreCase: Bool) -> Bool {
         var isMatch = false
         do {
             // 正则匹配选项
@@ -29,12 +30,14 @@ public extension NSRegularExpression
         }
         return isMatch
     }
+    
 }
 
 // MARK: - 替换 - Replacement
-public extension NSRegularExpression
-{
-    class func xl_replacement(string: String, replace: String, pattern: String) -> String
+
+public extension XL where Base: NSRegularExpression {
+    
+    static func replacement(string: String, replace: String, pattern: String) -> String
     {
         var value = string
         do {

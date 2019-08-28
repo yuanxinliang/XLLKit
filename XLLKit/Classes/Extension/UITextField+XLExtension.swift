@@ -5,12 +5,14 @@
 //  Created by ZZCMXL on 2019/5/30.
 //
 
-public extension UITextField
-{
+extension UITextField: XLCompatible { }
+
+public extension XL where Base: UITextField {
+    
     /// 创建文本输入框
-    class func xl_createTextField(text: String?, textColor: UIColor?, textFont: UIFont?, placeholder: String?, placeholderColor: UIColor?, placeholderFont: UIFont?) -> Self
+    static func createTextField(text: String?, textColor: UIColor?, textFont: UIFont?, placeholder: String?, placeholderColor: UIColor?, placeholderFont: UIFont?) -> Base
     {
-        let tf = self.init()
+        let tf = Base.init()
         
         tf.text = text
         tf.textColor = textColor
@@ -24,56 +26,56 @@ public extension UITextField
     }
     
     /// 输入框文本颜色、字体、占位符
-    class func xl_createTextField(_ textColor: UIColor, _ textFont: UIFont, _ placeholder: String) -> Self
+    static func createTextField(_ textColor: UIColor, _ textFont: UIFont, _ placeholder: String) -> Base
     {
-        return xl_createTextField(text: nil, textColor: textColor, textFont: textFont, placeholder: placeholder, placeholderColor: nil, placeholderFont: nil)
+        return createTextField(text: nil, textColor: textColor, textFont: textFont, placeholder: placeholder, placeholderColor: nil, placeholderFont: nil)
     }
     
     /// 输入框文本颜色、字体、占位符、占位颜色、占位字体
-    class func xl_createTextField(_ textColor: UIColor, _ textFont: UIFont, _ placeholder: String, _ placeholderColor: UIColor?, _ placeholderFont: UIFont?) -> Self
+    static func createTextField(_ textColor: UIColor, _ textFont: UIFont, _ placeholder: String, _ placeholderColor: UIColor?, _ placeholderFont: UIFont?) -> Base
     {
-        return xl_createTextField(text: nil, textColor: textColor, textFont: textFont, placeholder: placeholder, placeholderColor: placeholderColor, placeholderFont: placeholderFont)
+        return createTextField(text: nil, textColor: textColor, textFont: textFont, placeholder: placeholder, placeholderColor: placeholderColor, placeholderFont: placeholderFont)
     }
     
     /// 设置左边视图
-    func xl_setLeftView(_ view: UIView)
+    func setLeftView(_ view: UIView)
     {
-        xl_setLeftView(view, mode: .always)
+        setLeftView(view, mode: .always)
     }
     
     /// 设置左边视图
-    func xl_setLeftView(_ view: UIView, mode: UITextField.ViewMode)
+    func setLeftView(_ view: UIView, mode: UITextField.ViewMode)
     {
-        self.leftView = view
-        self.leftViewMode = mode
+        base.leftView = view
+        base.leftViewMode = mode
     }
     
     /// 设置右边视图
-    func xl_setRightView(_ view: UIView)
+    func setRightView(_ view: UIView)
     {
-        xl_setRightView(view, mode: .always)
+        setRightView(view, mode: .always)
     }
     
     /// 设置右边视图
-    func xl_setRightView(_ view: UIView, mode: UITextField.ViewMode)
+    func setRightView(_ view: UIView, mode: UITextField.ViewMode)
     {
-        self.rightView = view
-        self.rightViewMode = mode
+        base.rightView = view
+        base.rightViewMode = mode
     }
     
     /// 设置删除按钮图片
-    func xl_setClearButton(imageName: String, mode: UITextField.ViewMode)
+    func setClearButton(imageName: String, mode: UITextField.ViewMode)
     {
-        let clearBtn = self.value(forKey: "_clearButton") as! UIButton
+        let clearBtn = base.value(forKey: "_clearButton") as! UIButton
         clearBtn.setImage(UIImage(named: imageName), for: .normal)
         clearBtn.setImage(UIImage(named: imageName), for: .highlighted)
-        self.clearButtonMode = mode
+        base.clearButtonMode = mode
     }
     
     /// 设置占位字符属性
-    func xl_setPlaceholder(color: UIColor?, font: UIFont)
+    func setPlaceholder(color: UIColor?, font: UIFont)
     {
-        self.setValue(color, forKey: "_placeholderLabel.textColor")
-        self.setValue(font, forKey: "_placeholderLabel.font")
+        base.setValue(color, forKey: "_placeholderLabel.textColor")
+        base.setValue(font, forKey: "_placeholderLabel.font")
     }
 }

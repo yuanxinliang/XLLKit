@@ -5,33 +5,30 @@
 //  Created by ZZCMXL on 2019/5/30.
 //
 
-
-// MARK: 创建视图
-
-public extension UIImageView
-{
-    class func xl_createImageView(imageName: String) -> Self
-    {
-        let iv = self.init(image: UIImage(named: imageName))
-        return iv
-    }
-}
+extension UIImageView: XLCompatible { }
 
 // MARK: 设置图片圆角
 
-public extension UIImageView
-{
-    func xl_setCircleImage(cornerRadius: CGFloat)
+public extension XL where Base: UIImageView {
+    
+    /// 创建视图
+    static func createImageView(imageName: String) -> Base
     {
-        xl_setCircleImage(roundingCorners: .allCorners, cornerRadius: cornerRadius)
+        let iv = Base.init(image: UIImage(named: imageName))
+        return iv
     }
     
-    func xl_setCircleImage(roundingCorners: UIRectCorner, cornerRadius: CGFloat)
-    {
-        if image != nil {
-            image = image?.xl_circleImage(roundingCorners: roundingCorners, cornerRadius: cornerRadius)
+    func setCircleImage(cornerRadius: CGFloat) {
+        setCircleImage(roundingCorners: .allCorners, cornerRadius: cornerRadius)
+    }
+    
+    func setCircleImage(roundingCorners: UIRectCorner, cornerRadius: CGFloat) {
+        if base.image != nil {
+            base.image = base.image?.xl.circleImage(roundingCorners: roundingCorners, cornerRadius: cornerRadius)
         } else {
             print("iv 没有图片...")
         }
     }
 }
+
+

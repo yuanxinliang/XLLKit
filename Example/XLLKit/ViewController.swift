@@ -92,7 +92,7 @@ class ViewController: UIViewController
     
     func test01()
     {
-        print("appppp".xl_bothNumberAndLetter())
+        print("appppp".xl.bothNumberAndLetter())
     }
     
     func regularReplace()
@@ -109,7 +109,7 @@ class ViewController: UIViewController
             print(error)
         }
         
-        print(NSRegularExpression.xl_replacement(string: string, replace: replace, pattern: pattern))
+        print(NSRegularExpression.xl.replacement(string: string, replace: replace, pattern: pattern))
     }
     
     func regularTest()
@@ -161,8 +161,8 @@ class ViewController: UIViewController
         //            print(error)
         //        }
         //        print("19..9uu9".xl_isMatch(regularString: "^(?![0-9]+$)(?![A-Za-z]+$)[A-Za-z0-9]{2,}"))
-        print("1哈哈😆".xl_hasEmoji())
-        print("1😁哈哈".xl_hasChinese())
+        print("1哈哈😆".xl.hasEmoji())
+        print("1😁哈哈".xl.hasChinese())
     }
     
     func test()
@@ -176,8 +176,8 @@ class ViewController: UIViewController
         print(xl_appBuild)
         print(xl_appVersion)
         print(xl_appBundleID)
-        self.view.backgroundColor = UIColor.xl_hexString("0x112340")
-        let a = UIImage().xl_circleImage()
+        self.view.backgroundColor = UIColor.xl.hexString("0x112340")
+        let a = UIImage().xl.circleImage()
         print(a)
         
         //        let a = UIView.xl_createView(backgroundColor: .yellow)
@@ -210,10 +210,10 @@ class ViewController: UIViewController
         print("test")
         XLBtnDefaultBackgroundColor = .gray
         XLBtnDefaultTitleColor = .orange
-        let btn = UIButton.xl_createBtn(title: "button1")
-        btn.xl_setFrame(x: 20, y: 100, width: 100, height: 50)
+        let btn = UIButton.xl.createBtn(title: "button1")
+        btn.xl.setFrame(x: 20, y: 100, width: 100, height: 50)
         self.view.addSubview(btn)
-        btn.xl_setHorizontalGradientLayer(startColor: .red, endColor: .orange, cornerRadius: 25)
+        btn.xl.setHorizontalGradientLayer(startColor: .red, endColor: .orange, cornerRadius: 25)
     }
     
 }

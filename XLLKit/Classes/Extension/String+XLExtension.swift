@@ -5,25 +5,26 @@
 //  Created by ZZCMXL on 2019/5/30.
 //
 
-/*
- ^  开始位置
- $  结束位置
- \d 等价[0-9]
- \D 等价[^0-9]
- \w 等价[A-Za-z_0-9]
- \W 等价[^A-Za-z_0-9]
- *  0个或0个以上
- +  一个或一个以上
- ?  0个或一个
- .  匹配除换行符以外的任意字符
- 
- [\u4E00-\u9FA5] 汉字的正则匹配
- */
 
 // MARK: - 正则字符串
 
 public enum XLRegularString: String
 {
+    /*
+     ^  开始位置
+     $  结束位置
+     \d 等价[0-9]
+     \D 等价[^0-9]
+     \w 等价[A-Za-z_0-9]
+     \W 等价[^A-Za-z_0-9]
+     *  0个或0个以上
+     +  一个或一个以上
+     ?  0个或一个
+     .  匹配除换行符以外的任意字符
+     
+     [\u4E00-\u9FA5] 汉字的正则匹配
+     */
+    
     /// 手机号格式 - 只允许数字，示例：13512345678
     case phoneNumber = "^(1)(\\d{10})$"
     
@@ -107,171 +108,220 @@ public enum XLRegularString: String
     case limitInput2 = "^[0-9xX]+$"
 }
 
+extension String: XLCompatible { }
+
 // MARK: - 正则匹配
 
-public extension String
-{
+public extension XL where Base == String {
+    
     /// 字符串参数
-    func xl_isMatch(regularString: String) -> Bool
+    func isMatch(regularString: String) -> Bool
     {
-        return NSRegularExpression.xl_isMatch(string: self, pattern: regularString)
+        return NSRegularExpression.xl.isMatch(string: base, pattern: regularString)
     }
     
     // 枚举值参数
-    func xl_isMatch(regularString: XLRegularString) -> Bool
+    func isMatch(regularString: XLRegularString) -> Bool
     {
-        return NSRegularExpression.xl_isMatch(string: self, pattern: regularString.rawValue)
+        return NSRegularExpression.xl.isMatch(string: base, pattern: regularString.rawValue)
     }
     
     /// 判断手机号
-    func xl_isPhoneNumber() -> Bool
+    func isPhoneNumber() -> Bool
     {
-        return xl_isMatch(regularString: .phoneNumber)
+        return isMatch(regularString: .phoneNumber)
     }
     
     /// 判断固定电话
-    func xl_isTelePhoneNumber() -> Bool
+    func isTelePhoneNumber() -> Bool
     {
-        return xl_isMatch(regularString: .telephoneNumber)
+        return isMatch(regularString: .telephoneNumber)
     }
     
     /// 验证码格式
-    func xl_isVericationCode() -> Bool
+    func isVericationCode() -> Bool
     {
-        return xl_isMatch(regularString: .verificationCode)
+        return isMatch(regularString: .verificationCode)
     }
     
     /// 判断邮箱
-    func xl_isEmail() -> Bool
+    func isEmail() -> Bool
     {
-        return xl_isMatch(regularString: .email)
+        return isMatch(regularString: .email)
     }
     
     /// 判断用户名
-    func xl_isUsername() -> Bool
+    func isUsername() -> Bool
     {
-        return xl_isMatch(regularString: .username)
+        return isMatch(regularString: .username)
     }
     
     /// 判断密码
-    func xl_isPassword() -> Bool
+    func isPassword() -> Bool
     {
-        return xl_isMatch(regularString: .password)
+        return isMatch(regularString: .password)
     }
     
     /// 判断邮政编码
-    func xl_isPostalCode() -> Bool
+    func isPostalCode() -> Bool
     {
-        return xl_isMatch(regularString: .postalCode)
+        return isMatch(regularString: .postalCode)
     }
     
     /// 判断身份证号
-    func xl_isIDCardNumber() -> Bool
+    func isIDCardNumber() -> Bool
     {
-        return xl_isMatch(regularString: .idCardNumber)
+        return isMatch(regularString: .idCardNumber)
     }
     
     /// 是否包含数字的字符串
-    func xl_hasNumber() -> Bool
+    func hasNumber() -> Bool
     {
-        return xl_isMatch(regularString: .hasNumber)
+        return isMatch(regularString: .hasNumber)
     }
     
     /// 是否纯数字字符串
-    func xl_allNumber() -> Bool
+    func allNumber() -> Bool
     {
-        return xl_isMatch(regularString: .allNumber)
+        return isMatch(regularString: .allNumber)
     }
     
     /// 是否包含小写字母的字符串
-    func xl_hasLowerCase() -> Bool
+    func hasLowerCase() -> Bool
     {
-        return xl_isMatch(regularString: .hasLowerCase)
+        return isMatch(regularString: .hasLowerCase)
     }
     
     /// 是否纯小写字母字符串
-    func xl_allLowerCase() -> Bool
+    func allLowerCase() -> Bool
     {
-        return xl_isMatch(regularString: .allLowerCase)
+        return isMatch(regularString: .allLowerCase)
     }
     
     /// 是否包含大写字母的字符串
-    func xl_hasUpperCase() -> Bool
+    func hasUpperCase() -> Bool
     {
-        return xl_isMatch(regularString: .hasUpperCase)
+        return isMatch(regularString: .hasUpperCase)
     }
     
     /// 是否纯大写字母字符串
-    func xl_allUpperCase() -> Bool
+    func allUpperCase() -> Bool
     {
-        return xl_isMatch(regularString: .allUpperCase)
+        return isMatch(regularString: .allUpperCase)
     }
     
     /// 是否包含字母的字符串
-    func xl_hasLetter() -> Bool
+    func hasLetter() -> Bool
     {
-        return xl_isMatch(regularString: .hasLetter)
+        return isMatch(regularString: .hasLetter)
     }
     
     /// 是否纯字母字符串
-    func xl_allLetter() -> Bool
+    func allLetter() -> Bool
     {
-        return xl_isMatch(regularString: .allLetter)
+        return isMatch(regularString: .allLetter)
     }
     
     /// 是否包含数字或字母的字符串
-    func xl_hasNumberOrLetter() -> Bool
+    func hasNumberOrLetter() -> Bool
     {
-        return xl_isMatch(regularString: .hasNumberLetter)
+        return isMatch(regularString: .hasNumberLetter)
     }
     
     /// 是否同时包含数字和密码的字符串
-    func xl_bothNumberAndLetter() -> Bool
+    func bothNumberAndLetter() -> Bool
     {
-        return xl_isMatch(regularString: .bothNumberLetter)
+        return isMatch(regularString: .bothNumberLetter)
     }
     
     /// 是否包含表情符
-    func xl_hasEmoji() -> Bool
+    func hasEmoji() -> Bool
     {
-        return xl_isMatch(regularString: .hasEmoji)
+        return isMatch(regularString: .hasEmoji)
     }
     /// 是否包含中文字符
-    func xl_hasChinese() -> Bool
+    func hasChinese() -> Bool
     {
-        return xl_isMatch(regularString: .hasChinese)
+        return isMatch(regularString: .hasChinese)
     }
 }
 
 // MARK: - 计算字符串的宽高
 
-public extension String
-{
+public extension XL where Base == String {
+    
     /// 根据固定宽度和字体，计算字符串的高度
-    func xl_height(width: CGFloat, font: UIFont) -> CGFloat
-    {
-        let frame = (self as NSString).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
+    func height(width: CGFloat, font: UIFont) -> CGFloat {
+        let frame = (base as NSString).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
         return frame.height
     }
     
     /// 根据固定高度和字体，计算字符串的宽度
-    func xl_width(height: CGFloat, font: UIFont) -> CGFloat
-    {
-        let frame = (self as NSString).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
+    func width(height: CGFloat, font: UIFont) -> CGFloat {
+        let frame = (base as NSString).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
         return frame.width
     }
+    
 }
 
 // MARK: - 给字符串添加下标索引存取功能
 
-public extension String
-{
-    subscript(index: Int) -> String
-    {
+public extension XL where Base == String {
+    
+    subscript(index: Int) -> String {
+        get {
+            return String(base[base.index(base.startIndex, offsetBy: index)])
+        }
+        set {
+            let tmp = base
+            base = ""
+            for (idx, item) in tmp.enumerated() {
+                if idx == index {
+                    base += "\(newValue)"
+                }else{
+                    base += "\(item)"
+                }
+            }
+        }
+    }
+    
+    /// 根据开始位置和长度截取字符串
+    func subString(start: Int, length: Int = -1) -> String {
+        var len = length
+        if len == -1 {
+            len = base.count - start
+        }
+        let st = base.index(base.startIndex, offsetBy: start)
+        let en = base.index(st, offsetBy: len)
+        return String(base[st ..< en])
+    }
+}
+
+// MARK: - 字符串转Date
+
+public extension XL where Base == String {
+    
+    func convertDate(format: String = "yyyy-MM-dd HH:mm:ss") -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        let date = formatter.date(from: base)
+        if date == nil {
+            print("时间转换失败...")
+            return Date()
+        }
+        return date!
+    }
+}
+
+// MARK: - 字符串下标索引功能
+
+public extension String {
+    
+    /// 给字符串添加下标索引存取功能
+    subscript(index: Int) -> String {
         get {
             return String(self[self.index(self.startIndex, offsetBy: index)])
         }
-        
         set {
             let tmp = self
             self = ""
@@ -286,8 +336,7 @@ public extension String
     }
     
     /// 根据开始位置和长度截取字符串
-    func subString(start: Int, length: Int = -1) -> String
-    {
+    func subString(start: Int, length: Int = -1) -> String {
         var len = length
         if len == -1 {
             len = self.count - start
@@ -298,19 +347,5 @@ public extension String
     }
 }
 
-// MARK: - 字符串转Date
 
-public extension String
-{
-    func xl_convertDate(format: String = "yyyy-MM-dd HH:mm:ss") -> Date {
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        let date = formatter.date(from: self)
-        if date == nil {
-            print("时间转换失败...")
-            return Date()
-        }
-        return date!
-    }
-}
 

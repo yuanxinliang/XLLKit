@@ -5,31 +5,33 @@
 //  Created by ZZCMXL on 2019/5/30.
 //
 
-public extension UIColor
-{
+extension UIColor: XLCompatible { }
+
+public extension XL where Base: UIColor {
+    
     /// 通过16进制值，设置颜色、透明度为1
-    class func xl_hex(_ hex: Int) -> UIColor
+    static func hex(_ hex: Int) -> UIColor
     {
-        return xl_hex(hex, 1.0)
+        return self.hex(hex, 1.0)
     }
     
     /// 通过16进制值，设置颜色、透明度
-    class func xl_hex(_ hex: Int, _ alpha: CGFloat) -> UIColor
+    static func hex(_ hex: Int, _ alpha: CGFloat) -> UIColor
     {
         let r: Int = (hex & 0xFF0000) >> 16
         let g: Int = (hex & 0x00FF00) >> 8
         let b: Int = (hex & 0x0000FF)
-        return xl_RGBA(CGFloat(r), CGFloat(g), CGFloat(b), alpha)
+        return RGBA(CGFloat(r), CGFloat(g), CGFloat(b), alpha)
     }
     
     /// 通过16进制字符串，设置颜色，透明度为1.0
-    class func xl_hexString(_ hex: String) -> UIColor
+    static func hexString(_ hex: String) -> UIColor
     {
-        return xl_hexString(hex, 1.0)
+        return hexString(hex, 1.0)
     }
     
     /// 通过16进制字符串、透明度，设置颜色
-    class func xl_hexString(_ hex: String, _ alpha: CGFloat) -> UIColor
+    static func hexString(_ hex: String, _ alpha: CGFloat) -> UIColor
     {
         var tempHex = hex
         
@@ -68,25 +70,24 @@ public extension UIColor
         Scanner.init(string: gHex).scanHexInt32(&g)
         Scanner.init(string: bHex).scanHexInt32(&b)
         
-        return xl_RGBA(CGFloat(r), CGFloat(g), CGFloat(b), alpha)
+        return RGBA(CGFloat(r), CGFloat(g), CGFloat(b), alpha)
     }
     
     /// 随机色
-    class func xl_randomColor() -> UIColor
+    static func randomColor() -> UIColor
     {
-        return xl_RGB(CGFloat(arc4random() % 255), CGFloat(arc4random() % 255), CGFloat(arc4random() % 255))
+        return RGB(CGFloat(arc4random() % 255), CGFloat(arc4random() % 255), CGFloat(arc4random() % 255))
     }
     
     /// 通过r、g、b设置颜色，透明度为1.0
-    class func xl_RGB(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor
+    static func RGB(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor
     {
-        return xl_RGBA(r, g, b, 1.0)
+        return RGBA(r, g, b, 1.0)
     }
     
     /// 通过r、g、b、a设置颜色
-    class func xl_RGBA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor
+    static func RGBA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor
     {
         return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
     }
-    
 }

@@ -18,7 +18,7 @@ public class XLCategoryCell: UICollectionViewCell
     }
     
     lazy var contentLabel: UILabel = {
-        let label = UILabel.xl_createLabel("标题", .black, .systemFont(ofSize: 15))
+        let label = UILabel.xl.createLabel("标题", .black, .systemFont(ofSize: 15))
         label.textAlignment = .center
         label.backgroundColor = .orange
         self.contentView.addSubview(label)
