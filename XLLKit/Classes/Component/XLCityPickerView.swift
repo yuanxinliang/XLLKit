@@ -139,7 +139,7 @@ public class XLCityPickerView: UIView
     
     /// 创建城市选择器
     lazy var pickerView: UIPickerView = {
-        let frame = CGRect(x: 0, y: xl_h(60), width: xl_screenWidth, height: xl_h(250) - xl_h(60))
+        let frame = CGRect(x: 0, y: Screen.xl.h(60), width: Screen.xl.width, height: Screen.xl.h(250) - Screen.xl.h(60))
         let pickerView = UIPickerView(frame: frame)
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -150,7 +150,7 @@ public class XLCityPickerView: UIView
     
     /// 创建容器
     lazy var containView: UIView = {
-        let frame = CGRect(x: 0, y: xl_screenHeight, width: xl_screenWidth, height: xl_h(250))
+        let frame = CGRect(x: 0, y: Screen.xl.height, width: Screen.xl.width, height: Screen.xl.h(250))
         let containView = UIView(frame: frame)
         containView.backgroundColor = UIColor.gray
         return containView
@@ -159,7 +159,7 @@ public class XLCityPickerView: UIView
     
     /// 创建容器中的titleToolBar
     lazy var titleToolBar: UIView = {
-        let frame = CGRect(x: 0, y: 0, width: xl_screenWidth, height: xl_h(60))
+        let frame = CGRect(x: 0, y: 0, width: Screen.xl.width, height: Screen.xl.h(60))
         let titleToolBar = UIView(frame: frame)
         titleToolBar.backgroundColor = UIColor.xl.hex(0xF9F9FF)
         return titleToolBar
@@ -167,7 +167,7 @@ public class XLCityPickerView: UIView
     
     /// 创建确定按钮
     lazy var sureButton: UIButton = {
-        let frame = CGRect(x: xl_screenWidth - xl_w(80), y: xl_h(15), width: xl_w(60), height: xl_h(30))
+        let frame = CGRect(x: Screen.xl.width - Screen.xl.w(80), y: Screen.xl.h(15), width: Screen.xl.w(60), height: Screen.xl.h(30))
         let sureButton = UIButton(frame: frame)
         sureButton.setTitle("完成", for: .normal)
         sureButton.addTarget(self, action: #selector(addressButtonOnclik), for: .touchUpInside)
@@ -179,7 +179,7 @@ public class XLCityPickerView: UIView
     
     /// 创建取消按钮
     lazy var cancleButton: UIButton = {
-        let frame = CGRect(x: xl_w(20), y: xl_h(15), width: xl_w(60), height: xl_h(30))
+        let frame = CGRect(x: Screen.xl.w(20), y: Screen.xl.h(15), width: Screen.xl.w(60), height: Screen.xl.h(30))
         let cancleButton = UIButton(frame: frame)
         cancleButton.setTitle("取消", for: .normal)
         cancleButton.addTarget(self, action: #selector(addressButtonOnclik), for: .touchUpInside)
@@ -189,7 +189,7 @@ public class XLCityPickerView: UIView
     }()
     
     lazy var selectLabel: UILabel = {
-        let frame = CGRect(x: xl_screenWidth / 2.0 - xl_w(30), y: xl_h(15), width: xl_w(60), height: xl_h(30))
+        let frame = CGRect(x: Screen.xl.width / 2.0 - Screen.xl.w(30), y: Screen.xl.h(15), width: Screen.xl.w(60), height: Screen.xl.h(30))
         let label = UILabel(frame: frame)
         label.text = "请选择"
         label.textColor = UIColor.black
@@ -228,7 +228,7 @@ public class XLCityPickerView: UIView
     /// 初始化界面
     func xl_setView()
     {
-        self.frame = CGRect(x: 0, y: 0, width: xl_screenWidth, height: xl_screenHeight)
+        self.frame = CGRect(x: 0, y: 0, width: Screen.xl.width, height: Screen.xl.height)
         // 添加容器
         addSubview(containView)
         addGestureRecognizer(tap)
@@ -389,7 +389,7 @@ public class XLCityPickerView: UIView
         backgroundColor = UIColor.clear
         UIView.animate(withDuration: 0.3) {
             self.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-            self.containView.xl_bottom = xl_screenHeight
+            self.containView.xl_bottom = Screen.xl.height
         }
     }
     
@@ -398,7 +398,7 @@ public class XLCityPickerView: UIView
     {
         UIView.animate(withDuration: 0.3, animations: {
             self.backgroundColor = UIColor.clear
-            self.containView.xl_y =  xl_screenHeight
+            self.containView.xl_y =  Screen.xl.height
         }) { (finish) in
             self.removeFromSuperview()
         }
@@ -503,7 +503,7 @@ extension XLCityPickerView: UIPickerViewDataSource, UIPickerViewDelegate
         var label = view as? UILabel
         
         if label == nil {
-            label = UILabel(frame: CGRect(x: 0, y: 0, width: xl_screenWidth / 3.0, height: 30))
+            label = UILabel(frame: CGRect(x: 0, y: 0, width: Screen.xl.width / 3.0, height: 30))
             label?.adjustsFontSizeToFitWidth = true
             label?.textAlignment = .center
             label?.textColor = pickerLabelTextCoclor == nil ? UIColor.xl.hex(0x666666): pickerLabelTextCoclor

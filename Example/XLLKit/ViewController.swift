@@ -172,10 +172,7 @@ class ViewController: UIViewController
 //        let isMatch = NSRegularExpression.xl_isMatch(string: text, pattern: pattern, ignoreCase: false)
 //        print(isMatch)
         
-        print(xl_appName)
-        print(xl_appBuild)
-        print(xl_appVersion)
-        print(xl_appBundleID)
+        
         self.view.backgroundColor = UIColor.xl.hexString("0x112340")
         let a = UIImage().xl.circleImage()
         print(a)

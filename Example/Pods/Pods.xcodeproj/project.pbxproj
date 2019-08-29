@@ -224,7 +224,7 @@
 		85035F1729A70C6E09AE5B998BBB970C /* SDWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FDD809B2AFA6B59E1E3060BCEF1C215 /* SDWeakProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		852887173A1F802E93E8BF3FEDD3B8BD /* MJRefreshAutoStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E6FCBB6CB77B6920D9FED6A8FEBEBAC /* MJRefreshAutoStateFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85DBD599545B98F7AB17B94C86A4DC37 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 364F5615D4ACC17A6A5A15D3C70A12E6 /* MJRefreshGifHeader.m */; };
-		85E13339770AC98050CA5C6766B6AACC /* XLTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799222997320D56B3B375E7908FDF420 /* XLTool.swift */; };
+		85E13339770AC98050CA5C6766B6AACC /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799222997320D56B3B375E7908FDF420 /* Tool.swift */; };
 		8638BD5B0012059ABB8B3C588633667C /* MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE9FFD0FFC70B42162CA6EF3F195107 /* MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86BA81E8184895A67C1FFF3138A7E101 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5632E1A6B38CD6E10A7DDF7A36D70F /* SDMemoryCache.m */; };
 		86F2E53F22F26D2D030CA8ED679B5266 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = AC770305550C84EBB7FEB4C2CBD30A89 /* MJRefreshBackFooter.m */; };
@@ -431,7 +431,6 @@
 		FF0E3F8B3FB568ACBB1BC433D67ED093 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011DD830021A91A420FFA2472CFEC43 /* ConstraintMakerExtendable.swift */; };
 		FF0EE7E6F869E55DA268F25622674EB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEF01C5707077161892377B64350C25 /* Foundation.framework */; };
 		FF1DE73820CFD407AE73945E9B317579 /* NSRegularExpression+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A127BF509648B4A3D5EB69609051ED /* NSRegularExpression+XLExtension.swift */; };
-		FF663FD0F71972E9F413EE78F2325345 /* XLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F50AA037A8C05893EE81F358B36FE /* XLTabView.swift */; };
 		FFE7A02118B5288BC94F7422D6CFEB3F /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65144D9163DEA9CD1D9E4E350CE205 /* ConstraintLayoutGuide.swift */; };
 /* End PBXBuildFile section */
 
@@ -752,7 +751,7 @@
 		78CD2747FDEDC90337285B37D4C94AEE /* TriangleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TriangleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/TriangleShapeRenderer.swift; sourceTree = "<group>"; };
 		78FC464616FE98CCE4332A51CE55873D /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
 		7901384E4D87BAA420532C1D020B08F0 /* IBarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBarChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBarChartDataSet.swift; sourceTree = "<group>"; };
-		799222997320D56B3B375E7908FDF420 /* XLTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLTool.swift; path = XLLKit/Classes/Tool/XLTool.swift; sourceTree = "<group>"; };
+		799222997320D56B3B375E7908FDF420 /* Tool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = XLLKit/Classes/Tool/Tool.swift; sourceTree = "<group>"; };
 		7A45349971E1EA7551B5B43BFF203DF0 /* IValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IValueFormatter.swift; path = Source/Charts/Formatters/IValueFormatter.swift; sourceTree = "<group>"; };
 		7A8892D26A37E679F5944DB9B9E2D7FA /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		7B0F13BA84D7D7757F0C2C424588987B /* XLLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLKit.modulemap; sourceTree = "<group>"; };
@@ -978,7 +977,6 @@
 		E82D9E8DB55E024D27B4AC6220BBF033 /* AADataLabels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AADataLabels.swift; path = AAInfographics/AAOptionsModel/AADataLabels.swift; sourceTree = "<group>"; };
 		E85A360E4ADF862849EA5A789513BD46 /* ChevronDownShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChevronDownShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift; sourceTree = "<group>"; };
 		E91994551551FF84C641937E9937CB3F /* LineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift; sourceTree = "<group>"; };
-		E94F50AA037A8C05893EE81F358B36FE /* XLTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLTabView.swift; path = XLLKit/Classes/Component/XLTabView.swift; sourceTree = "<group>"; };
 		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9862BE1CBE81DBC244329BA0CB2E416 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		E9E0C19E1809CEF0EF21DCBD93456515 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
@@ -1245,7 +1243,6 @@
 				C90A7BFB5C9714D230CA8E5605FE9F01 /* XLNormalSelectorView.swift */,
 				B59DFB6012A35E07C50CA759D1EA7D30 /* XLPhoneTextField.swift */,
 				101FE1083F28A69BD4A0A0F946F3C867 /* XLProgressView.swift */,
-				E94F50AA037A8C05893EE81F358B36FE /* XLTabView.swift */,
 				7F15545744C1CF2681929E8C94DB3FB0 /* Resources */,
 			);
 			name = Component;
@@ -1572,7 +1569,7 @@
 		8B97B532D2E324F93F6C0109FA9F4DAB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				799222997320D56B3B375E7908FDF420 /* XLTool.swift */,
+				799222997320D56B3B375E7908FDF420 /* Tool.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -2931,8 +2928,7 @@
 				0FA1951F08CE61B0BA307D4EFC54E96D /* XLNormalSelectorView.swift in Sources */,
 				D799D402D64206309E79AB35FC32DABD /* XLPhoneTextField.swift in Sources */,
 				7D3070A66B19A3472C0EE8781F2835C7 /* XLProgressView.swift in Sources */,
-				FF663FD0F71972E9F413EE78F2325345 /* XLTabView.swift in Sources */,
-				85E13339770AC98050CA5C6766B6AACC /* XLTool.swift in Sources */,
+				85E13339770AC98050CA5C6766B6AACC /* Tool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

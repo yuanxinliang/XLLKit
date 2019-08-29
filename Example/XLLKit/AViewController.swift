@@ -32,7 +32,7 @@ class AViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
 //        self.present(BViewController(), animated: true, completion: nil)
-//        print(XLTool.xl_getTopViewController() as Any)
+//        print(Tool.xl_getTopViewController() as Any)
         
         let animation = CATransition()
         animation.duration = 0.5

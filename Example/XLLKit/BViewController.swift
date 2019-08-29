@@ -19,7 +19,7 @@ class BViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        print(XLTool.xl_getTopViewController() as Any)
+        print(Tool.xl.getTopViewController() as Any)
     }
 
 }

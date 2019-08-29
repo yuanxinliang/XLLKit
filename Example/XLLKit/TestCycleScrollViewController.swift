@@ -15,7 +15,7 @@ class TestCycleScrollViewController: UIViewController {
     {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let frame = CGRect(x: 0, y: 100, width: xl_screenWidth, height: 200)
+        let frame = CGRect(x: 0, y: 100, width: Screen.xl.width, height: 200)
 //        let image = ["0"]
 //        let image = ["0", "1"]
         let image = ["0", "1", "2", "3", "4"]

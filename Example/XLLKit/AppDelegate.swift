@@ -20,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("qwer"[1])
         print("13211111111".xl.isPhoneNumber())
         print("132111111112".xl.isPhoneNumber())
+        
+        print(Screen.xl.isInch_5_8)
+        print(Screen.xl.height)
+        print(Screen.xl.width)
+        
+        print(AppInfo.xl.name)
+        print(AppInfo.xl.version)
+        print(AppInfo.xl.build)
+        print(AppInfo.xl.bundleID)
         return true
     }
 
