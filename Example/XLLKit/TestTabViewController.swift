@@ -62,9 +62,9 @@ class TestTabViewController: UIViewController {
 
 }
 
-extension TestTabViewController: UIScrollViewDelegate, XLCategoryViewDelegate
+extension TestTabViewController: UIScrollViewDelegate, CategoryViewDelegate
 {
-    func xl_categroyViewSelectIndex(index: Int)
+    func categroyViewSelectIndex(index: Int)
     {
         print(index)
         let w = self.scrollView!.bounds.width

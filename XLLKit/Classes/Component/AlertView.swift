@@ -8,26 +8,29 @@
 import UIKit
 
 /// 对话框
-public typealias XLAlertViewClosure = () -> Void
+public typealias AlertViewClosure = () -> Void
 
-let xl_screenW                  : CGFloat =   UIScreen.main.bounds.size.width // 屏幕宽度
-let xl_alertViewLeftM           : CGFloat =   50  // alertview 左边距
-let xl_alertViewW               : CGFloat =   (xl_screenW - xl_alertViewLeftM * 2) // alertview宽度
-let xl_alertViewCornerRadius    : CGFloat =   10 // alertview的圆角
-let xl_alertViewTitieTopM       : CGFloat =   20 // 标题距离顶部的边距
-let xl_alertViewTitleMessageV   : CGFloat =   5  // 标题与内容的边距
-let xl_alertViewTitieLeftM      : CGFloat =   15 // 标题距离左边的边距
-let xl_alertViewTitleW          : CGFloat =   (xl_alertViewW - xl_alertViewTitieLeftM * 2) // 标题宽度
-let xl_alertViewBtnH            : CGFloat =   44 // 按钮的高度
 
-let xl_colorTitle        : UIColor = UIColor.xl.hex(0x07090C)
-let xl_colorMessage      : UIColor = UIColor.xl.hex(0x07090C)
-let xl_colorCancelTitle  : UIColor = UIColor.xl.hex(0x07090C)
-let xl_colorConfirmTitle : UIColor = UIColor.xl.hex(0x4685F0)
-let xl_colorLine         : UIColor = UIColor.xl.hex(0xE9E9FF)
 
 public class AlertView: UIView
 {
+    
+    let screenW                  : CGFloat =   UIScreen.main.bounds.size.width // 屏幕宽度
+    let alertViewLeftM           : CGFloat =   50  // alertview 左边距
+    let alertViewW               : CGFloat =   (UIScreen.main.bounds.size.width - 50 * 2) // alertview宽度
+    let alertViewCornerRadius    : CGFloat =   10 // alertview的圆角
+    let alertViewTitieTopM       : CGFloat =   20 // 标题距离顶部的边距
+    let alertViewTitleMessageV   : CGFloat =   5  // 标题与内容的边距
+    let alertViewTitieLeftM      : CGFloat =   15 // 标题距离左边的边距
+    let alertViewTitleW          : CGFloat =   ((UIScreen.main.bounds.size.width - 50 * 2) - 50 * 2) // 标题宽度
+    let alertViewBtnH            : CGFloat =   44 // 按钮的高度
+    
+    let colorTitle        : UIColor = UIColor.xl.hex(0x07090C)
+    let colorMessage      : UIColor = UIColor.xl.hex(0x07090C)
+    let colorCancelTitle  : UIColor = UIColor.xl.hex(0x07090C)
+    let colorConfirmTitle : UIColor = UIColor.xl.hex(0x4685F0)
+    let colorLine         : UIColor = UIColor.xl.hex(0xE9E9FF)
+    
     /**
      @param message 提示文字
      */
@@ -52,7 +55,7 @@ public class AlertView: UIView
      @param message 提示文字
      @param cancelTitle 按钮标题
      */
-    public class func showAlertView(message: String?, cancelTitle: String?, cancelClosure: XLAlertViewClosure?)
+    public class func showAlertView(message: String?, cancelTitle: String?, cancelClosure: AlertViewClosure?)
     {
         setupAlertView(title: nil, message: message, cancelTitle: cancelTitle, confirmTitle: nil, cancelClosure: cancelClosure, confirmClosure: nil)
     }
@@ -62,7 +65,7 @@ public class AlertView: UIView
      @param message 提示文字
      @param cancelTitle 按钮标题
      */
-    public class func showAlertView(title: String?, message: String?, cancelTitle: String?, cancelClosure: XLAlertViewClosure?)
+    public class func showAlertView(title: String?, message: String?, cancelTitle: String?, cancelClosure: AlertViewClosure?)
     {
         setupAlertView(title: title, message: message, cancelTitle: cancelTitle, confirmTitle: nil, cancelClosure: cancelClosure, confirmClosure: nil)
     }
@@ -72,7 +75,7 @@ public class AlertView: UIView
      @param confirmTitle 按钮文字
      @param confirmBlock 回调
      */
-    public class func showAlertView(message: String?, confirmTitle: String?, confirmClosure: XLAlertViewClosure?)
+    public class func showAlertView(message: String?, confirmTitle: String?, confirmClosure: AlertViewClosure?)
     {
         setupAlertView(title: nil, message: message, cancelTitle: nil, confirmTitle: confirmTitle, cancelClosure: nil, confirmClosure: confirmClosure)
     }
@@ -82,7 +85,7 @@ public class AlertView: UIView
      @param confirmTitle 按钮文字
      @param confirmBlock 回调
      */
-    public class func showAlertView(title: String?, message: String?, confirmTitle: String?, confirmClosure: XLAlertViewClosure?)
+    public class func showAlertView(title: String?, message: String?, confirmTitle: String?, confirmClosure: AlertViewClosure?)
     {
         setupAlertView(title: title, message: message, cancelTitle: nil, confirmTitle: confirmTitle, cancelClosure: nil, confirmClosure: confirmClosure)
     }
@@ -92,7 +95,7 @@ public class AlertView: UIView
      @param cancelTitle 取消按钮标题
      @param confirmTitle 确定按钮标题
      */
-    public class func showAlertView(message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: XLAlertViewClosure?, confirmClosure: XLAlertViewClosure?)
+    public class func showAlertView(message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: AlertViewClosure?, confirmClosure: AlertViewClosure?)
     {
         setupAlertView(title: nil, message: message, cancelTitle: cancelTitle, confirmTitle: confirmTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
     }
@@ -103,12 +106,12 @@ public class AlertView: UIView
      @param cancelTitle 取消按钮标题
      @param confirmTitle 确定按钮标题
      */
-    public class func showAlertView(title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: XLAlertViewClosure?, confirmClosure: XLAlertViewClosure?)
+    public class func showAlertView(title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: AlertViewClosure?, confirmClosure: AlertViewClosure?)
     {
         setupAlertView(title: title, message: message, cancelTitle: cancelTitle, confirmTitle: confirmTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
     }
     
-    class func setupAlertView(title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: XLAlertViewClosure?, confirmClosure: XLAlertViewClosure?)
+    class func setupAlertView(title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: AlertViewClosure?, confirmClosure: AlertViewClosure?)
     {
         let alertView = AlertView(frame: UIScreen.main.bounds, title: title, message: message, cancelTitle: cancelTitle, confirmTitle: confirmTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
         alertView.alpha = 0.0
@@ -130,10 +133,10 @@ public class AlertView: UIView
     fileprivate var message: String?
     fileprivate var cancelTitle: String?
     fileprivate var confirmTitle: String?
-    fileprivate var cancelClosure: XLAlertViewClosure?
-    fileprivate var confirmClosure: XLAlertViewClosure?
+    fileprivate var cancelClosure: AlertViewClosure?
+    fileprivate var confirmClosure: AlertViewClosure?
     
-    convenience init(frame: CGRect, title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: XLAlertViewClosure?, confirmClosure: XLAlertViewClosure?)
+    convenience init(frame: CGRect, title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: AlertViewClosure?, confirmClosure: AlertViewClosure?)
     {
         self.init(frame: frame)
         self.title = title
@@ -167,7 +170,7 @@ public class AlertView: UIView
     fileprivate func setupContentView()
     {
         contentView.backgroundColor = UIColor.white
-        contentView.layer.cornerRadius = xl_alertViewCornerRadius
+        contentView.layer.cornerRadius = alertViewCornerRadius
         contentView.layer.masksToBounds = true
         addSubview(contentView)
     }
@@ -178,7 +181,7 @@ public class AlertView: UIView
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
         titleLabel.font = UIFont(name: "PingFangSC-Regular", size: 15)
-        titleLabel.textColor = xl_colorTitle
+        titleLabel.textColor = colorTitle
         contentView.addSubview(titleLabel)
     }
     
@@ -188,14 +191,14 @@ public class AlertView: UIView
         messageLabel.textAlignment = .center
         messageLabel.numberOfLines = 0
         messageLabel.font = UIFont(name: "PingFangSC-Regular", size: 15)
-        messageLabel.textColor = xl_colorMessage
+        messageLabel.textColor = colorMessage
         contentView.addSubview(messageLabel)
     }
     
     fileprivate func setupCancelBtn()
     {
         cancelBtn.setTitle(cancelTitle, for: .normal)
-        cancelBtn.setTitleColor(xl_colorCancelTitle, for: .normal)
+        cancelBtn.setTitleColor(colorCancelTitle, for: .normal)
         cancelBtn.titleLabel?.font = UIFont(name: "PingFangSC-Regular", size: 15)
         cancelBtn.addTarget(self, action: #selector(cancelBtnAction(sender:)), for: .touchUpInside)
         contentView.addSubview(cancelBtn)
@@ -204,7 +207,7 @@ public class AlertView: UIView
     fileprivate func setupConfirmBtn()
     {
         confirmBtn.setTitle(confirmTitle, for: .normal)
-        confirmBtn.setTitleColor(xl_colorConfirmTitle, for: .normal)
+        confirmBtn.setTitleColor(colorConfirmTitle, for: .normal)
         confirmBtn.titleLabel?.font = UIFont(name: "PingFangSC-Regular", size: 15)
         confirmBtn.addTarget(self, action: #selector(confirmBtnAction(sender:)), for: .touchUpInside)
         contentView.addSubview(confirmBtn)
@@ -212,13 +215,13 @@ public class AlertView: UIView
     
     fileprivate func setupVLine()
     {
-        vLine.backgroundColor = xl_colorLine
+        vLine.backgroundColor = colorLine
         contentView.addSubview(vLine)
     }
     
     fileprivate func setupHLine()
     {
-        hLine.backgroundColor = xl_colorLine
+        hLine.backgroundColor = colorLine
         contentView.addSubview(hLine)
     }
     
@@ -247,58 +250,58 @@ public class AlertView: UIView
         
         if (title?.count ?? 0 > 0) && (message?.count ?? 0 > 0) {
             
-            titleLabel.frame = CGRect(x: xl_alertViewTitieLeftM, y: xl_alertViewTitieTopM, width: xl_alertViewTitleW, height: titleHeight)
-            messageLabel.frame = CGRect(x: xl_alertViewTitieLeftM, y: titleLabel.frame.maxY + xl_alertViewTitleMessageV, width: xl_alertViewTitleW, height: messageHeight)
-            y = xl_alertViewTitieTopM + titleHeight + messageHeight + xl_alertViewTitleMessageV
+            titleLabel.frame = CGRect(x: alertViewTitieLeftM, y: alertViewTitieTopM, width: alertViewTitleW, height: titleHeight)
+            messageLabel.frame = CGRect(x: alertViewTitieLeftM, y: titleLabel.frame.maxY + alertViewTitleMessageV, width: alertViewTitleW, height: messageHeight)
+            y = alertViewTitieTopM + titleHeight + messageHeight + alertViewTitleMessageV
             
         } else if titleHeight > 0 {
             
-            titleLabel.frame = CGRect(x: xl_alertViewTitieLeftM, y: xl_alertViewTitieTopM, width: xl_alertViewTitleW, height: titleHeight)
-            y = xl_alertViewTitieTopM + titleHeight
+            titleLabel.frame = CGRect(x: alertViewTitieLeftM, y: alertViewTitieTopM, width: alertViewTitleW, height: titleHeight)
+            y = alertViewTitieTopM + titleHeight
             
         } else if messageHeight > 0 {
             
-            messageLabel.frame = CGRect(x: xl_alertViewTitieLeftM, y: xl_alertViewTitieTopM, width: xl_alertViewTitleW, height: messageHeight)
-            y = xl_alertViewTitieTopM + messageHeight
+            messageLabel.frame = CGRect(x: alertViewTitieLeftM, y: alertViewTitieTopM, width: alertViewTitleW, height: messageHeight)
+            y = alertViewTitieTopM + messageHeight
             
         }
         
         if (cancelTitle?.count ?? 0 == 0) && (confirmTitle?.count ?? 0 == 0) {
             
-            alertViewHeight = y + xl_alertViewTitieTopM
+            alertViewHeight = y + alertViewTitieTopM
             
         } else {
             
-            hLine.frame = CGRect(x: CGFloat(0.0), y: messageLabel.frame.maxY + xl_alertViewTitieTopM, width: xl_alertViewW, height: 0.5)
+            hLine.frame = CGRect(x: CGFloat(0.0), y: messageLabel.frame.maxY + alertViewTitieTopM, width: alertViewW, height: 0.5)
             
             if (cancelTitle?.count ?? 0 > 0) && (confirmTitle?.count ?? 0 > 0) {
                 
-                vLine.frame = CGRect(x: hLine.frame.midX, y: hLine.frame.maxY, width: 0.5, height: xl_alertViewBtnH)
+                vLine.frame = CGRect(x: hLine.frame.midX, y: hLine.frame.maxY, width: 0.5, height: alertViewBtnH)
                 
-                cancelBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: xl_alertViewW / 2, height: xl_alertViewBtnH)
+                cancelBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: alertViewW / 2, height: alertViewBtnH)
                 
-                confirmBtn.frame = CGRect(x: CGFloat(xl_alertViewW / 2), y: hLine.frame.maxY, width: xl_alertViewW / 2, height: xl_alertViewBtnH)
+                confirmBtn.frame = CGRect(x: CGFloat(alertViewW / 2), y: hLine.frame.maxY, width: alertViewW / 2, height: alertViewBtnH)
                 
             } else if (cancelTitle?.count ?? 0 > 0) {
                 
-                cancelBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: xl_alertViewW, height: xl_alertViewBtnH)
+                cancelBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: alertViewW, height: alertViewBtnH)
                 
-                cancelBtn.setTitleColor(xl_colorCancelTitle, for: .normal)
+                cancelBtn.setTitleColor(colorCancelTitle, for: .normal)
                 
             } else if (confirmTitle?.count ?? 0 > 0) {
-                confirmBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: xl_alertViewW, height: xl_alertViewBtnH)
+                confirmBtn.frame = CGRect(x: CGFloat(0), y: hLine.frame.maxY, width: alertViewW, height: alertViewBtnH)
             }
             
-            y += xl_alertViewTitieTopM + 1 + xl_alertViewBtnH
+            y += alertViewTitieTopM + 1 + alertViewBtnH
             alertViewHeight = y
         }
-        contentView.frame = CGRect(x: 0, y: 0, width: xl_alertViewW, height: alertViewHeight)
+        contentView.frame = CGRect(x: 0, y: 0, width: alertViewW, height: alertViewHeight)
         contentView.center = self.center
     }
     
     fileprivate func calculateHeight(string: String, font: UIFont) -> CGFloat
     {
-        let width = xl_alertViewW - xl_alertViewTitieLeftM * 2
+        let width = alertViewW - alertViewTitieLeftM * 2
         return string.xl.height(width: width, font: font)
     }
     

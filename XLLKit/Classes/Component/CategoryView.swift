@@ -7,15 +7,15 @@
 
 import UIKit
 
-@objc public protocol XLCategoryViewDelegate: NSObjectProtocol
+@objc public protocol CategoryViewDelegate: NSObjectProtocol
 {
-    func xl_categroyViewSelectIndex(index: Int)
+    func categroyViewSelectIndex(index: Int)
 }
 
 /// 分类切换标签视图
 public class CategoryView: UIView
 {
-    public weak var delegate: XLCategoryViewDelegate?
+    public weak var delegate: CategoryViewDelegate?
     
     /// 给label打上tag用的
     fileprivate let baseTag: Int = 1000
@@ -87,7 +87,7 @@ public class CategoryView: UIView
         self.collectionView.addSubview(self.indicatorView)
         let cell = self.collectionView(collectionView, cellForItemAt: IndexPath(row: 0, section: 0))
         self.indicatorView.frame = CGRect(x: cell.frame.minX, y: cell.frame.maxY + 1, width: cell.frame.width, height: 3)
-        self.delegate?.xl_categroyViewSelectIndex(index: 0)
+        self.delegate?.categroyViewSelectIndex(index: 0)
     }
     
     /// sources赋值之后，刷新UI
@@ -103,7 +103,7 @@ public class CategoryView: UIView
         frame.origin.x = cell.frame.minX
         frame.size.width = cell.frame.width
         self.indicatorView.frame = frame
-        self.delegate?.xl_categroyViewSelectIndex(index: 0)
+        self.delegate?.categroyViewSelectIndex(index: 0)
     }
     
     /// 选中上一个
@@ -144,7 +144,7 @@ public class CategoryView: UIView
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
         
-        self.delegate?.xl_categroyViewSelectIndex(index: indexPath.row)
+        self.delegate?.categroyViewSelectIndex(index: indexPath.row)
     }
     
     
@@ -199,7 +199,7 @@ extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource, UI
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
         
-        self.delegate?.xl_categroyViewSelectIndex(index: indexPath.row)
+        self.delegate?.categroyViewSelectIndex(index: indexPath.row)
     }
     
 }

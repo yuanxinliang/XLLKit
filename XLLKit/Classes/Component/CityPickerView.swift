@@ -216,7 +216,7 @@ public class CityPickerView: UIView
     {
         super.init(frame: frame)
         // 设置界面
-        xl_setView()
+        setupView()
     }
     
     required public init?(coder aDecoder: NSCoder)
@@ -226,7 +226,7 @@ public class CityPickerView: UIView
     
     //MARK: - 界面初始化
     /// 初始化界面
-    func xl_setView()
+    func setupView()
     {
         self.frame = CGRect(x: 0, y: 0, width: Screen.xl.width, height: Screen.xl.height)
         // 添加容器
@@ -244,7 +244,7 @@ public class CityPickerView: UIView
     }
     
     /// 获取数据
-    func xl_getData()
+    func getData()
     {
         print(Bundle.main)
         let path = Bundle(for: self.classForCoder).path(forResource: "city", ofType: "plist", inDirectory: "Resource")
@@ -471,7 +471,7 @@ public class CityPickerView: UIView
         selectedAreaBlock = areaBlock
         self.showType = showType
         // 设置数据
-        xl_getData()
+        getData()
         showView()
     }
 }

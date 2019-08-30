@@ -94,9 +94,9 @@ class TestPageViewController: UIViewController {
 
 }
 
-extension TestPageViewController: XLCategoryViewDelegate {
+extension TestPageViewController: CategoryViewDelegate {
     
-    func xl_categroyViewSelectIndex(index: Int)
+    func categroyViewSelectIndex(index: Int)
     {
         if self.pageView != nil {
             self.pageView.listContainerView.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)

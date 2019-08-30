@@ -13,7 +13,7 @@ let timerInterval = 2.0
 
 @objc public protocol XLCycleScrollViewDelegate
 {
-    func xl_cycleScrollViewSelected(_ selectedIndex: Int)
+    func cycleScrollViewSelected(_ selectedIndex: Int)
 }
 
 public class CycleScrollView: UIView
@@ -265,7 +265,7 @@ extension CycleScrollView
 {
     @objc private func cycleViewSelected()
     {
-        self.delegate?.xl_cycleScrollViewSelected(currenIndex)
+        self.delegate?.cycleScrollViewSelected(currenIndex)
     }
 }
 
