@@ -136,11 +136,11 @@ public extension XL where Base == DeviceInfo {
 public extension XL where Base == DeviceInfo {
     
     /// 容量 - e.g. 64、128
-    static var sizeOfDisk: Int {
+    static var sizeOfDisk: Int64 {
         var fs: statfs = statfs()
-        var size: Int = -1
+        var size: Int64 = -1
         if statfs("/var", &fs) >= 0 {
-            size = Int(UInt64(fs.f_bsize) * fs.f_blocks / (1024 * 1024 * 1024))
+            size = Int64(UInt64(fs.f_bsize) * fs.f_blocks / (1024 * 1024 * 1024))
             switch size {
             case 0...16:
                 size = 16
@@ -164,31 +164,31 @@ public extension XL where Base == DeviceInfo {
     }
     
     /// 总容量 - 实际容量
-    static var totalSizeOfDisk: Int {
+    static var totalSizeOfDisk: Int64 {
         var fs: statfs = statfs()
-        var size: Int = -1
+        var size: Int64 = -1
         if statfs("/var", &fs) >= 0 {
-            size = Int(UInt64(fs.f_bsize) * fs.f_blocks)
+            size = Int64(UInt64(fs.f_bsize) * fs.f_blocks)
         }
         return size
     }
     
     /// 可用容量
-    static var availSizeOfDisk: Int {
+    static var availSizeOfDisk: Int64 {
         var fs: statfs = statfs()
-        var size: Int = -1
+        var size: Int64 = -1
         if statfs("/var", &fs) >= 0 {
-            size = Int(UInt64(fs.f_bsize) * fs.f_bavail)
+            size = Int64(UInt64(fs.f_bsize) * fs.f_bavail)
         }
         return size
     }
     
     /// 容量转换
-    static func fileSizeToString(_ size: Int) -> String {
+    static func fileSizeToString(_ size: Int64) -> String {
         
-        let KB = 1024
-        let MB = KB*KB
-        let GB = MB*KB
+        let KB: Int64 = 1024
+        let MB: Int64 = KB*KB
+        let GB: Int64 = MB*KB
         var value: String = ""
         
         switch size {
