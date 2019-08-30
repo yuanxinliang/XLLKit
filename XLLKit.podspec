@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Constant' do |ss|
     ss.source_files = 'XLLKit/Classes/Constant'
+    ss.dependency     'XLLKit/Extension'
   end
   
   s.subspec 'Extension' do |ss|
@@ -39,6 +40,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Tool' do |ss|
     ss.source_files = 'XLLKit/Classes/Tool'
+    ss.dependency     'XLLKit/Extension'
   end
   
   #s.source_files = 'XLLKit/Classes/**/*'
