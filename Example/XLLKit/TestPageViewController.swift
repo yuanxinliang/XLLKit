@@ -15,7 +15,7 @@ class TestPageViewController: UIViewController {
 
     var pageView: JXPagingView!
     var pageHeaderView: TestPageHeaderView!
-    var categoryView: XLCategoryView!
+    var categoryView: CategoryView!
     var titles1: [String] = ["深圳", "广州", "中山", "珠海", "海丰", "惠州", "汕尾", "梅陇", "小路破"]
 //    var titles2: [String] = ["🍎", "🍉", "🍌", "🌰", "🍆", "🍇", "🍅", "🥔", "🍅"]
     var titles2: [String] = ["惠州1", "惠州2", "惠州3", "惠州4", "惠州5", "惠州6", "惠州7", "惠州8", "惠州9"]
@@ -36,7 +36,7 @@ class TestPageViewController: UIViewController {
         pageHeaderView = TestPageHeaderView(frame: frame1)
         // 2
         let frame2 = CGRect(x: 0, y: 0, width: w, height: 40)
-        categoryView = XLCategoryView(frame: frame2)
+        categoryView = CategoryView(frame: frame2)
         categoryView.delegate = self
         categoryView.sources = titles
         categoryView.xl_show()

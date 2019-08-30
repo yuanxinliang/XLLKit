@@ -1,5 +1,5 @@
 //
-//  XLPhoneTextField.swift
+//  PhoneTextField.swift
 //  XLLKit
 //
 //  Created by XL Yuen on 2019/6/16.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// 手机格式化输入框
-public class XLPhoneTextField: UITextField
+public class PhoneTextField: UITextField
 {
     // 保存上一次的文本内容
     var _previousText: String!

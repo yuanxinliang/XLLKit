@@ -1,5 +1,5 @@
 //
-//  XLAlertController.swift
+//  AlertController.swift
 //  Pods-XLLKit_Example
 //
 //  Created by ZZCMXL on 2019/6/3.
@@ -8,10 +8,9 @@
 import UIKit
 
 /// 对话框
-public class XLAlertController: UIAlertController
-{
-    public class func xl_alertController(vc: UIViewController, title: String?, message: String?, leftActionTitle: String?, rightActionTitle: String?, leftHandler: ((UIAlertAction) -> Void)?, rightHandler: ((UIAlertAction) -> Void)?)
-    {
+public class AlertController: UIAlertController {
+    public class func alertController(vc: UIViewController, title: String?, message: String?, leftActionTitle: String?, rightActionTitle: String?, leftHandler: ((UIAlertAction) -> Void)?, rightHandler: ((UIAlertAction) -> Void)?) {
+        
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         if leftActionTitle?.count ?? 0 > 0 {

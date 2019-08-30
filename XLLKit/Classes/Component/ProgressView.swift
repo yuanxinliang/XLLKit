@@ -1,5 +1,5 @@
 //
-//  XLProgressView.swift
+//  ProgressView.swift
 //  Pods-XLLKit_Example
 //
 //  Created by ZZCMXL on 2019/6/3.
@@ -8,25 +8,25 @@
 import UIKit
 import MBProgressHUD
 
-let xl_progressMinimumDuration: CGFloat = 2.0   // 默认最小显示时间
-let xl_progressMaximumDuration: CGFloat = 10.0  // 默认最大显示时间
+let progressMinimumDuration: CGFloat = 2.0   // 默认最小显示时间
+let progressMaximumDuration: CGFloat = 10.0  // 默认最大显示时间
 
-public class XLProgressView: UIView
+public class ProgressView: UIView
 {
     /// 显示等待指示器，N秒之后消失
-    public class func xl_showIndicator(afterDelay: TimeInterval)
+    public class func showIndicator(afterDelay: TimeInterval)
     {
-        xl_showIndicator().hide(animated: true, afterDelay: afterDelay)
+        showIndicator().hide(animated: true, afterDelay: afterDelay)
     }
     
     /// 显示等待指示器
-    public class func xl_showIndicator() -> MBProgressHUD
+    public class func showIndicator() -> MBProgressHUD
     {
-        return xl_showIndicator(message: nil, superview: nil)
+        return showIndicator(message: nil, superview: nil)
     }
     
     /// 显示等待指示器和文字
-    public class func xl_showIndicator(message: String?, superview: UIView?) -> MBProgressHUD
+    public class func showIndicator(message: String?, superview: UIView?) -> MBProgressHUD
     {
         let view: UIView? = toView(toView: superview)
         let hud = MBProgressHUD.showAdded(to: view!, animated: true)
@@ -37,13 +37,13 @@ public class XLProgressView: UIView
     }
     
     /// 显示文字
-    public class func xl_showOnlyMessage(message: String)
+    public class func showOnlyMessage(message: String)
     {
-        xl_showOnlyMessage(message: message, superview: nil)
+        showOnlyMessage(message: message, superview: nil)
     }
     
     /// 显示文字
-    public class func xl_showOnlyMessage(message: String, superview: UIView?)
+    public class func showOnlyMessage(message: String, superview: UIView?)
     {
         let view: UIView? = toView(toView: superview)
         let hud = MBProgressHUD.showAdded(to: view!, animated: true)
@@ -79,8 +79,8 @@ public class XLProgressView: UIView
     /// 通过文字长度计算显示的时长
     fileprivate class func displayDurationForString(string: String) -> CGFloat
     {
-        let minimum = max(CGFloat(string.count) * 0.06 + 0.5, xl_progressMinimumDuration)
-        let duration = min(minimum, xl_progressMaximumDuration)
+        let minimum = max(CGFloat(string.count) * 0.06 + 0.5, progressMinimumDuration)
+        let duration = min(minimum, progressMaximumDuration)
         return duration
     }
     

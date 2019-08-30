@@ -16,7 +16,7 @@ class TestNumberFormatController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        let phoneField = XLPhoneTextField(frame: CGRect(x:20, y:180, width:200, height:40))
+        let phoneField = PhoneTextField(frame: CGRect(x:20, y:180, width:200, height:40))
         self.view.addSubview(phoneField)
     }
 

@@ -73,7 +73,7 @@ class ViewController: UIViewController
     func testAlertController()
     {
         self.present(AViewController(), animated: true, completion: nil)
-        XLAlertController.xl_alertController(vc: self, title: "警告⚠️", message: "tishi", leftActionTitle: "cane", rightActionTitle: "ok", leftHandler: { (action) in
+        AlertController.alertController(vc: self, title: "警告⚠️", message: "tishi", leftActionTitle: "cane", rightActionTitle: "ok", leftHandler: { (action) in
             print("123")
         }) { (action) in
             print("231")
@@ -82,7 +82,7 @@ class ViewController: UIViewController
     
     func testAlertView()
     {
-        XLAlertView.showAlertView(title: "警告⚠️", message: "密码格式错误", cancelTitle: "取消", confirmTitle: "确认", cancelClosure: {
+        AlertView.showAlertView(title: "警告⚠️", message: "密码格式错误", cancelTitle: "取消", confirmTitle: "确认", cancelClosure: {
 
         }) {
 
@@ -246,9 +246,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             navigationController?.pushViewController(next, animated: false)
         case 1:
             print("123")
-//            XLProgressView.xl_showOnlyMessage(message: "警告⚠️警告")
-//            XLProgressView.xl_showIndicator(message: "Loading...", superview: nil)
-            let hud = XLProgressView.xl_showIndicator()
+//            ProgressView.xl_showOnlyMessage(message: "警告⚠️警告")
+//            ProgressView.xl_showIndicator(message: "Loading...", superview: nil)
+            let hud = ProgressView.showIndicator()
             hud.hide(animated: true, afterDelay: 3)
         case 2:
             print("123")
@@ -261,7 +261,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             self.navigationController?.pushViewController(TestPageViewController(), animated: true)
         case 5:
             print("123")
-            let view = XLCityPickerView()
+            let view = CityPickerView()
             
             view.areaPickerViewWithareaBlock { (province, city, area) in
                 print(province, city, area)
@@ -270,7 +270,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         case 6:
             print("123")
             let data = ["1", "2", "3"]
-            XLNormalSelectorView.showPickerView(dataSource: data, title: "选择", cancelBtnTitle: "取消", confirmBtnTitle: "确认", cancelClosure: {
+            NormalSelectorView.showPickerView(dataSource: data, title: "选择", cancelBtnTitle: "取消", confirmBtnTitle: "确认", cancelClosure: {
                 
             }) { (str) in
                 print(str as Any)

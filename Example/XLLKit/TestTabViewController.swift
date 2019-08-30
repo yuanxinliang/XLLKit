@@ -12,7 +12,7 @@ import XLLKit
 class TestTabViewController: UIViewController {
 
     var w = UIScreen.main.bounds.width
-    var categoryView: XLCategoryView?
+    var categoryView: CategoryView?
     var scrollView: UIScrollView?
     override func viewDidLoad()
     {
@@ -29,7 +29,7 @@ class TestTabViewController: UIViewController {
     
     func demo2()
     {
-        let a = XLCategoryView(frame: CGRect(x: 0, y: 88, width: w, height: 40))
+        let a = CategoryView(frame: CGRect(x: 0, y: 88, width: w, height: 40))
         self.view.addSubview(a)
         a.sources = ["香蕉", "小苹果", "龙眼", "大西瓜", "妃子笑", "糯米滋", "水蜜桃", "香瓜", "美橙", "山竹",  "黑加仑", "提子", "荔枝", "番茄", "贡梨", "榴莲", "草莓", "葡萄", "番石榴"]
         a.xl_show()

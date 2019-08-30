@@ -220,7 +220,7 @@ public extension XL where Base == DeviceInfo {
         
         switch identifier {
             
-            // MARK: - iPhone
+            /// iPhone
             
             case "iPhone3,1":   return "iPhone 4"
             case "iPhone3,2":   return "iPhone 4"
@@ -251,7 +251,7 @@ public extension XL where Base == DeviceInfo {
             case "iPhone11,2":  return "iPhone XS"
             case "iPhone11,6":  return "iPhone XS Max"
             
-            // MARK: - iPad
+            /// iPad
             
             case "iPad1,1":     return "iPad"
             case "iPad1,2":     return "iPad 3G"
@@ -301,7 +301,7 @@ public extension XL where Base == DeviceInfo {
             case "iPad8,7":     return "iPad Pro (12.9-inch) (3rd generation)"
             case "iPad8,8":     return "iPad Pro (12.9-inch) (3rd generation)"
             
-            // MARK: -  Apple Watch
+            /// Apple Watch
             
             case "Watch1,1":    return "Apple Watch (1st generation)"
             case "Watch1,2":    return "Apple Watch (1st generation)"
@@ -318,7 +318,7 @@ public extension XL where Base == DeviceInfo {
             case "Watch4,3":    return "Apple Watch Series 4"
             case "Watch4,4":    return "Apple Watch Series 4"
             
-            // MARK: -  AppleTV
+            /// AppleTV
             
             case "AppleTV2,1":  return "Apple TV 2"
             case "AppleTV3,1":  return "Apple TV 3"
@@ -326,12 +326,12 @@ public extension XL where Base == DeviceInfo {
             case "AppleTV5,3":  return "Apple TV 4"
             case "AppleTV6,2":  return "Apple TV 4K"
             
-            // MARK: -  AirPods
+            /// AirPods
             
             case "AirPods1,1":  return "AirPods (1st generation)"
             case "AirPods2,1":  return "AirPods (2nd generation)"
             
-            // MARK: - Simulator
+            /// Simulator
             
             case "i386":        return "iPhone Simulator i386"
             case "x86_64":      return "iPhone Simulator x86_64"

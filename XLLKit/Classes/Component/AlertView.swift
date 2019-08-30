@@ -1,5 +1,5 @@
 //
-//  XLAlertView.swift
+//  AlertView.swift
 //  Pods-XLLKit_Example
 //
 //  Created by ZZCMXL on 2019/6/3.
@@ -20,20 +20,20 @@ let xl_alertViewTitieLeftM      : CGFloat =   15 // 标题距离左边的边距
 let xl_alertViewTitleW          : CGFloat =   (xl_alertViewW - xl_alertViewTitieLeftM * 2) // 标题宽度
 let xl_alertViewBtnH            : CGFloat =   44 // 按钮的高度
 
-public var xl_colorTitle        : UIColor = UIColor.xl.hex(0x07090C)
-public var xl_colorMessage      : UIColor = UIColor.xl.hex(0x07090C)
-public var xl_colorCancelTitle  : UIColor = UIColor.xl.hex(0x07090C)
-public var xl_colorConfirmTitle : UIColor = UIColor.xl.hex(0x4685F0)
-public var xl_colorLine         : UIColor = UIColor.xl.hex(0xE9E9FF)
+let xl_colorTitle        : UIColor = UIColor.xl.hex(0x07090C)
+let xl_colorMessage      : UIColor = UIColor.xl.hex(0x07090C)
+let xl_colorCancelTitle  : UIColor = UIColor.xl.hex(0x07090C)
+let xl_colorConfirmTitle : UIColor = UIColor.xl.hex(0x4685F0)
+let xl_colorLine         : UIColor = UIColor.xl.hex(0xE9E9FF)
 
-public class XLAlertView: UIView
+public class AlertView: UIView
 {
     /**
      @param message 提示文字
      */
     public class func showAlertView(message: String?)
     {
-        let alertView = XLAlertView(frame: UIScreen.main.bounds, title: nil, message: message, cancelTitle: nil, confirmTitle: nil, cancelClosure: nil, confirmClosure: nil)
+        let alertView = AlertView(frame: UIScreen.main.bounds, title: nil, message: message, cancelTitle: nil, confirmTitle: nil, cancelClosure: nil, confirmClosure: nil)
         alertView.alpha = 0.0
         
         let keyWindow = UIApplication.shared.keyWindow
@@ -110,7 +110,7 @@ public class XLAlertView: UIView
     
     class func setupAlertView(title: String?, message: String?, cancelTitle: String?, confirmTitle: String?, cancelClosure: XLAlertViewClosure?, confirmClosure: XLAlertViewClosure?)
     {
-        let alertView = XLAlertView(frame: UIScreen.main.bounds, title: title, message: message, cancelTitle: cancelTitle, confirmTitle: confirmTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
+        let alertView = AlertView(frame: UIScreen.main.bounds, title: title, message: message, cancelTitle: cancelTitle, confirmTitle: confirmTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
         alertView.alpha = 0.0
         
         let keyWindow = UIApplication.shared.keyWindow

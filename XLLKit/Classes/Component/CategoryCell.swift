@@ -1,5 +1,5 @@
 //
-//  XLCategoryCell.swift
+//  CategoryCell.swift
 //  XLLKit
 //
 //  Created by ZZCMXL on 2019/6/18.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class XLCategoryCell: UICollectionViewCell
+public class CategoryCell: UICollectionViewCell
 {
     var text: String?
     {

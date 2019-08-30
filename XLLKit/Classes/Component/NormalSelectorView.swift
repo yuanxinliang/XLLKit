@@ -1,5 +1,5 @@
 //
-//  XLNormalSelectorView.swift
+//  NormalSelectorView.swift
 //  Pods-XLLKit_Example
 //
 //  Created by ZZCMXL on 2019/6/3.
@@ -8,12 +8,12 @@
 import UIKit
 
 /// 单列选择器
-public class XLNormalSelectorView: UIView {
+public class NormalSelectorView: UIView {
     
     // MARK: 外部方法调用
     public class func showPickerView(dataSource: [String]?, title: String?, cancelBtnTitle: String?, confirmBtnTitle: String?, cancelClosure: (() -> Void)?, confirmClosure: ((String?) -> Void)?)
     {
-        let view = XLNormalSelectorView(dataSource: dataSource, title: title, cancelBtnTitle: cancelBtnTitle, confirmBtnTitle: confirmBtnTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
+        let view = NormalSelectorView(dataSource: dataSource, title: title, cancelBtnTitle: cancelBtnTitle, confirmBtnTitle: confirmBtnTitle, cancelClosure: cancelClosure, confirmClosure: confirmClosure)
         view.alpha = 0.5
         
         let keyWindow = UIApplication.shared.keyWindow
@@ -210,7 +210,7 @@ public class XLNormalSelectorView: UIView {
     
 }
 
-extension XLNormalSelectorView: UIPickerViewDelegate, UIPickerViewDataSource
+extension NormalSelectorView: UIPickerViewDelegate, UIPickerViewDataSource
 {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int

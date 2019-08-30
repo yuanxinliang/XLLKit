@@ -1,5 +1,5 @@
 //
-//  XLCategoryView.swift
+//  CategoryView.swift
 //  XLLKit
 //
 //  Created by XL Yuen on 2019/6/4.
@@ -13,7 +13,7 @@ import UIKit
 }
 
 /// 分类切换标签视图
-public class XLCategoryView: UIView
+public class CategoryView: UIView
 {
     public weak var delegate: XLCategoryViewDelegate?
     
@@ -56,7 +56,7 @@ public class XLCategoryView: UIView
         collectionView.alwaysBounceHorizontal = true
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(XLCategoryCell.self, forCellWithReuseIdentifier: "XLCategoryCell")
+        collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "CategoryCell")
         return collectionView
     }()
     
@@ -151,7 +151,7 @@ public class XLCategoryView: UIView
     
 }
 
-extension XLCategoryView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -181,7 +181,7 @@ extension XLCategoryView: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell: XLCategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "XLCategoryCell", for: indexPath) as! XLCategoryCell
+        let cell: CategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         cell.backgroundColor = UIColor.green
         cell.text = self.sources[indexPath.row]
         return cell
@@ -204,7 +204,7 @@ extension XLCategoryView: UICollectionViewDelegate, UICollectionViewDataSource, 
     
 }
 
-extension XLCategoryView
+extension CategoryView
 {
     /// 根据固定高度和字体，计算字符串的宽度
     func stringWidth(string: String) -> CGFloat

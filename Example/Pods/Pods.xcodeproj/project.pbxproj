@@ -34,10 +34,10 @@
 		0DD08F8893FAF96348DAD10ABA8048A4 /* AnimatedViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B7541A8093BF5D7145C3270D7F051 /* AnimatedViewPortJob.swift */; };
 		0E1E32F28FA604778453C9DFFA904BBA /* IChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A4272A68418939B4F69844CF2CA7 /* IChartDataSet.swift */; };
 		0F47C7DE634D4FE07B595912093139FE /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB24C76A0064DE1664A477CDB7B36764 /* MJRefresh.bundle */; };
-		0FA1951F08CE61B0BA307D4EFC54E96D /* XLNormalSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A7BFB5C9714D230CA8E5605FE9F01 /* XLNormalSelectorView.swift */; };
+		0FA1951F08CE61B0BA307D4EFC54E96D /* NormalSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A7BFB5C9714D230CA8E5605FE9F01 /* NormalSelectorView.swift */; };
 		0FA8E62C7A4A6DA9BB841007B5E16CD4 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB30929526A08D611F5835B6A0CDE2 /* ConstraintMakerFinalizable.swift */; };
 		107FAE670642E6B0BDD77CDB48CD86DA /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0997DD6A1C0BCFF5C3206745A6DB18 /* UIImageView+HighlightedWebCache.m */; };
-		10C9DE7AB55E786215B96DA16DE04D58 /* XLAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D110F5C568640D657B8823D83FAD5E /* XLAlertController.swift */; };
+		10C9DE7AB55E786215B96DA16DE04D58 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D110F5C568640D657B8823D83FAD5E /* AlertController.swift */; };
 		111AC23DFB3F817AD05A91EEE5D41B9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEF01C5707077161892377B64350C25 /* Foundation.framework */; };
 		11DB9121B419284F459EA15842BC1DC0 /* LineScatterCandleRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72107A1BA6AD56B856F430BF6C51FBAE /* LineScatterCandleRadarRenderer.swift */; };
 		1291EC130BEB833FE0F1BAE7488FBBB8 /* CombinedChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458FB2328EF37B003073889190D4A036 /* CombinedChartData.swift */; };
@@ -46,7 +46,7 @@
 		138E31119CF14BF9645AFE5B38E1A2E5 /* RadarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA421E5974E3DB21C99048C16A7C7FED /* RadarChartData.swift */; };
 		14E9ACC5796C5E35C84DD6659BEB788F /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544084672C1BC39278CF1508340CAAF /* ConstraintPriorityTarget.swift */; };
 		14F29E73CB029AD2E96E8D211B4D8167 /* JXPagingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8EA3185901171E9B433632161074DB /* JXPagingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17219A02F91BECA50A26D8BA8BFB2BF8 /* XLCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5664914B265FB799DE0C92A85482EB3 /* XLCategoryCell.swift */; };
+		17219A02F91BECA50A26D8BA8BFB2BF8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5664914B265FB799DE0C92A85482EB3 /* CategoryCell.swift */; };
 		1799DD61C47CE2524F772CE9FE3E57BB /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64266BA893BAA65D43B3F56CC8902C /* SDWebImageCompat.m */; };
 		183AE69089AB6722B60089859F51CC91 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC7C11EC4767E7E667F642FF88A4907 /* NSButton+WebCache.m */; };
 		188D84097F799F3CDAD9ECCD55D8522E /* BubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BF9AD6368F3AEEF7D92C26D4C4FC2 /* BubbleChartDataSet.swift */; };
@@ -81,7 +81,7 @@
 		2B104C24DAE3ACB459746E31AE8ABA68 /* HorizontalBarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E362C17C91A098D5D38AB2883F3FF /* HorizontalBarChartRenderer.swift */; };
 		2C8950112B8EE2D95FB7F971B580A374 /* SDImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AC7A56646083B43BD59161DD31C8F /* SDImageCodersManager.m */; };
 		2CF884A28822E1D9859FD2F2B228560A /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F55956BA3A16E8BD7014F909C4C389 /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2FB98BD24F8811A075F82645179A493B /* XLCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D45B5600E8B8C0BB6CC9B420060E7C /* XLCategoryView.swift */; };
+		2FB98BD24F8811A075F82645179A493B /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D45B5600E8B8C0BB6CC9B420060E7C /* CategoryView.swift */; };
 		2FE40604ABA7405B498718F7AD1A7173 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0095DCF8745C73E02410DF043BF9B3 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		328B094001DE040AD15618C0F0CB8BCC /* DefaultFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2542A4D1246162D69433C67FF42A4A0C /* DefaultFillFormatter.swift */; };
 		3330623D8D8E0C094650E73C6CFD6BC9 /* UIColor+XLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B366C57719431B359C3C4014E30D6A /* UIColor+XLExtension.swift */; };
@@ -207,7 +207,7 @@
 		7AC16EF1D279EB897BC14974B6A09132 /* Charts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7DE44412FD9B9897E964484580A3E9D /* Charts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BC2174DB47F14169C5557F188A48F46 /* UIImage+Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = C96D17E55AD0DE92210352DB95272579 /* UIImage+Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BE0BD01FE847A924BD531F237B3E936 /* SDImageGIFCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 018941402ADD14495786479D6FFCF5C4 /* SDImageGIFCoderInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7D3070A66B19A3472C0EE8781F2835C7 /* XLProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101FE1083F28A69BD4A0A0F946F3C867 /* XLProgressView.swift */; };
+		7D3070A66B19A3472C0EE8781F2835C7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101FE1083F28A69BD4A0A0F946F3C867 /* ProgressView.swift */; };
 		7E401B357B6530955088D8B2CD78FE0B /* LineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91994551551FF84C641937E9937CB3F /* LineChartDataSet.swift */; };
 		7E5574A32119705721C977131F1EC4A5 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = C2B6C34AF3A21C94A5416401014DCAEF /* Resource */; };
 		7ED12926E82C9D1DE457504DA75B80A9 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665C83DB5646CD351910191D39B2E8B /* LayoutConstraintItem.swift */; };
@@ -262,7 +262,7 @@
 		98B286E3F6D8710C7692F0E86B372A5B /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158F81F7FB846152D80D47115F11A78 /* ChartData.swift */; };
 		98CC4C0D639E858543B9DE4C6681BE2D /* LineScatterCandleRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A44A552ECB69007E6C10AD99C067E3 /* LineScatterCandleRadarChartDataSet.swift */; };
 		99456829035D2883017E8EBCDB82C231 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0B2F921A975CC6C3172BF3656E64B5 /* QuartzCore.framework */; };
-		999A94CB2FE8C059C4D22B098D27811D /* XLCityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07AF79B3288C4B9F81F8F4BA6E459C /* XLCityPickerView.swift */; };
+		999A94CB2FE8C059C4D22B098D27811D /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07AF79B3288C4B9F81F8F4BA6E459C /* CityPickerView.swift */; };
 		9A19445560C68B053A665476C55501AF /* SDWebImageCacheSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 705085247086A3B19D289ADF1F082D68 /* SDWebImageCacheSerializer.m */; };
 		9AA295EE6B1C10DA83CC36E860BAB5CF /* SDImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = C4040BE6B4ED049BAB7BB239BE5ABC7C /* SDImageTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AAA9E5633B7133055EC66BAF3E48157 /* SDAsyncBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A92FAB7F9CA58AC1865490B6DAEF4D0 /* SDAsyncBlockOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -272,7 +272,7 @@
 		9E6184458532BFF2E3E3F804C54BD0E7 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B12D036372FC3BBCBB97CCA9412EC2 /* ConstraintDescription.swift */; };
 		9EE2D363A721ACFA89B5B899E1987633 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C6F86C72A1A265DFBE4C0B168465DB /* ConstraintConstantTarget.swift */; };
 		9F2983FFB0FDC6182FB80507035D1EC2 /* NSImage+Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4858428AE13648D4C18EF12BC380F43E /* NSImage+Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FA9D80601763B64D26B840EC84BC225 /* XLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCD305A48FEACB7D5A79669C8B0B86 /* XLAlertView.swift */; };
+		9FA9D80601763B64D26B840EC84BC225 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCD305A48FEACB7D5A79669C8B0B86 /* AlertView.swift */; };
 		9FB38EF4D969619CCD54D7B64EFBF587 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEC43C3DDD70A8F3AB777B99B4E6CD8 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FC9A907FE210E1DE9F11A004F52F97F /* ScatterChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489C4BBFFDEBA7179D8CD545045E61E /* ScatterChartData.swift */; };
 		9FDEEEE37349769B84A30B0105DFF456 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC49FAC2218BC31A347231A510967D /* SVProgressHUD-dummy.m */; };
@@ -310,7 +310,7 @@
 		B1CD7A79FDF25E47C63E62A96056E75E /* GlobeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B874405918E6FDEB9F62B7BD636DB6 /* GlobeConstant.swift */; };
 		B2128EFF9529E6966387B59647179684 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F54C99777289775731C48E182AC96A91 /* SDWebImageManager.m */; };
 		B25DF27CC398820D46B9B493FFC2F41C /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C14E21CB3BE24D546157B459A85D3F /* SDImageGIFCoder.m */; };
-		B35DAC22F8565702F53BA252C8CB7B5D /* XLCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17663E787AE8D75799CFB324E5BF36B /* XLCycleScrollView.swift */; };
+		B35DAC22F8565702F53BA252C8CB7B5D /* CycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17663E787AE8D75799CFB324E5BF36B /* CycleScrollView.swift */; };
 		B545FC64504EB25999F30CFC1E27E702 /* MJRefreshAutoNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = D73D8E1A9E71AC09E4032CB3251BAA45 /* MJRefreshAutoNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5B9915F785CB47C5C07F0B698911B00 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6421E38BEE611C71AF66F9609CCF9EE /* SVIndefiniteAnimatedView.m */; };
 		B7544ADD7DAB706BF84A58442071284A /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = A7864F89F25645315778D58896F04140 /* SDAnimatedImageRep.m */; };
@@ -368,7 +368,7 @@
 		D5F2BE50F2E0A2AB93FF731EDAAED340 /* ViewPortJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CC1E1042C45E9008E98D8FDDC504 /* ViewPortJob.swift */; };
 		D6DD1607FB9E7A5887BCEFD36E692C62 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C5D3B6335089726C65B0D76DACE1 /* BarLineScatterCandleBubbleChartDataProvider.swift */; };
 		D760D8C1A8F0B0E21553050A605D7772 /* SDImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF63BF977A3A30F971765F9B74162F8 /* SDImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D799D402D64206309E79AB35FC32DABD /* XLPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DFB6012A35E07C50CA759D1EA7D30 /* XLPhoneTextField.swift */; };
+		D799D402D64206309E79AB35FC32DABD /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DFB6012A35E07C50CA759D1EA7D30 /* PhoneTextField.swift */; };
 		D8328429281E82F67DB47AF6C9D95191 /* MJRefreshBackGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F09C6F60883D1CF6BF8FEAF84F4EF /* MJRefreshBackGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D87B2D5ED73534ACF97CE0A52FA18AE4 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E5C5D79CC8C73AC9A443FC6C4CAA0C /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9EF3E8D3F914B578839AF80324F247B /* BarLineScatterCandleBubbleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6298EE40F9DE78E03FC0BC43681B8BEA /* BarLineScatterCandleBubbleChartData.swift */; };
@@ -560,7 +560,7 @@
 		10066942975BE050D7B3A75D9306C651 /* JXPagingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JXPagingView-Info.plist"; sourceTree = "<group>"; };
 		10114E27C497D0885546493656B7BF1A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		101E01EBAD5DA776B17156EAECECF958 /* AAInfographics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AAInfographics-dummy.m"; sourceTree = "<group>"; };
-		101FE1083F28A69BD4A0A0F946F3C867 /* XLProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLProgressView.swift; path = XLLKit/Classes/Component/XLProgressView.swift; sourceTree = "<group>"; };
+		101FE1083F28A69BD4A0A0F946F3C867 /* ProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = XLLKit/Classes/Component/ProgressView.swift; sourceTree = "<group>"; };
 		1031D961318A655F49539F4CE4939D56 /* SDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDiskCache.h; path = SDWebImage/SDDiskCache.h; sourceTree = "<group>"; };
 		107C9A44CF9A1BC3242B03E3A9E8F7CF /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
 		10A857CFC4041EA4196E1EF3F14FFD8A /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
@@ -800,7 +800,7 @@
 		920D152C90E1F655A9C032FC633D2AE5 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
 		922B41ECEB0154D5291F42FF4DA2B409 /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
 		924D58DDB79657818B55C481E610009E /* XAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRenderer.swift; path = Source/Charts/Renderers/XAxisRenderer.swift; sourceTree = "<group>"; };
-		92FCD305A48FEACB7D5A79669C8B0B86 /* XLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLAlertView.swift; path = XLLKit/Classes/Component/XLAlertView.swift; sourceTree = "<group>"; };
+		92FCD305A48FEACB7D5A79669C8B0B86 /* AlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = XLLKit/Classes/Component/AlertView.swift; sourceTree = "<group>"; };
 		9317E4947CA2FE1B5D5999034C09CCA7 /* Then.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Then.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		941A825C2341774E6F26DD167837AA32 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		941FDF21C20A04662807717576733E72 /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartDataProvider.swift; path = Source/Charts/Interfaces/BubbleChartDataProvider.swift; sourceTree = "<group>"; };
@@ -832,7 +832,7 @@
 		A34C2884548A5017A53446EA98824E76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		A4A9CC1E1042C45E9008E98D8FDDC504 /* ViewPortJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPortJob.swift; path = Source/Charts/Jobs/ViewPortJob.swift; sourceTree = "<group>"; };
 		A4F9C873ADC6B8F01C67FD4FB62E4E11 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
-		A5664914B265FB799DE0C92A85482EB3 /* XLCategoryCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLCategoryCell.swift; path = XLLKit/Classes/Component/XLCategoryCell.swift; sourceTree = "<group>"; };
+		A5664914B265FB799DE0C92A85482EB3 /* CategoryCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = XLLKit/Classes/Component/CategoryCell.swift; sourceTree = "<group>"; };
 		A712FC2BE2EA71851C54F885813C43FF /* IHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IHighlighter.swift; path = Source/Charts/Highlight/IHighlighter.swift; sourceTree = "<group>"; };
 		A7864F89F25645315778D58896F04140 /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		A78778B9CA7FD32ABD15993972947D4E /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/SDImageCoder.m; sourceTree = "<group>"; };
@@ -860,7 +860,7 @@
 		B35EF6F973A21E5A4EB4251DD27D1B90 /* Then-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Then-dummy.m"; sourceTree = "<group>"; };
 		B395AED0201A2F394E1B01E9EA8E4612 /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
 		B3E9CED2028B0CA89F73A9CC18FBF46A /* Pods-XLLKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B59DFB6012A35E07C50CA759D1EA7D30 /* XLPhoneTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLPhoneTextField.swift; path = XLLKit/Classes/Component/XLPhoneTextField.swift; sourceTree = "<group>"; };
+		B59DFB6012A35E07C50CA759D1EA7D30 /* PhoneTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneTextField.swift; path = XLLKit/Classes/Component/PhoneTextField.swift; sourceTree = "<group>"; };
 		B5AB76B04C45A2D097FFB296DF052A0F /* JXPagingMainTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JXPagingMainTableView.swift; path = "JXPagingView-Swift/JXPagingMainTableView.swift"; sourceTree = "<group>"; };
 		B6893C97E16F360D47B3F81681B5D75D /* AAInfographics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AAInfographics.modulemap; sourceTree = "<group>"; };
 		B6ADC25B5156EDAE67185DB6E594B05E /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/SDImageFrame.h; sourceTree = "<group>"; };
@@ -875,7 +875,7 @@
 		BA3279E9DFCB96244581B9522696D756 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		BA81F52A049B4A669EB392ADEC837CFE /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		BAE379888FA6D64EEE38900CE024B2A8 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		BB07AF79B3288C4B9F81F8F4BA6E459C /* XLCityPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLCityPickerView.swift; path = XLLKit/Classes/Component/XLCityPickerView.swift; sourceTree = "<group>"; };
+		BB07AF79B3288C4B9F81F8F4BA6E459C /* CityPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CityPickerView.swift; path = XLLKit/Classes/Component/CityPickerView.swift; sourceTree = "<group>"; };
 		BC80C368F5BE28C26C28B7C287FE532B /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		BD37417CB7341BC67045F994C4618D75 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
 		BDE967B82C7354DDA14D0D542F4BC214 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
@@ -905,7 +905,7 @@
 		C7FF9DF0A9E95773A0908C21F06C38A0 /* CandleStickChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartRenderer.swift; path = Source/Charts/Renderers/CandleStickChartRenderer.swift; sourceTree = "<group>"; };
 		C89F4BCCA68D042FF366076D88285A9A /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		C8B34B85422FD429FBB4C62FEA0B37EE /* HorizontalBarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartView.swift; path = Source/Charts/Charts/HorizontalBarChartView.swift; sourceTree = "<group>"; };
-		C90A7BFB5C9714D230CA8E5605FE9F01 /* XLNormalSelectorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLNormalSelectorView.swift; path = XLLKit/Classes/Component/XLNormalSelectorView.swift; sourceTree = "<group>"; };
+		C90A7BFB5C9714D230CA8E5605FE9F01 /* NormalSelectorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NormalSelectorView.swift; path = XLLKit/Classes/Component/NormalSelectorView.swift; sourceTree = "<group>"; };
 		C96D17E55AD0DE92210352DB95272579 /* UIImage+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Transform.h"; path = "SDWebImage/UIImage+Transform.h"; sourceTree = "<group>"; };
 		CA421E5974E3DB21C99048C16A7C7FED /* RadarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartData.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartData.swift; sourceTree = "<group>"; };
 		CACD3C58E22A3D647D66107455C30E36 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
@@ -966,7 +966,7 @@
 		E48FC77A2C79436707D8A7ACC8A28AD8 /* XLLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLKit-dummy.m"; sourceTree = "<group>"; };
 		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B366C57719431B359C3C4014E30D6A /* UIColor+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIColor+XLExtension.swift"; sourceTree = "<group>"; };
-		E4D110F5C568640D657B8823D83FAD5E /* XLAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLAlertController.swift; path = XLLKit/Classes/Component/XLAlertController.swift; sourceTree = "<group>"; };
+		E4D110F5C568640D657B8823D83FAD5E /* AlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = XLLKit/Classes/Component/AlertController.swift; sourceTree = "<group>"; };
 		E516CCE607DB32A9D3BAA72227853C0E /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
 		E53F483EFC32E6A982694A4CDE1C8199 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		E5CD2D464C4526B8042C7B881C8CF8AF /* UIView+XLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+XLExtension.swift"; path = "XLLKit/Classes/Extension/UIView+XLExtension.swift"; sourceTree = "<group>"; };
@@ -992,12 +992,12 @@
 		EE9D428B10135D1DC48EAE824A9C2197 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
 		F101B0C03727B60867712156C26312E5 /* SDWebImageError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageError.m; path = SDWebImage/SDWebImageError.m; sourceTree = "<group>"; };
 		F10AD7ED312CFC4F706F5894105D56EC /* Pods-XLLKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F17663E787AE8D75799CFB324E5BF36B /* XLCycleScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLCycleScrollView.swift; path = XLLKit/Classes/Component/XLCycleScrollView.swift; sourceTree = "<group>"; };
+		F17663E787AE8D75799CFB324E5BF36B /* CycleScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CycleScrollView.swift; path = XLLKit/Classes/Component/CycleScrollView.swift; sourceTree = "<group>"; };
 		F1AD8F2FCBF3B50E43D1089FE068F5D7 /* Then-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Then-umbrella.h"; sourceTree = "<group>"; };
 		F1E8B4077EE3CB123ADD254E50829CCC /* IFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IFillFormatter.swift; path = Source/Charts/Formatters/IFillFormatter.swift; sourceTree = "<group>"; };
 		F1EBA8A41EEDA3F80F28DC8FBF527424 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		F2400E302C85B6C4049B28A147F3C872 /* BubbleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartData.swift; path = Source/Charts/Data/Implementations/Standard/BubbleChartData.swift; sourceTree = "<group>"; };
-		F2D45B5600E8B8C0BB6CC9B420060E7C /* XLCategoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XLCategoryView.swift; path = XLLKit/Classes/Component/XLCategoryView.swift; sourceTree = "<group>"; };
+		F2D45B5600E8B8C0BB6CC9B420060E7C /* CategoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CategoryView.swift; path = XLLKit/Classes/Component/CategoryView.swift; sourceTree = "<group>"; };
 		F380B924626F323DE2730D1696772AB5 /* AASerializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AASerializable.swift; path = AAInfographics/AAChartCreator/AASerializable.swift; sourceTree = "<group>"; };
 		F51309D7847754F913BC29EF3860F465 /* ILineScatterCandleRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineScatterCandleRadarChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineScatterCandleRadarChartDataSet.swift; sourceTree = "<group>"; };
 		F54C99777289775731C48E182AC96A91 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
@@ -1234,15 +1234,15 @@
 		32C9D3E3E6B0935220BE3A696D97C7B8 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				E4D110F5C568640D657B8823D83FAD5E /* XLAlertController.swift */,
-				92FCD305A48FEACB7D5A79669C8B0B86 /* XLAlertView.swift */,
-				A5664914B265FB799DE0C92A85482EB3 /* XLCategoryCell.swift */,
-				F2D45B5600E8B8C0BB6CC9B420060E7C /* XLCategoryView.swift */,
-				BB07AF79B3288C4B9F81F8F4BA6E459C /* XLCityPickerView.swift */,
-				F17663E787AE8D75799CFB324E5BF36B /* XLCycleScrollView.swift */,
-				C90A7BFB5C9714D230CA8E5605FE9F01 /* XLNormalSelectorView.swift */,
-				B59DFB6012A35E07C50CA759D1EA7D30 /* XLPhoneTextField.swift */,
-				101FE1083F28A69BD4A0A0F946F3C867 /* XLProgressView.swift */,
+				E4D110F5C568640D657B8823D83FAD5E /* AlertController.swift */,
+				92FCD305A48FEACB7D5A79669C8B0B86 /* AlertView.swift */,
+				A5664914B265FB799DE0C92A85482EB3 /* CategoryCell.swift */,
+				F2D45B5600E8B8C0BB6CC9B420060E7C /* CategoryView.swift */,
+				BB07AF79B3288C4B9F81F8F4BA6E459C /* CityPickerView.swift */,
+				F17663E787AE8D75799CFB324E5BF36B /* CycleScrollView.swift */,
+				C90A7BFB5C9714D230CA8E5605FE9F01 /* NormalSelectorView.swift */,
+				B59DFB6012A35E07C50CA759D1EA7D30 /* PhoneTextField.swift */,
+				101FE1083F28A69BD4A0A0F946F3C867 /* ProgressView.swift */,
 				7F15545744C1CF2681929E8C94DB3FB0 /* Resources */,
 			);
 			name = Component;
@@ -2918,16 +2918,16 @@
 				A1E640356C5AC21C74F833905301D55B /* UITextField+XLExtension.swift in Sources */,
 				AB6114858469DC60811AB3AF66385AD0 /* UIView+XLExtension.swift in Sources */,
 				36DFCB03810E0A24F2AC8B12A03C8542 /* XL.swift in Sources */,
-				10C9DE7AB55E786215B96DA16DE04D58 /* XLAlertController.swift in Sources */,
-				9FA9D80601763B64D26B840EC84BC225 /* XLAlertView.swift in Sources */,
-				17219A02F91BECA50A26D8BA8BFB2BF8 /* XLCategoryCell.swift in Sources */,
-				2FB98BD24F8811A075F82645179A493B /* XLCategoryView.swift in Sources */,
-				999A94CB2FE8C059C4D22B098D27811D /* XLCityPickerView.swift in Sources */,
-				B35DAC22F8565702F53BA252C8CB7B5D /* XLCycleScrollView.swift in Sources */,
+				10C9DE7AB55E786215B96DA16DE04D58 /* AlertController.swift in Sources */,
+				9FA9D80601763B64D26B840EC84BC225 /* AlertView.swift in Sources */,
+				17219A02F91BECA50A26D8BA8BFB2BF8 /* CategoryCell.swift in Sources */,
+				2FB98BD24F8811A075F82645179A493B /* CategoryView.swift in Sources */,
+				999A94CB2FE8C059C4D22B098D27811D /* CityPickerView.swift in Sources */,
+				B35DAC22F8565702F53BA252C8CB7B5D /* CycleScrollView.swift in Sources */,
 				71BB4916F31B979363FB98CBA5DE3D92 /* XLLKit-dummy.m in Sources */,
-				0FA1951F08CE61B0BA307D4EFC54E96D /* XLNormalSelectorView.swift in Sources */,
-				D799D402D64206309E79AB35FC32DABD /* XLPhoneTextField.swift in Sources */,
-				7D3070A66B19A3472C0EE8781F2835C7 /* XLProgressView.swift in Sources */,
+				0FA1951F08CE61B0BA307D4EFC54E96D /* NormalSelectorView.swift in Sources */,
+				D799D402D64206309E79AB35FC32DABD /* PhoneTextField.swift in Sources */,
+				7D3070A66B19A3472C0EE8781F2835C7 /* ProgressView.swift in Sources */,
 				85E13339770AC98050CA5C6766B6AACC /* Tool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

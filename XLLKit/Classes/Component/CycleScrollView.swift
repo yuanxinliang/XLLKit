@@ -1,5 +1,5 @@
 //
-//  XLCycleScrollView.swift
+//  CycleScrollView.swift
 //  XLLKit
 //
 //  Created by XL Yuen on 2019/6/4.
@@ -16,13 +16,13 @@ let timerInterval = 2.0
     func xl_cycleScrollViewSelected(_ selectedIndex: Int)
 }
 
-public class XLCycleScrollView: UIView
+public class CycleScrollView: UIView
 {
     weak var delegate: XLCycleScrollViewDelegate?
     
-    public class func cycleScrollView(frame: CGRect, margin: Int, imageArray: [Any], needPageControl: Bool) -> XLCycleScrollView
+    public class func cycleScrollView(frame: CGRect, margin: Int, imageArray: [Any], needPageControl: Bool) -> CycleScrollView
     {
-        let view = XLCycleScrollView(frame: frame, margin: margin, imageArray: imageArray, needPageControl: needPageControl)
+        let view = CycleScrollView(frame: frame, margin: margin, imageArray: imageArray, needPageControl: needPageControl)
         view.layer.masksToBounds = true
         return view
     }
@@ -261,7 +261,7 @@ public class XLCycleScrollView: UIView
 }
 
 
-extension XLCycleScrollView
+extension CycleScrollView
 {
     @objc private func cycleViewSelected()
     {
@@ -270,7 +270,7 @@ extension XLCycleScrollView
 }
 
 
-extension XLCycleScrollView: UIScrollViewDelegate
+extension CycleScrollView: UIScrollViewDelegate
 {
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)

@@ -1,5 +1,5 @@
 //
-//  XLCityPickerView.swift
+//  CityPickerView.swift
 //  Pods-XLLKit_Example
 //
 //  Created by ZZCMXL on 2019/6/3.
@@ -25,7 +25,7 @@ public enum XLAddressPickerType: Int
 }
 
 /// 城市选择器
-public class XLCityPickerView: UIView
+public class CityPickerView: UIView
 {
     // MARK: -外部参数
     
@@ -478,7 +478,7 @@ public class XLCityPickerView: UIView
 
 // MARK: -UIPickerViewDataSource, UIPickerViewDelegate 方法
 
-extension XLCityPickerView: UIPickerViewDataSource, UIPickerViewDelegate
+extension CityPickerView: UIPickerViewDataSource, UIPickerViewDelegate
 {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int
@@ -579,7 +579,7 @@ extension XLCityPickerView: UIPickerViewDataSource, UIPickerViewDelegate
 
 // MARK: - 代理方式传值
 
-extension XLCityPickerView {
+extension CityPickerView {
     
     //初始化方法
     public func areaPickerViewProvince(delegate: XLCityPickerViewDelegate)
