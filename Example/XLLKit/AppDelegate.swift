@@ -29,6 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(AppInfo.xl.version)
         print(AppInfo.xl.build)
         print(AppInfo.xl.bundleID)
+        print(DeviceInfo.xl.sizeOfDisk)
+        print(DeviceInfo.xl.fileSizeToString(DeviceInfo.xl.totalSizeOfDisk))
+        print(DeviceInfo.xl.fileSizeToString(DeviceInfo.xl.availSizeOfDisk))
+        print(DeviceInfo.xl.model)
+        print(DeviceInfo.xl.deviceModel)
+        print(DeviceInfo.xl.ip)
+        print(DeviceInfo.xl.countOfCpu)
+        print(DeviceInfo.xl.modelOfCpu)
+        print(DeviceInfo.xl.phoneCardModel)
+        
         return true
     }
 
