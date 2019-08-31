@@ -28,6 +28,10 @@
 		5936494E231A23AF0055B2AC /* MVVMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936494D231A23AF0055B2AC /* MVVMModel.swift */; };
 		59364950231A24660055B2AC /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936494F231A24660055B2AC /* MVVMView.swift */; };
 		59364952231A24830055B2AC /* MVVMvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59364951231A24830055B2AC /* MVVMvm.swift */; };
+		59364955231A3A610055B2AC /* TimerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59364954231A3A610055B2AC /* TimerTarget.swift */; };
+		59364957231A3BA90055B2AC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59364956231A3BA90055B2AC /* TimerController.swift */; };
+		5936495B231A3E620055B2AC /* GCDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936495A231A3E620055B2AC /* GCDTimerController.swift */; };
+		5936495D231A41BE0055B2AC /* GCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936495C231A41BE0055B2AC /* GCDTimer.swift */; };
 		599A24DA22B5FF2300D77BCC /* TestNumberFormatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -74,6 +78,10 @@
 		5936494D231A23AF0055B2AC /* MVVMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMModel.swift; sourceTree = "<group>"; };
 		5936494F231A24660055B2AC /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
 		59364951231A24830055B2AC /* MVVMvm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMvm.swift; sourceTree = "<group>"; };
+		59364954231A3A610055B2AC /* TimerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTarget.swift; sourceTree = "<group>"; };
+		59364956231A3BA90055B2AC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		5936495A231A3E620055B2AC /* GCDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimerController.swift; sourceTree = "<group>"; };
+		5936495C231A41BE0055B2AC /* GCDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimer.swift; sourceTree = "<group>"; };
 		599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumberFormatController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XLLKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,6 +187,31 @@
 			name = MVVM;
 			sourceTree = "<group>";
 		};
+		59364953231A39DA0055B2AC /* 中间者对象 */ = {
+			isa = PBXGroup;
+			children = (
+				59364954231A3A610055B2AC /* TimerTarget.swift */,
+				59364956231A3BA90055B2AC /* TimerController.swift */,
+			);
+			name = "中间者对象";
+			sourceTree = "<group>";
+		};
+		59364958231A3D760055B2AC /* GCD定时器 */ = {
+			isa = PBXGroup;
+			children = (
+				5936495A231A3E620055B2AC /* GCDTimerController.swift */,
+				5936495C231A41BE0055B2AC /* GCDTimer.swift */,
+			);
+			name = "GCD定时器";
+			sourceTree = "<group>";
+		};
+		59364959231A3D890055B2AC /* 线程控制 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "线程控制";
+			sourceTree = "<group>";
+		};
 		599A24D822B5FECF00D77BCC /* 号码格式化 */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +244,9 @@
 		607FACD21AFB9204008FA782 /* Example for XLLKit */ = {
 			isa = PBXGroup;
 			children = (
+				59364959231A3D890055B2AC /* 线程控制 */,
+				59364958231A3D760055B2AC /* GCD定时器 */,
+				59364953231A39DA0055B2AC /* 中间者对象 */,
 				59364942231A040B0055B2AC /* MVVM */,
 				59364941231A04060055B2AC /* MVP */,
 				5305942022C70AC4001F07BB /* textview 自适应高度 */,
@@ -491,7 +527,9 @@
 				5356943322B0A01400C024B3 /* TestCategoryView.swift in Sources */,
 				53691F4522B9C6D500687AAD /* TestPageHeaderView.swift in Sources */,
 				59364944231A04C20055B2AC /* MVPController.swift in Sources */,
+				5936495D231A41BE0055B2AC /* GCDTimer.swift in Sources */,
 				5936494A231A05030055B2AC /* MVPView.swift in Sources */,
+				5936495B231A3E620055B2AC /* GCDTimerController.swift in Sources */,
 				59364946231A04E20055B2AC /* MVVMController.swift in Sources */,
 				59364948231A04F50055B2AC /* MVPModel.swift in Sources */,
 				53FF4F5722C1BCCA00490000 /* TestPieViewController.swift in Sources */,
@@ -504,7 +542,9 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				5936494E231A23AF0055B2AC /* MVVMModel.swift in Sources */,
 				536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */,
+				59364955231A3A610055B2AC /* TimerTarget.swift in Sources */,
 				599A24DA22B5FF2300D77BCC /* TestNumberFormatController.swift in Sources */,
+				59364957231A3BA90055B2AC /* TimerController.swift in Sources */,
 				59364952231A24830055B2AC /* MVVMvm.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

@@ -12,7 +12,21 @@ import Then
 
 class ViewController: UIViewController
 {
-    var titles = ["导航栏转场", "MBProgressHUD", "轮播图", "选择标签栏", "分页视图左右滑动", "城市选择", "单个选择", "手机号、银行卡号格式化", "饼状图", "textview 自适应高度", "MVP", "MVVM"]
+    var titles = ["导航栏转场",
+                  "MBProgressHUD",
+                  "轮播图",
+                  "选择标签栏",
+                  "分页视图左右滑动",
+                  "城市选择",
+                  "单个选择",
+                  "手机号、银行卡号格式化",
+                  "饼状图",
+                  "textview 自适应高度",
+                  "MVP",
+                  "MVVM",
+                  "Timer 中间者",
+                  "GCD 定时器",
+                  "线程封装"]
     var view1: UIView!
     
     var customView: UIView =
@@ -276,15 +290,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
                 print(str as Any)
             }
         case 7:
-            self.navigationController?.pushViewController(TestNumberFormatController(), animated: true)
+            navigationController?.pushViewController(TestNumberFormatController(), animated: true)
         case 8:
-            self.navigationController?.pushViewController(TestPieViewController(), animated: true)
+            navigationController?.pushViewController(TestPieViewController(), animated: true)
         case 9:
-            self.navigationController?.pushViewController(TestTextViewAdjustFrameController(), animated: true)
+            navigationController?.pushViewController(TestTextViewAdjustFrameController(), animated: true)
         case 10:
-            self.navigationController?.pushViewController(MVPController(), animated: true)
+            navigationController?.pushViewController(MVPController(), animated: true)
         case 11:
-            self.navigationController?.pushViewController(MVVMController(), animated: true)
+            navigationController?.pushViewController(MVVMController(), animated: true)
+        case 12:
+            navigationController?.pushViewController(TimerController(), animated: true)
+        case 13:
+            navigationController?.pushViewController(GCDTimerController(), animated: true)
+            
 
         default:
             break
