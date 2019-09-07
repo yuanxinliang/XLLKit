@@ -88,7 +88,7 @@ public class XLCityPickerView: UIView
         }
     }
     
-    // MARK: -内部参数
+    // MARK: - 内部参数
     
     /// 接收参数的数据
     var dataSource = [Dictionary<String, Dictionary<String, Dictionary<String,[String]>>>]() // Array<Any>()
@@ -135,7 +135,7 @@ public class XLCityPickerView: UIView
     /// 区域block
     var selectedAreaBlock:((_ province:String, _ city:String, _ area:String)->())?
     
-    /// MARK: -懒加载
+    /// MARK: - 懒加载
     
     /// 创建城市选择器
     lazy var pickerView: UIPickerView = {
@@ -224,7 +224,7 @@ public class XLCityPickerView: UIView
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: -界面初始化
+    //MARK: - 界面初始化
     /// 初始化界面
     func xl_setView()
     {

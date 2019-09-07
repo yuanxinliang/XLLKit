@@ -5,7 +5,7 @@
 //  Created by XL Yuen on 2019/6/1.
 //
 
-// MARK: 匹配 - Matching
+// MARK: - 匹配 - Matching
 public extension NSRegularExpression
 {
     class func xl_isMatch(string: String, pattern: String) -> Bool
@@ -31,7 +31,7 @@ public extension NSRegularExpression
     }
 }
 
-// MARK: 替换 - Replacement
+// MARK: - 替换 - Replacement
 public extension NSRegularExpression
 {
     class func xl_replacement(string: String, replace: String, pattern: String) -> String
