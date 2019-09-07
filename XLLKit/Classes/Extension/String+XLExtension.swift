@@ -20,7 +20,7 @@
  [\u4E00-\u9FA5] 汉字的正则匹配
  */
 
-// MARK: 正则字符串
+// MARK: - 正则字符串
 
 public enum XLRegularString: String
 {
@@ -107,7 +107,7 @@ public enum XLRegularString: String
     case limitInput2 = "^[0-9xX]+$"
 }
 
-// MARK: 正则匹配
+// MARK: - 正则匹配
 
 public extension String
 {
@@ -243,7 +243,7 @@ public extension String
     }
 }
 
-// MARK: 计算字符串的宽高
+// MARK: - 计算字符串的宽高
 
 public extension String
 {
@@ -262,7 +262,7 @@ public extension String
     }
 }
 
-// MARK: 给字符串添加下标索引存取功能
+// MARK: - 给字符串添加下标索引存取功能
 
 public extension String
 {
@@ -295,6 +295,22 @@ public extension String
         let st = self.index(startIndex, offsetBy: start)
         let en = self.index(st, offsetBy: len)
         return String(self[st ..< en])
+    }
+}
+
+// MARK: - 字符串转Date
+
+public extension String
+{
+    func xl_convertDate(format: String = "yyyy-MM-dd HH:mm:ss") -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        let date = formatter.date(from: self)
+        if date == nil {
+            print("时间转换失败...")
+            return Date()
+        }
+        return date!
     }
 }
 
