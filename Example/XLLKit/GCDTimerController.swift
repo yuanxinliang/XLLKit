@@ -20,7 +20,7 @@ class GCDTimerController: UIViewController {
 //            print(Date())
 //        }
         
-        timer = GCDTimer.timer(interval: 1, start: 0, target: TimerTarget(self), selector: #selector(log1), repeat: true)
+        timer = GCDTimer.timer(interval: 1, start: 2, target: TimerTarget(self), selector: #selector(log1), repeat: true)
     }
     
     @objc func log1() {
@@ -32,6 +32,7 @@ class GCDTimerController: UIViewController {
     }
     
     deinit {
+        print("deinit - GCDTimerController")
         GCDTimer.cancelTimer(timer)
     }
 }

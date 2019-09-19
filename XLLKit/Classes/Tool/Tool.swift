@@ -104,6 +104,15 @@ public extension XL where Base: Tool {
         return format ?? "￥0.00"
     }
     
+    /// 数字转中文
+    static func chineseNumber(number: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .spellOut
+        formatter.locale = Locale(identifier: "zh_Hans")
+        let string = formatter.string(from: NSNumber(value: number))
+        return string ?? "未知"
+    }
+    
     /// 时间转换：date -> string - http://www.hangge.com/blog/cache/detail_2182.html
     static func dateConverToString(date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> String {
         let formatter = DateFormatter()

@@ -12,28 +12,33 @@ var semaphore: DispatchSemaphore = DispatchSemaphore(value: 1)
 
 public class GCDTimer {
     
-    
-    
     public class func timer(interval: TimeInterval,
                             start: TimeInterval,
                             repeat: Bool,
                             task: @escaping () -> Void) -> String {
         
+        // 创建时间源
         let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
-        timer.schedule(deadline: .now() + start, repeating: DispatchTimeInterval.seconds(Int(interval)), leeway: .nanoseconds(0))
+        // 设置时间源
+        timer.schedule(deadline: .now() + start, repeating: interval)
         
+        // 数据同步
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         let name = String(format: "%zd", timers.count)
         timers[name] = timer
         semaphore.signal()
         
+        // 设置触发事件
         timer.setEventHandler {
-            task()
-            if `repeat` == false {
-                cancelTimer(name)
+            DispatchQueue.main.async {
+                task()
+                if `repeat` == false {
+                    cancelTimer(name)
+                }
             }
         }
         timer.resume()
+        
         return name
     }
     
@@ -53,6 +58,8 @@ public class GCDTimer {
         guard timerName.count != 0 else {
             return
         }
+        
+        // 数据同步
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         let timer = timers[timerName]
         if timer != nil {

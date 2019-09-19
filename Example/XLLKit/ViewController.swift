@@ -218,7 +218,6 @@ class ViewController: UIViewController
         label.layer.borderWidth = 1.0;
         label.numberOfLines = 0
         
-        print("test")
         XLBtnDefaultBackgroundColor = .gray
         XLBtnDefaultTitleColor = .orange
         let btn = UIButton.xl.createBtn(title: "button1")
@@ -259,22 +258,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let next = AViewController()
             navigationController?.pushViewController(next, animated: false)
         case 1:
-            print("123")
 //            ProgressView.xl_showOnlyMessage(message: "警告⚠️警告")
 //            ProgressView.xl_showIndicator(message: "Loading...", superview: nil)
             let hud = ProgressView.showIndicator()
             hud.hide(animated: true, afterDelay: 3)
         case 2:
-            print("123")
             self.navigationController?.pushViewController(TestCycleScrollViewController(), animated: true)
         case 3:
 //            print("123")
             self.navigationController?.pushViewController(TestTabViewController(), animated: true)
         case 4:
-            print("123")
             self.navigationController?.pushViewController(TestPageViewController(), animated: true)
         case 5:
-            print("123")
             let view = CityPickerView()
             
             view.areaPickerViewWithareaBlock { (province, city, area) in
@@ -282,7 +277,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             }
             
         case 6:
-            print("123")
             let data = ["1", "2", "3"]
             NormalSelectorView.showPickerView(dataSource: data, title: "选择", cancelBtnTitle: "取消", confirmBtnTitle: "确认", cancelClosure: {
                 
@@ -303,8 +297,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             navigationController?.pushViewController(TimerController(), animated: true)
         case 13:
             navigationController?.pushViewController(GCDTimerController(), animated: true)
-            
-
+        case 14:
+            navigationController?.pushViewController(PermanentThreadController(), animated: true)
+        
         default:
             break
         }

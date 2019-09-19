@@ -39,6 +39,21 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A6091B58231DFE8800B865A5 /* PermanentThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6091B57231DFE8800B865A5 /* PermanentThreadController.swift */; };
+		A6091B5A231DFE9900B865A5 /* PermanentThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6091B59231DFE9900B865A5 /* PermanentThread.swift */; };
+		A60A81A92327C78100878907 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A81A82327C78100878907 /* Stack.swift */; };
+		A62C056C232F3657004CCC22 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C056B232F3657004CCC22 /* List.swift */; };
+		A62C05792330C744004CCC22 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C05782330C744004CCC22 /* TreeNode.swift */; };
+		A62C057B2330C808004CCC22 /* BanirySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C057A2330C808004CCC22 /* BanirySearchTree.swift */; };
+		A62C057D2330C83F004CCC22 /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C057C2330C83F004CCC22 /* AVLTree.swift */; };
+		A62C057F2330C849004CCC22 /* RBTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C057E2330C849004CCC22 /* RBTree.swift */; };
+		A62C05812330C896004CCC22 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C05802330C896004CCC22 /* BinaryTree.swift */; };
+		A62C06162330E93C004CCC22 /* NSString+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C060B2330E93B004CCC22 /* NSString+Trees.m */; };
+		A62C06172330E93C004CCC22 /* MJBinaryTrees.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C060E2330E93B004CCC22 /* MJBinaryTrees.m */; };
+		A62C06182330E93C004CCC22 /* MJLevelOrderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C060F2330E93B004CCC22 /* MJLevelOrderPrinter.m */; };
+		A62C06192330E93C004CCC22 /* MJInorderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C06112330E93B004CCC22 /* MJInorderPrinter.m */; };
+		A62C061A2330E93C004CCC22 /* MJPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C06122330E93B004CCC22 /* MJPrinter.m */; };
+		A69773092328C1EE00FE250B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69773082328C1EE00FE250B /* Queue.swift */; };
 		FAA2FA1BA0AF54DB8454AD82 /* Pods_XLLKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE6DA4113C9C53B7E8E8AE /* Pods_XLLKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +110,28 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68ACD633725356D3D9545B66 /* Pods-XLLKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XLLKit_Tests/Pods-XLLKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		79314B36A9048E9943220DD5 /* Pods-XLLKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLKit_Example.release.xcconfig"; path = "Target Support Files/Pods-XLLKit_Example/Pods-XLLKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A6091B57231DFE8800B865A5 /* PermanentThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermanentThreadController.swift; sourceTree = "<group>"; };
+		A6091B59231DFE9900B865A5 /* PermanentThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermanentThread.swift; sourceTree = "<group>"; };
+		A60A81A82327C78100878907 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A62C056B232F3657004CCC22 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		A62C05782330C744004CCC22 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		A62C057A2330C808004CCC22 /* BanirySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanirySearchTree.swift; sourceTree = "<group>"; };
+		A62C057C2330C83F004CCC22 /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
+		A62C057E2330C849004CCC22 /* RBTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBTree.swift; sourceTree = "<group>"; };
+		A62C05802330C896004CCC22 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		A62C060A2330E93A004CCC22 /* XLLKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLLKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		A62C060B2330E93B004CCC22 /* NSString+Trees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trees.m"; sourceTree = "<group>"; };
+		A62C060C2330E93B004CCC22 /* MJLevelOrderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJLevelOrderPrinter.h; sourceTree = "<group>"; };
+		A62C060D2330E93B004CCC22 /* MJInorderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJInorderPrinter.h; sourceTree = "<group>"; };
+		A62C060E2330E93B004CCC22 /* MJBinaryTrees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBinaryTrees.m; sourceTree = "<group>"; };
+		A62C060F2330E93B004CCC22 /* MJLevelOrderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJLevelOrderPrinter.m; sourceTree = "<group>"; };
+		A62C06102330E93B004CCC22 /* MJBinaryTrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTrees.h; sourceTree = "<group>"; };
+		A62C06112330E93B004CCC22 /* MJInorderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJInorderPrinter.m; sourceTree = "<group>"; };
+		A62C06122330E93B004CCC22 /* MJPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPrinter.m; sourceTree = "<group>"; };
+		A62C06132330E93B004CCC22 /* MJPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPrinter.h; sourceTree = "<group>"; };
+		A62C06142330E93B004CCC22 /* NSString+Trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trees.h"; sourceTree = "<group>"; };
+		A62C06152330E93B004CCC22 /* MJBinaryTreeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTreeInfo.h; sourceTree = "<group>"; };
+		A69773082328C1EE00FE250B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		BEBE6DA4113C9C53B7E8E8AE /* Pods_XLLKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C472FF90CE8D507B8B373016 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F969413122612E40DBDABB87 /* Pods_XLLKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +245,8 @@
 		59364959231A3D890055B2AC /* 线程控制 */ = {
 			isa = PBXGroup;
 			children = (
+				A6091B57231DFE8800B865A5 /* PermanentThreadController.swift */,
+				A6091B59231DFE9900B865A5 /* PermanentThread.swift */,
 			);
 			name = "线程控制";
 			sourceTree = "<group>";
@@ -244,6 +283,7 @@
 		607FACD21AFB9204008FA782 /* Example for XLLKit */ = {
 			isa = PBXGroup;
 			children = (
+				A60A81A72327C75800878907 /* 数据结构 */,
 				59364959231A3D890055B2AC /* 线程控制 */,
 				59364958231A3D760055B2AC /* GCD定时器 */,
 				59364953231A39DA0055B2AC /* 中间者对象 */,
@@ -326,6 +366,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A60A81A72327C75800878907 /* 数据结构 */ = {
+			isa = PBXGroup;
+			children = (
+				A62C06092330E922004CCC22 /* Printer */,
+				A69773082328C1EE00FE250B /* Queue.swift */,
+				A60A81A82327C78100878907 /* Stack.swift */,
+				A62C056B232F3657004CCC22 /* List.swift */,
+				A62C05782330C744004CCC22 /* TreeNode.swift */,
+				A62C05802330C896004CCC22 /* BinaryTree.swift */,
+				A62C057A2330C808004CCC22 /* BanirySearchTree.swift */,
+				A62C057C2330C83F004CCC22 /* AVLTree.swift */,
+				A62C057E2330C849004CCC22 /* RBTree.swift */,
+			);
+			name = "数据结构";
+			sourceTree = "<group>";
+		};
+		A62C06092330E922004CCC22 /* Printer */ = {
+			isa = PBXGroup;
+			children = (
+				A62C06152330E93B004CCC22 /* MJBinaryTreeInfo.h */,
+				A62C06102330E93B004CCC22 /* MJBinaryTrees.h */,
+				A62C060E2330E93B004CCC22 /* MJBinaryTrees.m */,
+				A62C060D2330E93B004CCC22 /* MJInorderPrinter.h */,
+				A62C06112330E93B004CCC22 /* MJInorderPrinter.m */,
+				A62C060C2330E93B004CCC22 /* MJLevelOrderPrinter.h */,
+				A62C060F2330E93B004CCC22 /* MJLevelOrderPrinter.m */,
+				A62C06132330E93B004CCC22 /* MJPrinter.h */,
+				A62C06122330E93B004CCC22 /* MJPrinter.m */,
+				A62C06142330E93B004CCC22 /* NSString+Trees.h */,
+				A62C060B2330E93B004CCC22 /* NSString+Trees.m */,
+				A62C060A2330E93A004CCC22 /* XLLKit_Example-Bridging-Header.h */,
+			);
+			name = Printer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,7 +455,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = L7HVF2SVDY;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -521,12 +596,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5936494C231A08BA0055B2AC /* MVPPresenter.swift in Sources */,
+				A62C056C232F3657004CCC22 /* List.swift in Sources */,
 				536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */,
 				5356943522B0A76800C024B3 /* TestCategoryCell.swift in Sources */,
 				53724FC8229FA58A002B4795 /* TButton.swift in Sources */,
 				5356943322B0A01400C024B3 /* TestCategoryView.swift in Sources */,
+				A62C057B2330C808004CCC22 /* BanirySearchTree.swift in Sources */,
 				53691F4522B9C6D500687AAD /* TestPageHeaderView.swift in Sources */,
 				59364944231A04C20055B2AC /* MVPController.swift in Sources */,
+				A62C06192330E93C004CCC22 /* MJInorderPrinter.m in Sources */,
 				5936495D231A41BE0055B2AC /* GCDTimer.swift in Sources */,
 				5936494A231A05030055B2AC /* MVPView.swift in Sources */,
 				5936495B231A3E620055B2AC /* GCDTimerController.swift in Sources */,
@@ -535,15 +613,27 @@
 				53FF4F5722C1BCCA00490000 /* TestPieViewController.swift in Sources */,
 				5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */,
 				5305942222C70B01001F07BB /* TestTextViewAdjustFrameController.swift in Sources */,
+				A62C06172330E93C004CCC22 /* MJBinaryTrees.m in Sources */,
 				53691F4722B9C6FE00687AAD /* TestPageListView.swift in Sources */,
+				A62C05812330C896004CCC22 /* BinaryTree.swift in Sources */,
+				A62C05792330C744004CCC22 /* TreeNode.swift in Sources */,
+				A60A81A92327C78100878907 /* Stack.swift in Sources */,
 				59364950231A24660055B2AC /* MVVMView.swift in Sources */,
+				A62C06182330E93C004CCC22 /* MJLevelOrderPrinter.m in Sources */,
 				53691F4322B90C8C00687AAD /* TestPageViewController.swift in Sources */,
 				53B7E5BE22A7C1F8002F035B /* TestCycleScrollViewController.swift in Sources */,
+				A62C061A2330E93C004CCC22 /* MJPrinter.m in Sources */,
+				A69773092328C1EE00FE250B /* Queue.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				5936494E231A23AF0055B2AC /* MVVMModel.swift in Sources */,
+				A6091B5A231DFE9900B865A5 /* PermanentThread.swift in Sources */,
 				536B450122A51CD7004D1FD5 /* BViewController.swift in Sources */,
 				59364955231A3A610055B2AC /* TimerTarget.swift in Sources */,
+				A62C057D2330C83F004CCC22 /* AVLTree.swift in Sources */,
 				599A24DA22B5FF2300D77BCC /* TestNumberFormatController.swift in Sources */,
+				A62C057F2330C849004CCC22 /* RBTree.swift in Sources */,
+				A62C06162330E93C004CCC22 /* NSString+Trees.m in Sources */,
+				A6091B58231DFE8800B865A5 /* PermanentThreadController.swift in Sources */,
 				59364957231A3BA90055B2AC /* TimerController.swift in Sources */,
 				59364952231A24830055B2AC /* MVVMvm.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -692,6 +782,7 @@
 			baseConfigurationReference = F9E16EFD659A1DFAC8A937EC /* Pods-XLLKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L7HVF2SVDY;
 				INFOPLIST_FILE = XLLKit/Info.plist;
@@ -701,6 +792,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.jjjjj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "public_**";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLLKit/XLLKit_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -710,6 +803,7 @@
 			baseConfigurationReference = 79314B36A9048E9943220DD5 /* Pods-XLLKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L7HVF2SVDY;
@@ -720,6 +814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.jjjjj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "hoc_**";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLLKit/XLLKit_Example-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

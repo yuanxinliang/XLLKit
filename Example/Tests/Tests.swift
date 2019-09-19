@@ -1,4 +1,5 @@
 import XCTest
+import XLLKit
 
 class Tests: XCTestCase {
     
@@ -23,8 +24,11 @@ class Tests: XCTestCase {
     
     func test001()
     {
-//        let b = "123456a".xl.isPassword()
-//        print(b)
+        print("----------begin----------")
+        
+        
+        
+        print("-----------end-----------")
     }
     
     func testPerformanceExample() {

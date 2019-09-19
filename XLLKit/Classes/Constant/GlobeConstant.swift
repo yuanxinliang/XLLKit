@@ -207,7 +207,7 @@ public extension XL where Base == DeviceInfo {
     }
     
     /// 手机型号 - e.g. @"iPhone 6"
-    /// 型号参考苹果官方：https://www.theiphonewiki.com/wiki/Models
+    /// 型号参考苹果非官方：https://www.theiphonewiki.com/wiki/Models
     static var deviceModel: String {
         
         var systemInfo = utsname()
@@ -333,8 +333,8 @@ public extension XL where Base == DeviceInfo {
             
             /// Simulator
             
-            case "i386":        return "iPhone Simulator i386"
-            case "x86_64":      return "iPhone Simulator x86_64"
+            case "i386":        return "\(model) Simulator i386"
+            case "x86_64":      return "\(model) Simulator x86_64"
             
             default:            return identifier
         }
