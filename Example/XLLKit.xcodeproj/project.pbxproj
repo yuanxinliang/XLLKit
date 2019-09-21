@@ -53,6 +53,7 @@
 		A62C06182330E93C004CCC22 /* MJLevelOrderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C060F2330E93B004CCC22 /* MJLevelOrderPrinter.m */; };
 		A62C06192330E93C004CCC22 /* MJInorderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C06112330E93B004CCC22 /* MJInorderPrinter.m */; };
 		A62C061A2330E93C004CCC22 /* MJPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C06122330E93B004CCC22 /* MJPrinter.m */; };
+		A62C06202334B480004CCC22 /* Leetcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C061F2334B480004CCC22 /* Leetcode.swift */; };
 		A69773092328C1EE00FE250B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69773082328C1EE00FE250B /* Queue.swift */; };
 		FAA2FA1BA0AF54DB8454AD82 /* Pods_XLLKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE6DA4113C9C53B7E8E8AE /* Pods_XLLKit_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		A62C06132330E93B004CCC22 /* MJPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPrinter.h; sourceTree = "<group>"; };
 		A62C06142330E93B004CCC22 /* NSString+Trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trees.h"; sourceTree = "<group>"; };
 		A62C06152330E93B004CCC22 /* MJBinaryTreeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTreeInfo.h; sourceTree = "<group>"; };
+		A62C061F2334B480004CCC22 /* Leetcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leetcode.swift; sourceTree = "<group>"; };
 		A69773082328C1EE00FE250B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		BEBE6DA4113C9C53B7E8E8AE /* Pods_XLLKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C472FF90CE8D507B8B373016 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				A62C057A2330C808004CCC22 /* BanirySearchTree.swift */,
 				A62C057C2330C83F004CCC22 /* AVLTree.swift */,
 				A62C057E2330C849004CCC22 /* RBTree.swift */,
+				A62C061F2334B480004CCC22 /* Leetcode.swift */,
 			);
 			name = "数据结构";
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				5936494C231A08BA0055B2AC /* MVPPresenter.swift in Sources */,
 				A62C056C232F3657004CCC22 /* List.swift in Sources */,
 				536B450022A51CD7004D1FD5 /* AViewController.swift in Sources */,
+				A62C06202334B480004CCC22 /* Leetcode.swift in Sources */,
 				5356943522B0A76800C024B3 /* TestCategoryCell.swift in Sources */,
 				53724FC8229FA58A002B4795 /* TButton.swift in Sources */,
 				5356943322B0A01400C024B3 /* TestCategoryView.swift in Sources */,

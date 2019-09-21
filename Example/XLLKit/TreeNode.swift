@@ -23,6 +23,9 @@ class TreeNode {
     /// 是否为叶子节点
     var isLeaf: Bool { return left == nil && right == nil }
     
+    /// 是否只有一个子节点
+    var hasOnlyChildren: Bool { return (left != nil && right == nil) || (left == nil && right != nil) }
+    
     /// 是否有两个子节点
     var hasTwoChildren: Bool { return left != nil && right != nil }
     

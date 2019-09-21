@@ -10,12 +10,16 @@ import Foundation
 
 class BinaryTree {
     
+    /// 二叉树的根节点
     var root: TreeNode?
     
+    /// 二叉树的节点数量
     var size: Int = 0
     
+    /// 是否为空树
     var isEmpty: Bool { return size == 0 ? true : false }
     
+    /// 清空二叉树所有元素
     func clear() {
         root = nil
         size = 0
@@ -58,7 +62,7 @@ class BinaryTree {
         return true
     }
     
-    /// 树的高度：通过层序遍历计算高度
+    /// 二叉树的高度：通过层序遍历计算高度
     func heightOfIteration() -> Int {
         
         if root == nil {
@@ -94,7 +98,7 @@ class BinaryTree {
         return height
     }
     
-    /// 树的高度：通过递归计算高度
+    /// 二叉树的高度：通过递归计算高度
     func heigthOfRecursion() -> Int {
         return height(root)
     }
@@ -104,9 +108,48 @@ class BinaryTree {
             return 0
         }
         return 1 + max(height(node?.left), height(node?.right))
-        
     }
     
+    /// 二叉树的宽度
+    func width() -> Int {
+        if root == nil {
+            return 0
+        }
+        
+        var levelSize = 1
+        var maxWidth = 1
+        
+        var nodes = [root!]
+        var indes = [0]
+        
+        while !nodes.isEmpty {
+            
+            
+            let node = nodes.removeFirst()
+            let inde = indes.removeFirst()
+            levelSize -= 1
+            
+            if node.left != nil {
+                nodes.append(node.left!)
+                indes.append(2 * inde + 1)
+            }
+            
+            if node.right != nil {
+                nodes.append(node.right!)
+                indes.append(2 * inde + 2)
+            }
+            
+            if levelSize == 0 {
+                levelSize = nodes.count
+                if indes.count > 1 {
+                    let width = indes.last! - indes.first! + 1
+                    if width > maxWidth { maxWidth = width }
+                }
+            }
+        }
+        
+        return maxWidth
+    }
     
 }
 
@@ -269,15 +312,62 @@ extension BinaryTree {
     
     /// 前驱节点 predecessor
     func predecessor(_ node: TreeNode?) -> TreeNode? {
-        return nil
+        
+        if node == nil {
+            return nil
+        }
+        
+        var pre = node?.left
+        
+        if pre != nil { // 1.前驱节点在左子树当中（left.right.right.right....）
+            
+            while pre?.right != nil { // 终止条件：right为nil
+                pre = pre?.right
+            }
+            return pre
+            
+        } else if pre == nil && node?.parent != nil { // 2.从父节点、祖父节点中寻找前驱节点
+            var tempNode = node
+            while tempNode?.parent != nil && tempNode === tempNode?.parent?.left { // 终止条件：node在parent的右子树
+                tempNode = tempNode?.parent
+            }
+            return tempNode?.parent
+        } else { // 3.那就是没有前驱节点，比如没有左子树的根节点
+            return nil
+        }
     }
     
     /// 后继节点 successor node
     func successor(_ node: TreeNode?) -> TreeNode? {
-        return nil
+        
+        if node == nil {
+            return nil
+        }
+        
+        var post = node?.right
+        
+        if post != nil {
+            
+            while post?.left != nil {
+                post = post?.left
+            }
+            return post
+        } else if post == nil && node?.parent != nil {
+            var temp = node
+            while temp?.parent != nil && temp === temp?.parent?.right {
+                temp = temp?.parent
+            }
+            return temp?.parent
+        } else {
+            return nil
+        }
+        
+        
     }
     
 }
+
+// MARK: - Test
 
 extension BinaryTree {
     
@@ -304,12 +394,13 @@ extension BinaryTree {
         preorderPrint(node: node?.right, preStr: preStr + "〖R〗", str: &str)
     }
     
-    func invertBT(){
+    func invertBT() {
         invertBinaryTree(node: root)
     }
     
     /// 翻转二叉树invertBinaryTree
     func invertBinaryTree(node: TreeNode?) {
+        
         if node == nil {
             return
         }
