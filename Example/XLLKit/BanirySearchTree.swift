@@ -53,6 +53,7 @@ class BanirySearchTree: BinaryTree {
         remove(e: node(elemet))
     }
     
+    /// 删除元素：内部实现
     private func remove(e: TreeNode?) {
         
         var node = e
@@ -132,7 +133,11 @@ class BanirySearchTree: BinaryTree {
         return nil
     }
     
+    
+    
 }
+
+// MARK: - 测试
 
 func testBST() {
     let a = [10,8,14,4,9,12,15,2,5,11]

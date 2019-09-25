@@ -306,6 +306,70 @@ extension BinaryTree {
     }
 }
 
+// MARK: - 遍历： 迭代
+
+extension BinaryTree {
+    
+    // 前序
+    func preorderOfIteration(_ root: TreeNode?) -> [Int] {
+        if root == nil { return [] }
+        var res = [Int]()
+        var arr = [root!]
+        while !arr.isEmpty {
+            let node = arr.removeFirst()
+            res.append(node.element)
+            if node.right != nil { arr.append(node.right!) }
+            if node.left != nil { arr.append(node.left!) }
+        }
+        return res
+    }
+    // 中序
+    func inorderOfIteration(_ root: TreeNode?) -> [Int] {
+        if root == nil { return [] }
+        var res = [Int]()
+        var arr = [TreeNode]()
+        var cur = root
+        while cur != nil || !arr.isEmpty {
+            while cur != nil {
+                arr.append(cur!)
+                cur = cur?.left
+            }
+            cur = arr.removeLast()
+            res.append(cur!.element)
+            cur = cur?.right
+        }
+        return res
+    }
+    // 后序
+    func posorderOfIteration(_ root: TreeNode?) -> [Int] {
+        if root == nil { return [] }
+        var res = [Int]()
+        var arr = [root!]
+        while !arr.isEmpty {
+            let node = arr.removeLast()
+            res.insert(node.element, at: 0)
+            if node.left != nil { arr.append(node.left!) }
+            if node.right != nil { arr.append(node.right!) }
+        }
+        
+        return res
+    }
+    // 层序
+    func levelorderOfIteration(_ root: TreeNode?) -> [Int] {
+        if root == nil { return [] }
+        var res = [Int]()
+        var arr = [root!]
+        while !arr.isEmpty {
+            let node = arr.removeFirst()
+            res.append(node.element)
+            if node.left != nil { arr.append(node.left!) }
+            if node.right != nil { arr.append(node.right!) }
+        }
+        
+        return res
+    }
+}
+
 // MARK: - 前驱、后继
 
 extension BinaryTree {
