@@ -6,6 +6,16 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+/*
+ *
+ let a = 3.15
+ let a1 = ceil(a)  // 向下取整
+ let a2 = floor(a) // 向上取整
+ print(a1) // 4.0
+ print(a2) // 3.0
+ *
+ */
+
 import Foundation
 
 protocol Queue {
@@ -47,6 +57,7 @@ struct IntQueue: Queue {
 }
 
 func testQueue() {
+    
     print("queue ------ ")
     var a = IntQueue()
     a.enQueue(2)

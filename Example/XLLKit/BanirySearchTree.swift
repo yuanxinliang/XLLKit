@@ -10,16 +10,18 @@ import Foundation
 
 class BanirySearchTree: BinaryTree {
     
+    func createNode(_ element: Int, _ parent: TreeNode? = nil) -> TreeNode {
+        return TreeNode(element, parent)
+    }
+    
     /// 添加元素
     func add(e: Int) {
-        
         // 如果是空树，先设置根节点
         if root == nil {
-            root = TreeNode(e)
+            root = createNode(e)
             size += 1
             return
         }
-        
         // 如果不是空树
         var parent = root
         var node = root
@@ -31,21 +33,20 @@ class BanirySearchTree: BinaryTree {
                 node = node!.right
             } else if cmp < 0 {
                 node = node!.left
-            } else {
-                // 如果相等直接覆盖旧值，然后退出
+            } else { // 如果相等直接覆盖旧值，然后退出
                 node!.element = e
                 return
             }
         }
         
-        let newNode = TreeNode(e, parent)
-        
+        let newNode = createNode(e, parent)
         if cmp > 0 {
             parent?.right = newNode
         } else {
             parent?.left = newNode
         }
         size += 1
+        afterAdd(node: newNode)
     }
     
     /// 删除元素
@@ -133,13 +134,30 @@ class BanirySearchTree: BinaryTree {
         return nil
     }
     
+    /*
+     * 添加节点元素之后，自平衡二叉树，用于AVL树和红黑树
+     */
+    func afterAdd(node: TreeNode) { }
     
+    /*
+     * 删除节点元素之后，自平衡二叉树，用于AVL树和红黑树
+     */
+    func afterRemove(node: TreeNode) { }
     
 }
 
 // MARK: - 测试
 
 func testBST() {
+    let bst = BanirySearchTree()
+    
+    for i in 1...10 {
+        bst.add(e: i)
+    }
+    
+}
+
+func testBST3() {
     let a = [10,8,14,4,9,12,15,2,5,11]
     let bst = BanirySearchTree()
     for i in a {
