@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        testBST()
 //        testLeetCode()
         testAVL()
-        
-        
+        print("123")
         return true
     }
     
