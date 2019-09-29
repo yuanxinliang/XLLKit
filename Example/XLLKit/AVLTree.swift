@@ -14,21 +14,31 @@ class AVLTree: BanirySearchTree {
         return AVLNode(element, parent)
     }
     
-    override func afterAdd(node: TreeNode) {
-        var cur: TreeNode? = node.parent
+    override func afterAdd(_ node: TreeNode?) {
+        var cur: TreeNode? = node?.parent
         while cur != nil {
             if isBalanced(cur!) { // 如果是平衡，就更新一下高度
                 updateHeight(cur!)
             } else { // 如果不平衡，需要恢复平衡
-                reBalanceOfRotate(cur!)
+//                reBalanceOfRotate(cur!)
+                reBalance(cur!)
                 break
             }
             cur = cur?.parent
         }
     }
     
-    override func afterRemove(node: TreeNode) {
-        
+    override func afterRemove(_ node: TreeNode?) {
+        var cur: TreeNode? = node?.parent
+        while cur != nil {
+            if isBalanced(cur!) { // 如果是平衡，就更新一下高度
+                updateHeight(cur!)
+            } else { // 如果不平衡，需要恢复平衡
+                reBalanceOfRotate(cur!)
+//                reBalance(cur!)
+            }
+            cur = cur?.parent
+        }
     }
     
 }
@@ -130,27 +140,56 @@ extension AVLTree {
         let child = parent?.tallerChildNode()
         if parent?.isLeftChild ?? false {
             if child?.isLeftChild ?? false { // LL：grand 右旋
-                rotate(grand, child, child?.right, parent, parent?.right, grand)
+                rotate(grand, child?.left, child, child?.right, parent, parent?.right, grand, grand.right)
             } else { // LR：parent 先左旋，grand 再右旋
-                rotate(grand, parent, child?.left, child, child?.right, grand)
+                rotate(grand, parent?.left, parent, child?.left, child, child?.right, grand, grand.right)
             }
         } else {
             if child?.isRightChild ?? false { // RR：grand 左旋
-                rotate(grand, grand, parent?.left, parent, child?.left, child)
+                rotate(grand, grand.left, grand, parent?.left, parent, child?.left, child, child?.right)
             } else { // RL：parent 先右旋，grand 再左旋
-                rotate(grand, grand, child?.left, child, child?.right, parent)
+                rotate(grand, grand.left, grand, child?.left, child, child?.right, parent, parent?.right)
             }
         }
     }
     
     private func rotate(_ r: TreeNode?,
-                        _ b: TreeNode?,
-                        _ c: TreeNode?,
+                        _ a: TreeNode?, _ b: TreeNode?, _ c: TreeNode?,
                         _ d: TreeNode?,
-                        _ e: TreeNode?,
-                        _ f: TreeNode?) {
+                        _ e: TreeNode?, _ f: TreeNode?, _ g: TreeNode?) {
         
+        // 先处理最顶上节点的指向
+        d?.parent = r?.parent
+        if r?.isLeftChild ?? false {
+            r?.parent?.left = d
+        } else if r?.isRightChild ?? false {
+            r?.parent?.right = d
+        } else {
+            root = d
+        }
         
+        // 处理左子树
+        b?.left = a
+        b?.right = c
+        a?.parent = b
+        c?.parent = b
+        
+        // 处理右子树
+        f?.left = e
+        f?.right = g
+        e?.parent = f
+        g?.parent = f
+        
+        // 处理父节点
+        d?.left = b
+        d?.right = f
+        b?.parent = d
+        f?.parent = d
+        
+        // 更新高度
+        updateHeight(b!)
+        updateHeight(f!)
+        updateHeight(d!)
     }
     
 }
@@ -164,13 +203,19 @@ func testAVL() {
 func testAVLDemo2() {
     let avl = AVLTree()
     
-    for i in 1...15 {
+    for i in 1...20 {
         avl.add(e: i)
 //        avl.printTree()
 //        print("------------")
     }
-    
     avl.printTree()
+    
+//    for i in 0..<20 {
+//        avl.remove(elemet: 20 - i)
+//        avl.printTree()
+//    }
+    
+    
 }
 
 func testAVLDemo1() {

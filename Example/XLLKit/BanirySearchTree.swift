@@ -20,6 +20,8 @@ class BanirySearchTree: BinaryTree {
         if root == nil {
             root = createNode(e)
             size += 1
+            // 新添加节点之后的处理 (本人认为此处可以不做处理) - 添加之后做平衡二叉树
+            afterAdd(root)
             return
         }
         // 如果不是空树
@@ -46,7 +48,8 @@ class BanirySearchTree: BinaryTree {
             parent?.left = newNode
         }
         size += 1
-        afterAdd(node: newNode)
+        // 新添加节点之后的处理 - 添加之后做平衡二叉树
+        afterAdd(newNode)
     }
     
     /// 删除元素
@@ -56,20 +59,18 @@ class BanirySearchTree: BinaryTree {
     
     /// 删除元素：内部实现
     private func remove(e: TreeNode?) {
-        
         var node = e
-        
         if node == nil {
             return
         }
-        
         size -= 1
         
-        /// 删除节点分三种情况：
-        ///
-        /// 1.节点的度为2：
-        /// 2.节点的度为1：用子节点代替原节点的位置
-        /// 3.节点的度为0，即叶子节点：直接删除
+        /*
+         * 删除节点分三种情况：
+         * 1.节点的度为2：
+         * 2.节点的度为1：用子节点代替原节点的位置
+         * 3.节点的度为0，即叶子节点：直接删除
+         */
         
         if node!.hasTwoChildren { // 1.节点的度为2：
             // 先找到前驱节点
@@ -84,30 +85,32 @@ class BanirySearchTree: BinaryTree {
         let replaceNode = node?.left != nil ? node?.left : node?.right
         
         if replaceNode != nil { // 2.节点的度为1：用子节点代替原节点的位置
-            
+            // 更改parent
+            replaceNode?.parent = node?.parent
             if node === root {
                 root = replaceNode
-                replaceNode?.parent = nil
             } else if node!.isLeftChild {
-                replaceNode?.parent = node?.parent
                 node?.parent?.left = replaceNode
             } else {
-                replaceNode?.parent = node?.parent
                 node?.parent?.right = replaceNode
             }
-            
+            // 删除节点之后的处理
+            afterRemove(node)
         } else { // 3.节点的度为0，即叶子节点：直接删除
             if node === root { // node是叶子节点并且是根节点
                 root = nil
+                // 删除节点之后的处理
+                afterRemove(node)
             } else {
                 if node?.isLeftChild ?? false {
                     node?.parent?.left = nil
                 } else {
                     node?.parent?.right = nil
                 }
+                // 删除节点之后的处理
+                afterRemove(node)
             }
         }
-        
     }
     
     /// 是否包含某元素
@@ -137,12 +140,12 @@ class BanirySearchTree: BinaryTree {
     /*
      * 添加节点元素之后，自平衡二叉树，用于AVL树和红黑树
      */
-    func afterAdd(node: TreeNode) { }
+    func afterAdd(_ node: TreeNode?) { }
     
     /*
      * 删除节点元素之后，自平衡二叉树，用于AVL树和红黑树
      */
-    func afterRemove(node: TreeNode) { }
+    func afterRemove(_ node: TreeNode?) { }
     
 }
 
