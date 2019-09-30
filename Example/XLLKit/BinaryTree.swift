@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 二叉树
 class BinaryTree {
     
     /// 二叉树的根节点
@@ -450,7 +451,12 @@ extension BinaryTree {
         
         str.append(preStr)
         str.append("【")
-        str.append("\(node!.element)")
+        if let rb = node as? RBNode {
+            str.append("\(node!.element) - \(rb.color ? "B" : "R")")
+        } else {
+            str.append("\(node!.element)")
+        }
+        
         str.append("】")
         str.append("\n")
     

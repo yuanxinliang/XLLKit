@@ -1,5 +1,5 @@
 //
-//  BanirySearchTree.swift
+//  BinarySearchTree.swift
 //  XLLKit_Example
 //
 //  Created by XL ZZCM on 2019/9/17.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-class BanirySearchTree: BinaryTree {
+/// 二叉搜索树
+class BinarySearchTree: BinaryTree {
     
     func createNode(_ element: Int, _ parent: TreeNode? = nil) -> TreeNode {
         return TreeNode(element, parent)
@@ -21,7 +22,7 @@ class BanirySearchTree: BinaryTree {
             root = createNode(e)
             size += 1
             // 新添加节点之后的处理 (本人认为此处可以不做处理) - 添加之后做平衡二叉树
-            afterAdd(root)
+            afterAdd(root!)
             return
         }
         // 如果不是空树
@@ -95,12 +96,12 @@ class BanirySearchTree: BinaryTree {
                 node?.parent?.right = replaceNode
             }
             // 删除节点之后的处理
-            afterRemove(node)
+            afterRemove(node!)
         } else { // 3.节点的度为0，即叶子节点：直接删除
             if node === root { // node是叶子节点并且是根节点
                 root = nil
                 // 删除节点之后的处理
-                afterRemove(node)
+                afterRemove(node!)
             } else {
                 if node?.isLeftChild ?? false {
                     node?.parent?.left = nil
@@ -108,7 +109,7 @@ class BanirySearchTree: BinaryTree {
                     node?.parent?.right = nil
                 }
                 // 删除节点之后的处理
-                afterRemove(node)
+                afterRemove(node!)
             }
         }
     }
@@ -140,94 +141,13 @@ class BanirySearchTree: BinaryTree {
     /*
      * 添加节点元素之后，自平衡二叉树，用于AVL树和红黑树
      */
-    func afterAdd(_ node: TreeNode?) { }
+    func afterAdd(_ node: TreeNode) { }
     
     /*
      * 删除节点元素之后，自平衡二叉树，用于AVL树和红黑树
      */
-    func afterRemove(_ node: TreeNode?) { }
+    func afterRemove(_ node: TreeNode) { }
     
 }
 
-// MARK: - 测试
 
-func testBST() {
-    let bst = BanirySearchTree()
-    
-    for i in 1...10 {
-        bst.add(e: i)
-    }
-    
-}
-
-func testBST3() {
-    let a = [10,8,14,4,9,12,15,2,5,11]
-    let bst = BanirySearchTree()
-    for i in a {
-        bst.add(e: i)
-    }
-    
-    bst.printTree()
-    bst.remove(elemet: 15)
-    bst.printTree()
-}
-
-func testBST2() {
-    let a = [10,8,14,4,9,12,15,2,5,11]
-    let bst = BanirySearchTree()
-    for i in a {
-        bst.add(e: i)
-    }
-    
-    let node = bst.node(4)
-    let pre = bst.predecessor(node)
-    let pos = bst.successor(node)
-    print(pre?.element ?? 0)
-    print(pos?.element ?? 0)
-    print(node as Any)
-}
-
-func testBST1() {
-    
-    let a = [10,8,14,4,9,12,15,2,5]
-    let bst = BanirySearchTree()
-    for i in a {
-        bst.add(e: i)
-    }
-    var preStr = "前序遍历："
-    bst.preorderTraversal { (e) in
-        preStr.append("\(e), ")
-    }
-    print(preStr)
-    
-    var inStr = "中序遍历："
-    bst.inorderTraversal { (e) in
-        inStr.append("\(e), ")
-    }
-    print(inStr)
-    
-    var postStr = "后序遍历："
-    bst.postorderTraversal { (e) in
-        postStr.append("\(e), ")
-    }
-    print(postStr)
-    
-    var levelStr = "层序遍历："
-    bst.levelOrderTraversal { (e) in
-        levelStr.append("\(e), ")
-    }
-    print(levelStr)
-    
-    print("高度：", bst.heightOfIteration())
-    print("高度：", bst.heigthOfRecursion())
-    
-    bst.printTree()
-    
-    print("是否为完全二叉树：", bst.isComplete())
-    
-    bst.invertBT()
-    
-    bst.printTree()
-    
-    print("是否为完全二叉树：", bst.isComplete())
-}

@@ -300,7 +300,7 @@ class Solution {
 func testLeetCode() {
     
     let a = [10,8,14,4,9,12,15,2,5,11]
-    let bst = BanirySearchTree()
+    let bst = BinarySearchTree()
     for i in a {
         bst.add(e: i)
     }

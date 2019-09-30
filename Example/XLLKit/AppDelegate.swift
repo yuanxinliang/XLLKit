@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        testLinkedList()
 //        testBST()
 //        testLeetCode()
-        testAVL()
-        print("123")
+//        testAVL()
+        testRB()
         return true
     }
     
