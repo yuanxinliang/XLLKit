@@ -14,29 +14,28 @@ class HeapSort<T: Comparable>: Sort<T> {
         print("heap sort")
         
         let count = array.count
-        
-        for i in (0...(count / 2 - 1)).reversed() {
-            siftDown(&array, length: count, index: i)
+        for i in (0..<count/2).reversed() {
+            siftDown(&array, count, i)
         }
         
         for i in (1..<count).reversed() {
             let temp = array[0]
             array[0] = array[i]
             array[i] = temp
-            siftDown(&array, length: i, index: 0)
+            siftDown(&array, i, 0)
         }
-        
     }
     
-    class func siftDown(_ array: inout [T], length: Int, index: Int) {
-        
+    class func siftDown(_ array: inout [T], _ length: Int, _ index: Int) {
         var cur = index
         let half = length / 2
         while cur < half {
             let l = cur * 2 + 1
             let r = l + 1
             var max = l
-            if r < length && array[r] > array[l] { max = r }
+            if r < length && array[r] > array[l] {
+                max = r
+            }
             if array[max] <= array[cur] { break }
             let temp = array[max]
             array[max] = array[cur]

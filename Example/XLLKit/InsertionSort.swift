@@ -12,13 +12,15 @@ class InsertionSort<T: Comparable>: Sort<T> {
     override class func sort(array: inout Array<T>) {
         print("insertion sort")
         for i in 1..<array.count {
-            var j = i
-            var cur = array[j]
-            while j > 0 && cur < array[j - 1] {
-                array[j] = array[j - 1]
-                j -= 1
+            var cur = i
+            let value = array[i]
+            while cur > 0 && value < array[cur - 1] {
+                array[cur] = array[cur - 1]
+                cur -= 1
             }
-            array[j] = cur
+            if cur != i {
+                array[cur] = value
+            }
         }
     }
 }

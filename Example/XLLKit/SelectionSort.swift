@@ -12,20 +12,19 @@ class SelectionSort<T: Comparable>: Sort<T> {
     
     override class func sort(array: inout Array<T>) {
         print("selection sort")
-        let count = array.count
-        for i in (1..<count).reversed() {
+        
+        for i in (1..<array.count).reversed() {
             var max = 0
             for j in 1...i {
                 if array[j] > array[max] {
                     max = j
                 }
             }
-            if max != i {
-                let temp = array[max]
-                array[max] = array[i]
-                array[i] = temp
-            }
+            let temp = array[i]
+            array[i] = array[max]
+            array[max] = temp
         }
+        
     }
 
 }
