@@ -51,8 +51,8 @@ func testSort() {
     print(a6)
     QuickSort.sort(array: &a7)
     print(a7)
-//    MergeSort.sort(array: &a8)
-//    print(a8)
+    MergeSort.sort(array: &a8)
+    print(a8)
 //    ShellSort.sort(array: &a9)
 //    print(a9)
 }
