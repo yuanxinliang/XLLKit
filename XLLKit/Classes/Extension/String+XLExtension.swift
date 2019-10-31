@@ -21,7 +21,6 @@ public enum XLRegularString: String
      +  一个或一个以上
      ?  0个或一个
      .  匹配除换行符以外的任意字符
-     
      [\u4E00-\u9FA5] 汉字的正则匹配
      */
     

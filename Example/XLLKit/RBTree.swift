@@ -16,6 +16,7 @@ class RBTree: BalanceBinarySearchTree {
     }
     
     /// 更新节点颜色状态
+    @discardableResult
     private func updateColor(_ node: TreeNode?, _ color: Bool) -> TreeNode? {
         if node == nil { return node }
         (node as! RBNode).color = color
@@ -100,6 +101,80 @@ class RBTree: BalanceBinarySearchTree {
                 leftRotate(grand)
             }
         }
+    }
+    
+    override func afterRemove(_ node: TreeNode) {
+        // 如果删除的节点是红色或者用以取代删掉节点的子节点是红色
+        if isRed(node) {
+            black(node)
+            return
+        }
+        let parent = node.parent
+        // 删除的是根节点
+        if parent == nil { return }
+        
+        // 删除的是黑色叶子节点「下溢」
+        // 判断被删除的 node 是左还是右
+        let left = parent?.left == nil || node.isLeftChild
+        var sibling = left ? parent?.right : parent?.left
+        if left { // 被删除的节点在左边，兄弟节点在右边
+            if isRed(sibling) { // 兄弟节点是红色
+                black(sibling)
+                red(parent)
+                leftRotate(parent)
+                // 更换兄弟
+                sibling = parent?.right
+            }
+            // 兄弟节点必然是黑色
+            if isBlack(sibling?.left) && isBlack(sibling?.right) {
+                // 兄弟节点没有一个红色子节点，父节点要向下跟兄弟节点合并
+                let parentBlack = isBlack(parent)
+                black(parent)
+                red(sibling)
+                if parentBlack && parent != nil {
+                    afterRemove(parent!)
+                }
+            } else { // 兄弟节点至少有一个红色子节点，向兄弟节点借元素
+                // 兄弟节点的左边是黑色，兄弟要先旋转
+                if isBlack(sibling?.right) {
+                    rightRotate(sibling)
+                    sibling = parent?.right
+                }
+                updateColor(sibling, colorOf(parent))
+                black(sibling?.right)
+                black(parent)
+                leftRotate(parent)
+            }
+        } else { // 被删除的节点在右边，兄弟节点在左边
+            if isRed(sibling) { // 兄弟节点是红色
+                black(sibling)
+                red(parent)
+                rightRotate(parent)
+                // 更换兄弟
+                sibling = parent?.left
+            }
+            // 兄弟节点必然是黑色
+            if isBlack(sibling?.left) && isBlack(sibling?.right) {
+                // 兄弟节点没有一个红色子节点，父节点要向下跟兄弟节点合并
+                let parentBlack = isBlack(parent)
+                black(parent)
+                red(sibling)
+                if parentBlack && parent != nil {
+                    afterRemove(parent!)
+                }
+            } else { // 兄弟节点至少有一个红色子节点，向兄弟节点借元素
+                // 兄弟节点的左边是黑色，兄弟要先旋转
+                if isBlack(sibling?.left) {
+                    leftRotate(sibling)
+                    sibling = parent?.left
+                }
+                updateColor(sibling, colorOf(parent))
+                black(sibling?.left)
+                black(parent)
+                rightRotate(parent)
+            }
+        }
+        
     }
     
 }

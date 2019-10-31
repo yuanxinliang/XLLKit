@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        testBST()
 //        testLeetCode()
 //        testAVL()
-        testRB()
+//        testRB()
+        testSort()
+//        testCustomSort()
         return true
     }
     

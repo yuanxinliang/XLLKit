@@ -1,6 +1,6 @@
 {
   "name": "XLLKit",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "summary": "Base XLLKit.",
   "homepage": "https://github.com/yuanxinliang/XLLKit",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/yuanxinliang/XLLKit.git",
-    "tag": "0.1.4"
+    "tag": "0.1.6"
   },
   "swift_versions": "5.0",
   "platforms": {
@@ -19,7 +19,12 @@
   "subspecs": [
     {
       "name": "Constant",
-      "source_files": "XLLKit/Classes/Constant"
+      "source_files": "XLLKit/Classes/Constant",
+      "dependencies": {
+        "XLLKit/Extension": [
+
+        ]
+      }
     },
     {
       "name": "Extension",
@@ -46,7 +51,12 @@
     },
     {
       "name": "Tool",
-      "source_files": "XLLKit/Classes/Tool"
+      "source_files": "XLLKit/Classes/Tool",
+      "dependencies": {
+        "XLLKit/Extension": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"
