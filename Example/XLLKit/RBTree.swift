@@ -174,7 +174,6 @@ class RBTree: BalanceBinarySearchTree {
                 rightRotate(parent)
             }
         }
-        
     }
     
 }
