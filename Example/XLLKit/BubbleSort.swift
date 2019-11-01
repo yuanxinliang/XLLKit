@@ -25,7 +25,7 @@ import UIKit
 class BubbleSort<T: Comparable>: Sort<T> {
     override class func sort(array: inout Array<T>) {
         print("bubble sort")
-        for i in (1..<array.count).reversed() {
+        for i in (1..<array.count) {
             var flag = false
             for j in 1...i {
                 if array[j - 1] > array[j] {

@@ -19,10 +19,11 @@ class SelectionSort<T: Comparable>: Sort<T> {
                     max = j
                 }
             }
-            let temp = array[i]
-            array[i] = array[max]
-            array[max] = temp
+            let temp = array[max]
+            array[max] = array[i]
+            array[i] = temp
         }
+        
     }
 
 }

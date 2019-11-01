@@ -13,13 +13,13 @@ class InsertionSort<T: Comparable>: Sort<T> {
         print("insertion sort")
         for i in 1..<array.count {
             var cur = i
-            let value = array[i]
-            while cur > 0 && value < array[cur - 1] {
+            let element = array[i]
+            while cur > 0 && element < array[cur - 1] {
                 array[cur] = array[cur - 1]
                 cur -= 1
             }
             if cur != i {
-                array[cur] = value
+                array[cur] = element
             }
         }
     }

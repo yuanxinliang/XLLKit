@@ -12,45 +12,44 @@ class QuickSort<T: Comparable>: Sort<T> {
     
     override class func sort(array: inout Array<T>) {
         print("quick sort")
-        quickSort(&array, 0, array.count)
+        sort(&array, 0, array.count)
     }
     
-    class func quickSort(_ array: inout [T], _ left: Int, _ right: Int) {
-        if right - left < 2 { return }
-        let middle = pivotIndex(&array, left, right)
-        quickSort(&array, left, middle)
-        quickSort(&array, middle + 1, right)
+    class func sort(_ arr: inout [T], _ left: Int, _ right: Int) {
+        if right - left < 2 {
+            return
+        }
+        let middle = pivotInex(&arr, left, right)
+        sort(&arr, left, middle)
+        sort(&arr, middle + 1, right)
     }
     
-    class func pivotIndex(_ array: inout [T], _ left: Int, _ right: Int) -> Int {
+    class func pivotInex(_ arr: inout [T], _ left: Int, _ right: Int) -> Int {
         var begin = left
         var end = right - 1
-        let pivot = array[begin]
+        let pivot = arr[left]
         while begin < end {
             while begin < end {
-                if pivot < array[end] {
+                if pivot < arr[end] {
                     end -= 1
                 } else {
-                    array[begin] = array[end]
+                    arr[begin] = arr[end]
                     begin += 1
                     break
                 }
             }
-            
             while begin < end {
-                if pivot > array[begin] {
+                if pivot > arr[begin] {
                     begin += 1
                 } else {
-                    array[end] = array[begin]
+                    arr[end] = arr[begin]
                     end -= 1
                     break
                 }
             }
-            
         }
-        array[begin] = pivot
+        arr[begin] = pivot
         return begin
     }
-    
     
 }

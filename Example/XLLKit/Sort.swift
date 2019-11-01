@@ -53,8 +53,8 @@ func testSort() {
     print(a7)
     MergeSort.sort(array: &a8)
     print(a8)
-//    ShellSort.sort(array: &a9)
-//    print(a9)
+    ShellSort.sort(array: &a9)
+    print(a9)
 }
 
 func randomData(_ count: Int, _ max: Int) -> [Int] {
