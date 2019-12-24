@@ -32,6 +32,7 @@
 		59364957231A3BA90055B2AC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59364956231A3BA90055B2AC /* TimerController.swift */; };
 		5936495B231A3E620055B2AC /* GCDTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936495A231A3E620055B2AC /* GCDTimerController.swift */; };
 		5936495D231A41BE0055B2AC /* GCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936495C231A41BE0055B2AC /* GCDTimer.swift */; };
+		5952501E239961A200CB2453 /* XLSingletonOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5952501D239961A200CB2453 /* XLSingletonOC.m */; };
 		597E269423693A6700520114 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E269323693A6700520114 /* Sort.swift */; };
 		599A24DA22B5FF2300D77BCC /* TestNumberFormatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */; };
 		59F897A52369988A003070FC /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F897A42369988A003070FC /* BubbleSort.swift */; };
@@ -110,6 +111,8 @@
 		59364956231A3BA90055B2AC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		5936495A231A3E620055B2AC /* GCDTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimerController.swift; sourceTree = "<group>"; };
 		5936495C231A41BE0055B2AC /* GCDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimer.swift; sourceTree = "<group>"; };
+		5952501C239961A200CB2453 /* XLSingletonOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLSingletonOC.h; sourceTree = "<group>"; };
+		5952501D239961A200CB2453 /* XLSingletonOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLSingletonOC.m; sourceTree = "<group>"; };
 		597E269323693A6700520114 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumberFormatController.swift; sourceTree = "<group>"; };
 		59F897A42369988A003070FC /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
@@ -277,6 +280,22 @@
 			name = "线程控制";
 			sourceTree = "<group>";
 		};
+		5952501A239960BD00CB2453 /* 单例 */ = {
+			isa = PBXGroup;
+			children = (
+				5952501C239961A200CB2453 /* XLSingletonOC.h */,
+				5952501D239961A200CB2453 /* XLSingletonOC.m */,
+			);
+			name = "单例";
+			sourceTree = "<group>";
+		};
+		5952501B239960C700CB2453 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Block;
+			sourceTree = "<group>";
+		};
 		597E269223693A4F00520114 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +317,13 @@
 				599A24D922B5FF2300D77BCC /* TestNumberFormatController.swift */,
 			);
 			name = "号码格式化";
+			sourceTree = "<group>";
+		};
+		59A3C8C5236D7AB700257C43 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BinaryTree;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -324,6 +350,8 @@
 		607FACD21AFB9204008FA782 /* Example for XLLKit */ = {
 			isa = PBXGroup;
 			children = (
+				5952501B239960C700CB2453 /* Block */,
+				5952501A239960BD00CB2453 /* 单例 */,
 				A60A81A72327C75800878907 /* 数据结构 */,
 				59364959231A3D890055B2AC /* 线程控制 */,
 				59364958231A3D760055B2AC /* GCD定时器 */,
@@ -410,6 +438,7 @@
 		A60A81A72327C75800878907 /* 数据结构 */ = {
 			isa = PBXGroup;
 			children = (
+				59A3C8C5236D7AB700257C43 /* BinaryTree */,
 				597E269223693A4F00520114 /* Sort */,
 				A62C06092330E922004CCC22 /* Printer */,
 				A69773082328C1EE00FE250B /* Queue.swift */,
@@ -661,6 +690,7 @@
 				5936495B231A3E620055B2AC /* GCDTimerController.swift in Sources */,
 				59364946231A04E20055B2AC /* MVVMController.swift in Sources */,
 				59364948231A04F50055B2AC /* MVPModel.swift in Sources */,
+				5952501E239961A200CB2453 /* XLSingletonOC.m in Sources */,
 				59F897AF2369D81E003070FC /* QuickSort.swift in Sources */,
 				53FF4F5722C1BCCA00490000 /* TestPieViewController.swift in Sources */,
 				5377DCDB22AF9D5F0051476C /* TestTabViewController.swift in Sources */,

@@ -10,21 +10,20 @@ import UIKit
 
 class QuickSort<T: Comparable>: Sort<T> {
     
-    override class func sort(array: inout Array<T>) {
+    override class func sort(arr: inout Array<T>) {
         print("quick sort")
-        sort(&array, 0, array.count)
+        sort(&arr, 0, arr.count)
     }
     
     class func sort(_ arr: inout [T], _ left: Int, _ right: Int) {
-        if right - left < 2 {
-            return
-        }
-        let middle = pivotInex(&arr, left, right)
+        if right - left < 2 { return }
+        let middle = pivotIndex(&arr, left, right)
         sort(&arr, left, middle)
         sort(&arr, middle + 1, right)
     }
     
-    class func pivotInex(_ arr: inout [T], _ left: Int, _ right: Int) -> Int {
+    class func pivotIndex(_ arr: inout [T], _ left: Int, _ right: Int) -> Int {
+        
         var begin = left
         var end = right - 1
         let pivot = arr[left]

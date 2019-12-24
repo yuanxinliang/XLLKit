@@ -10,9 +10,9 @@ import Foundation
 
 class Sort<T: Comparable> {
     
-    class func sort(array: inout Array<T>) {
+    class func sort(arr: inout Array<T>) {
         print("sort")
-        array.sort()
+        arr.sort()
     }
     class func compare(_ t1: T, _ t2: T) -> Int {
         return t1 > t2 ? 1 : (t1 < t2 ? -1 : 0)
@@ -25,11 +25,8 @@ class Sort<T: Comparable> {
     }
 }
 
-
-
-
 func testSort() {
-    var a1 = randomData(10, 20)
+    var a1 = randomData(100, 200)
     var a2 = a1
     var a3 = a1
     var a4 = a1
@@ -38,23 +35,24 @@ func testSort() {
     var a7 = a1
     var a8 = a1
     var a9 = a1
+    var count = Int(arc4random()) % 100
     a1.sort()
-    Sort.sort(array: &a2)
-    print(a2)
-    BubbleSort.sort(array: &a3)
-    print(a3)
-    SelectionSort.sort(array: &a4)
-    print(a4)
-    InsertionSort.sort(array: &a5)
-    print(a5)
-    HeapSort.sort(array: &a6)
-    print(a6)
-    QuickSort.sort(array: &a7)
-    print(a7)
-    MergeSort.sort(array: &a8)
-    print(a8)
-    ShellSort.sort(array: &a9)
-    print(a9)
+    Sort.sort(arr: &a2)
+    print(a2[count])
+    BubbleSort.sort(arr: &a3)
+    print(a3[count])
+    SelectionSort.sort(arr: &a4)
+    print(a4[count])
+    InsertionSort.sort(arr: &a5)
+    print(a5[count])
+    HeapSort.sort(arr: &a6)
+    print(a6[count])
+    QuickSort.sort(arr: &a7)
+    print(a7[count])
+    MergeSort.sort(arr: &a8)
+    print(a8[count])
+    ShellSort.sort(arr: &a9)
+    print(a9[count])
 }
 
 func randomData(_ count: Int, _ max: Int) -> [Int] {

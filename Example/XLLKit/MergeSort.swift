@@ -10,10 +10,10 @@ import UIKit
 
 class MergeSort<T: Comparable>: Sort<T> {
     
-    override class func sort(array: inout Array<T>) {
+    override class func sort(arr: inout Array<T>) {
         print("merge sort")
         var pre = [T]()
-        sort(&pre, &array, 0, array.count)
+        sort(&pre, &arr, 0, arr.count)
     }
     
     class func sort(_ pre: inout [T], _ arr: inout [T], _ left: Int, _ right: Int) {
@@ -22,10 +22,10 @@ class MergeSort<T: Comparable>: Sort<T> {
         sort(&pre, &arr, left, middle)
         sort(&pre, &arr, middle, right)
         merge(&pre, &arr, left, middle, right)
+        
     }
     
     class func merge(_ pre: inout [T], _ arr: inout [T], _ left: Int, _ middle: Int, _ right: Int) {
-        
         var lb = 0
         let le = middle - left
         

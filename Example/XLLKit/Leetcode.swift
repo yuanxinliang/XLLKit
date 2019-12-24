@@ -8,9 +8,7 @@
 
 import Foundation
 
-
 class Solution {
-    
     
     @discardableResult
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
@@ -104,29 +102,29 @@ class Solution {
     }
     
     // MARK: - 98. 验证二叉搜索树
-    var last: TreeNode?
-    func isValidBST(_ root: TreeNode?) -> Bool {
-        var valid: Bool = true
-        inorderTraversal(root, &valid)
-        return valid
-    }
-
-    func inorderTraversal(_ node: TreeNode?, _ valid: inout Bool) {
-
-        if node == nil {
-            return
-        }
-
-        inorderTraversal(node?.left, &valid)
-
-        if last != nil && node!.element <= last!.element {
-            valid = false
-            return
-        }
-        last = node
-        
-        inorderTraversal(node?.right, &valid)
-    }
+//    var last: TreeNode?
+//    func isValidBST(_ root: TreeNode?) -> Bool {
+//        var valid: Bool = true
+//        inorderTraversal(root, &valid)
+//        return valid
+//    }
+//
+//    func inorderTraversal(_ node: TreeNode?, _ valid: inout Bool) {
+//
+//        if node == nil {
+//            return
+//        }
+//
+//        inorderTraversal(node?.left, &valid)
+//
+//        if last != nil && node!.element <= last!.element {
+//            valid = false
+//            return
+//        }
+//        last = node
+//
+//        inorderTraversal(node?.right, &valid)
+//    }
     
     // MARK: - 450. 删除二叉搜索树中的节点
     /*
@@ -295,6 +293,9 @@ class Solution {
         
         return node.next
     }
+    
+    
+    var laster: Int?
 }
 
 func testLeetCode() {
@@ -317,4 +318,101 @@ func testLeetCode() {
 //    bst.printTree()
     bst.root = Solution().sortedArrayToBST([-10,-3,0,5,9])
     bst.printTree()
+}
+
+extension Solution {
+    
+    func evalRPN(_ tokens: [String]) -> Int {
+        var nums = [Int]()
+        for token in tokens {
+            switch token {
+            case "+":
+                nums.append(nums.removeLast() + nums.removeLast())
+            case "-":
+                let r = nums.removeLast()
+                let l = nums.removeLast()
+                nums.append(l - r)
+            case "*":
+                nums.append(nums.removeLast() * nums.removeLast())
+            case "/":
+                let r = nums.removeLast()
+                let l = nums.removeLast()
+                nums.append(l / r)
+            default:
+                nums.append(Int(token)!)
+            }
+        }
+        return nums.first!
+    }
+    
+    public class ListNode {
+        public var val: Int
+        public var next: ListNode?
+        public init(_ val: Int) {
+            self.val = val
+            self.next = nil
+        }
+    }
+    
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        
+        if l1 == nil { return l2 }
+        if l2 == nil { return l1 }
+        
+        let head = ListNode(0)
+        var cur = head
+        
+        var k1 = l1
+        var k2 = l2
+        while k1 != nil && k2 != nil {
+            
+            if k1!.val <= k2!.val {
+                cur.next = k1
+                k1 = k1?.next
+                cur = cur.next!
+            } else {
+                cur.next = k2
+                k2 = k2?.next
+                cur = cur.next!
+            }
+        }
+        
+        if k1 != nil {
+            cur.next = k1
+        } else if k2 != nil {
+            cur.next = k2
+        }
+        
+        return head.next
+    }
+    
+    func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
+        if lists.count == 0 { return nil }
+        var arr = lists
+        for i in 1..<arr.count {
+            arr[0] = mergeTwoLists(arr[0], arr[i])
+        }
+        return arr[0]
+    }
+    
+    func isValidBST(_ root: TreeNode?) -> Bool {
+        return inorderTraversal(root)
+    }
+    
+    
+    func inorderTraversal(_ root: TreeNode?) -> Bool {
+        if root == nil { return true }
+        
+        if !inorderTraversal(root?.left) { return false }
+        
+        if laster != nil && laster! > root!.element {
+            return false
+        }
+        laster = root?.element
+        
+        if !inorderTraversal(root?.right) { return false }
+        
+        return true
+    }
+    
 }

@@ -9,17 +9,17 @@
 import UIKit
 
 class InsertionSort<T: Comparable>: Sort<T> {
-    override class func sort(array: inout Array<T>) {
+    override class func sort(arr: inout Array<T>) {
         print("insertion sort")
-        for i in 1..<array.count {
+        for i in 1..<arr.count {
             var cur = i
-            let element = array[i]
-            while cur > 0 && element < array[cur - 1] {
-                array[cur] = array[cur - 1]
+            let element = arr[i]
+            while cur > 0 && element < arr[cur - 1] {
+                arr[cur] = arr[cur - 1]
                 cur -= 1
             }
             if cur != i {
-                array[cur] = element
+                arr[cur] = element
             }
         }
     }

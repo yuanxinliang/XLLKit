@@ -10,20 +10,19 @@ import UIKit
 
 class SelectionSort<T: Comparable>: Sort<T> {
     
-    override class func sort(array: inout Array<T>) {
+    override class func sort(arr: inout Array<T>) {
         print("selection sort")
-        for i in (1..<array.count).reversed() {
+        for i in (1..<arr.count).reversed() {
             var max = 0
             for j in 1...i {
-                if array[j] > array[max] {
+                if arr[j] > arr[max] {
                     max = j
                 }
             }
-            let temp = array[max]
-            array[max] = array[i]
-            array[i] = temp
+            let temp = arr[max]
+            arr[max] = arr[i]
+            arr[i] = temp
         }
-        
     }
 
 }
